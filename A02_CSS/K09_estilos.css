@@ -1,0 +1,40 @@
+/* Aqui vamos a manejar los distintos colores a mostrar en funcion del estado
+del link (antes de visitarlo, cuando pasamos el puntero sobre el, cuando damos 
+click) 
+Al momento de mostar un enlace los colores originales son:
+AZUL        Antes de dar click 
+MORADO      Una vez visitado el sitio o cunando se dio clic en el enlace
+
+Recordar que la etiqueta para el manejo de links es 'a'
+*/
+
+h1{
+    color: #f07167;
+}
+
+/* ESTADOS DEL LINK */
+/* Cuando no se ha tocado el link (estado normal original que no hemos dado click)
+   ademas le vamos a quitar el subrallado con text-decoration: none */
+a:link{
+    color: #fb8500;
+    text-decoration: none;
+}
+
+/* Cuando ya un link fue visitado (ya se dio click sobre el link) */
+a:visited{
+    color: #219ebc;
+    text-decoration: none;
+}
+
+/* Cuando nos ponemos encima del link (pasamos el puntero del raton sobre el) */
+/* Queremos que cuando el puntero este sobre el link que se vea subrayyado  */
+a:hover{
+    color: #8ecae6;
+    text-decoration: underline;
+}
+
+/* Cuando damos clic sobre el enlace */
+a:active{
+    color: #023047;
+    text-decoration: underline;
+}

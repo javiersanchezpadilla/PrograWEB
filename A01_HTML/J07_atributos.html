@@ -1,0 +1,53 @@
+<!-- MANEJO DE ATRIBUTOS EN DOCUMENTOS HTML  Leccion 13-->
+<!-- TITLE  Podemos llamar a los atributos de titulo, este atributo 
+            funciona cuando pasamos el cursor sobre un elemento de la página
+            (ej. una imagen o un parrafo), esto es, dejamos el puntero del 
+            raton sobre la imagen o el parrafo y se mostrará el contenido 
+            del atributo -->
+<!-- STYLE  Permite modificar ciertos estilos de los elementos del documento 
+            como color, tamaño de fuente, fuente, color de fuente son estilos 
+            CSS-->
+<!-- ALT    Es un texto alternativo para cuando no se cargue la imagen y se 
+            rompa el link -->
+<!--<pre>   </pre> Permite declarar parrafos y se respetan los espacios tal 
+            cual        -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acapulco</title>
+</head>
+<body>
+    <h1>Instituto Tecnológico de Acapulco</h1>
+
+    <!-- Manejo de atributos en imagenes -->
+    <img src="imagenes/html5.png" alt="no cargo la imagen" 
+    title="Pasaste el puntero sobre la imagen">
+
+    <!-- Atributos sobre parrafos -->
+     <p title="Si me lees quiere decir que pasaste el puntero sobre el texto">
+        Este es un parrafo mostrado en pantalla</p>
+
+     <!-- Manejo de atributos de estilos sobre parrafos -->
+      <p title="pasaste el raton" style="color: blue;">
+        Este es un parrafo modificado con estilo de color</p>
+
+    <!-- Los parrafos al escribirse en código no respetan los Enters del documento,
+    esto es en el ejmeplo se partira una frase pero al mostrarla en pantalla 
+    se vera como una sola linea -->
+    <p>Este 
+        es un ppara 
+        rrafo partido,
+        pero en pantalla solo se vera una sola linea
+    </p>
+
+    <!-- Si queremos que se respete loque se modifique en el programa y sea tal cual
+    la salida existe otra etiqueta alternativa a parrafo (p) y es (pre) PREFORMATED-->
+    <pre>Este 
+        es un ppara 
+        rrafo partido,
+        pero en pantalla solo se vera una sola linea
+    </pre>
+</body>

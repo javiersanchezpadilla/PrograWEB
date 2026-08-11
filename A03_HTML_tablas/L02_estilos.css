@@ -1,0 +1,22 @@
+/* Vamos a modificar los estilos de las etiquetas 
+   TABLE tabla c
+   TH table head comportamiento en negritas y centrado  
+   TD tabla data comportamiento solo se muestra 
+   
+   vamos a cambiar el comportamiento
+   colapsar los bordes es mas común que expandir los bordes, recordar
+   que solo podemos colapsar o expandir uno a la vez, no ambas
+   */
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;      /* colapsa los bordes */
+    padding: 5px;                   /* aplica 5 pixels arriba izq, abajo, der */
+    /* border-spacing: 15px; si en lugar de colapsar los bordes queremos aumentar los bordes */
+}   
+
+
+/*  con esto podemos cambiar el comportamiento del TD y TH
+td{ text-align: center; }
+th{ text-align: left;   }
+    */

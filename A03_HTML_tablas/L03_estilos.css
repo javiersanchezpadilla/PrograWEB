@@ -1,0 +1,18 @@
+/* Continuación de modificación del código anterior  */
+
+   /* SI QUEREMOS QUE NUESTRA TABLA ABARQUE TOTO LO ANCHO DE LA PANTALLA*/
+table {
+    width: 100%;
+}
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;      /* colapsa los bordes */
+    padding: 5px;                   /* aplica 5 pixels arriba izq, abajo, der */
+    /* border-spacing: 15px; si en lugar de colapsar los bordes queremos aumentar los bordes */
+}   
+
+
+/*  con esto podemos cambiar el comportamiento del TD y TH
+td{ text-align: center; }
+th{ text-align: left;   }
+    */

@@ -1,0 +1,41 @@
+
+                    /* Definimos los elementos para los encabezados */
+h1{
+    color: #1d3557;
+}
+
+    /* Requerimos que nuestra lista se despliegue horizontalmente
+    que ademas no tenga viñetas */
+ul{
+    list-style-type: none;            /* 1. Quitamos el disco de fondo */
+    background-color: #457b9d;      /* 2. Asignamos un color de fondo*/
+    overflow: hidden;                 /* 5. no queremos las barras de scroll */
+    margin: 0;                        /* 6. no queremos que aplique margenes*/
+    padding: 0;                       /* 7. no queremos que aplique padding*/
+}
+
+    /* Modificamos el estilo del li LIST ITEM */
+li{
+    float: left;            /* 3. Queremos que los elementos floten a la izquieda */
+}
+
+    /* Estos es SOLO para las anclas <a> dentro de los list items
+        en este punto se vera todo en una sola linea incluso el h1*/
+li a{
+    display: block;         /* 4. Queremos se desplieguen en bloques*/
+                               /* En este punto se ve todo junto en una sola linea
+                                  si queremos que se muestre todo de forma 
+                                  independiente y que aquellos elementos que no son
+                                  del tipo lista queden en otra linea (como el caso
+                                  del encabezado h1 que se muestra en la misma linea
+                                  tenemos que usar la propiedad 5 */
+    color: white;         /* 8. aplicamos un color blanco */
+    text-align: center;     /* 9. centramos el texto */
+    padding: 15px;          /* 10. aplicamos un padding de 15 pixeles */
+    text-decoration: none;  /* 11. le quitamos el subrayado al link*/
+}
+
+    /* 12. para cuando pasamos el raton sobre el elemento ancla de la lista */
+li a:hover{
+    background-color: #1d3557;  /* 13. ahora vemos cada link como un bloque */
+}

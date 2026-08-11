@@ -1,0 +1,39 @@
+<!-- Ya hemos visto como aplicar esilos a ciertos elementos en html, para esto
+ocuparemos el concepto de las hojas de estilo CSS (cascading Style Sheet)
+Como ya vimos los estilos los podemos aplicar a elementos individuales, al 
+encebazado de nuestro documento HTML, pero ademas ahora lo podremos aplicar
+a todo el documento o elementos comunes mediante un archivo externo de 
+extensión CSS.
+En este ejemplo aplicaremos estilos globales a todos los elementos de mi página
+Para todos los encabezados h1 y todos los parrafos, esto permitira que no 
+tengamos que modificar encabezado por encabezado ni parrafo por parrafo
+Sin embargo todo esto se aplicará dentro del mismo documento html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Antes de cerrar la etiqueta de head definimos los estilos globales -->
+    <!-- Creamos el bloque STYLE y dentro creamos selectores para los elementos
+     globales que queremos modificar, por ejemplo los encabezados -->
+    <style>
+        /* Creamos un selector para todos los encabezados */
+        h1{ 
+            color:blue;
+        }
+        /* Creamos un selector para todos los parrafos */
+        p{
+            color:white;
+            background-color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <h1>Instituto Tecnológico de Acapulco</h1>
+    <p>Este es un parrafo afectado por el estilo global</p>
+    <p>Este es otro parrafo</p>
+</body>
+</html>

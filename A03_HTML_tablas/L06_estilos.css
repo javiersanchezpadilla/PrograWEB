@@ -1,0 +1,37 @@
+table {
+    width: 100%;
+}
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;      /* colapsa los bordes */
+    padding: 5px;                   /* aplica 5 pixels arriba izq, abajo, der */
+    /* border-spacing: 15px; si en lugar de colapsar los bordes queremos aumentar los bordes */
+}   
+ 
+                                    /* Este es el elemento que queremos modificar */
+                                    /* el titulo de las tablas */
+caption{                           
+    color: #e63946;
+    font-family: 'Trocchi', serif ;
+    font-size: 45px;
+    line-height: 70px;
+}
+
+                                    /* Modificamos el elemento de los encabezados  */
+th{
+    color: #f1faee;
+    background-color: #1d3557;
+}
+
+                                    /* MODICAMOS LAS PROPIEDADES DE LOS RENGLONES
+                                       primero los renglones pares
+                                       nth-child()  even PARES  odd IMPARES */
+                                    /* EN UNA TABLA EL PRIMER TENGLON ES EL ENCABEZADO */
+tr:nth-child(even){
+    background-color: #f1f1ee;
+}
+
+                                    /* AHORA MODIFICAMOS LOS RENGLONES IMPARES  */
+tr:nth-child(odd){
+    background-color: #a8dadc;
+}

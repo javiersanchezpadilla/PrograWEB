@@ -1,0 +1,41 @@
+h1{
+    color:blue;
+
+    }
+
+    /* Este marcador indica que aplicará para todos los parrafos */
+p{
+    color:white;
+    background-color: crimson;
+    /* Si defino un valor para el padding, esté se aplicará para todas las
+    posiciones (arriba, abajo, izquierda y derecha) */
+    padding: 15px;
+
+    /* Manejaremos ademas un borde de 10 pixeles de color azul palido */
+    border: 10px solid powderblue;
+
+    /* Aplicamos un margen para cada lado */
+    /* margin-top: 40px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-left: 90px; */
+
+    /* Podemos tambien definir los cuatro valores en una sola linea sin necesidad
+    de colocar cuatro, para ello se indica en una sola linea indicando en el 
+    sentido de las manecillas del reloj iniciando desde arriba
+    margin:  Top  right  bottom left */
+    margin: 40px 15px 20px 90px;
+
+    /* Tambien podemos omitir definiciones cuando dos valores son iguales, por ejemlpo
+    arriba abajo o izquierda y derecha ej. 
+    margin: 40px 10px 20px        top=40 right y left = 10, bottom=20 
+    margin 40px 10px              top y bottom = 40px  right y left = 10px */
+
+
+    /* Tambien podemos centrar de manera horizontal
+        margin: auto 50px;
+    */
+
+    /* Si queremos centrar nuestro texto */
+    text-align: center;
+}

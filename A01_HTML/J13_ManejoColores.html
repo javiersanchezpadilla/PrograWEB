@@ -1,0 +1,59 @@
+<!-- Manejo de colores desde HTML 
+ Podemos buscar en internet la cadena html color names y así obtener la lista
+ de los colores para usarlos directamente
+ Ejemplos de páginas https://www.w3schools.com/tags/ref_colornames.asp 
+                     https://htmlcolorcodes.com/color-names/ 
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colores en html</title>
+</head>
+<body>
+    <h1>Instituto Tecnológico de Acapulco</h1>
+
+    <!-- Aplicamos el color al texto del parrafo -->
+    <p style="color: crimson;">Uso del color por nombre</p>
+    <p style="color:rgb(123, 104, 238);">Este texto es por valores RGB</p> 
+    <p style="color:rgb(255, 0, 0);">RGB para el rojo</p> 
+    <p style="color:rgb(0, 255, 0);">RGB para el verde</p> 
+    <p style="color:rgb(0, 0, 255);">RGB para el azul</p> 
+
+    <h3>Colores con transparencia RGBA (Alpha Channel)</h1>
+
+    <!-- En el manejo del color con transparencia 1=100% 0=0% .0=50% -->
+    <p style="border: 10px solid rgba(220,20,60,.5)">Color rgba con trasnparencia</p>
+
+    <h3>color por HSL</h3>
+    <p style="color: hsl(240, 83%, 47%);">Color por código hs1</p>
+    <p style="border: 10px solid hsla(348,83%,47%,.5)">Color hsl con trasnparencia</p>
+
+    <h3>Color con valores hexadecimales</h3>
+    <!-- En los colores hexadecimales tenemos tres pares el primer par es para el rojo
+    el segundo par es para el verde y el tercer par es para el azul
+    #000000 Negro  #ffffff Blanco  #ff0000 Rojo  # 00ff00 Verde  #0000ff Azul
+    Podemos simplificar cuando los dos valores son identicos, esto es, si tenemos
+    ff = f 00=0, 11=1, 22=2, 33=3 -->
+
+    <p style="color: #000000;">Color Negro</p>
+    <p style="color: #000;">Color Negro simplificado</p>
+    <p style="color: #ffffff;">Color Blanco</p>
+    <p style="color: #fff;">Color Blanco simplificado</p>
+    <p style="color: #ff0000;">Color Rojo simplificado</p>
+    <p style="color: #f00;">Color Rojo simplificado</p>
+    <p style="color: #00ff00;">Color Verde</p>
+    <p style="color: #0f0;">Color Verde simplificado</p>
+    <p style="color: #0000ff;">Color Azul</p>
+    <p style="color: #00f;">Color Azul simplificado</p>
+    <p style="color: #ffff00;">Color Amarillo</p>
+    <p style="color: #ff0;">Color Amarillo simplificado</p>
+    <p style="color: #00ffff;">Color Magenta</p>
+    <p style="color: #0ff;">Color Magenta simplificado</p>
+    <p style="color: #ff00ff;">Color Cyan</p>
+    <p style="color: #f0f;">Color Cyan simplificado</p>
+    <p style="color: #dc143c;">Color Crimson</p>
+    
+</body>
+</html>

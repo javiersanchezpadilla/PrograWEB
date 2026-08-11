@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba rutas relativas</title>
+
+    <!-- Vamos a aplicar el estilo que se encuentra en otra carpeta, primero
+     tiene que subir un nivel en el arbol y luego bajar en la carpeta A02_CSS 
+     para poder encontrar dentro el archivo K12_estilos.css -->
+    <link rel="stylesheet" href="../A02_CSS/K12_estilos.css">
+</head>
+<body>
+    <h1>Este archivo sera llamadodesde K12_RutasRelativsAbsoluts.html que</h1>
+    <h1>esta dentro del directorio A02_CSS, la idea es entender el</h1>
+    <h1>uso de las rutas relativas sobre un archivo ubicado en una</h1>
+    <h1>carpeta a nivel del proyecto html, en este caso el archivo</h1>
+    <h1>que llamara a este archivo esta dentro de otra carpeta llamada</h1>
+    <h1>A02_CSS/K12_RutasRelativsAbsoluts.html</h1>
+
+    <!-- Aqui podemos entender como para llamar al documento que originalmente
+     llamo esta página tenemos que subir un nivel en el arbol gerarquico y
+     posteriormente bajar al directorio A02_CSS donde se encuentra el archivo
+     K12_RutasRelactivsAbsoluts.html -->
+    <a href="../A02_CSS/K12_RutasRelactivsAbsoluts.html">Regresar a la pagina que nos llamo</a>
+    
+</body>
+</html>

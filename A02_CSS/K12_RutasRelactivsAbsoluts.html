@@ -1,0 +1,63 @@
+<!-- Manejo de rutas relativas y absolutas:
+Hasta el momento hemos trabajado las rutas de forma relativa, Ejemplos
+si revisamos el ejemplo anterios (K11_LinksComoBotones.html) al pasar 
+el cursos sobre el boton, en la parte inferior aparece la ruta de acceso URL
+vemos el link completo de la página:
+
+    127.0.0.1:5000/A02_CSS/K09_Kontenido  Path absoluto de este archivo HTML
+    Dir IP    Port   Dir   Nombre archivo
+
+Si armamos la ruta quedaraia http://localhost:5500/A02_CSS/K09_Kontenido.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutas absolutas y relativas</title>
+    <link rel="stylesheet" href="K12_estilos.css">
+</head>
+<body>
+    <h1>Manejo de rutas en HTML (absolutas y rlativas)</h1>
+    <br/>
+    <h1>MAnejo de las rutas del tipo:</h1>
+     <!-- Cuando ejecutamos se enciman los botones, por lo que se recomienda dentro del 
+    archivo CSS agregar la propiedad display: inline-block para que cada boton tenga
+    su propio espacio -->
+    
+    <!-- Al ejecutar y pasar el cursor del raton encima del link enla parte inferior de la 
+    pantalla podemos ver la ruta de acceso -->
+    <!-- Sin embargo cuando usamos archivos dentro de la misma aplicación no se recomienda
+    el uso de las rutas absolutas, porque ademas si usamos rutas absolutas y por alguna
+    razon cambia el puerto, el dominio el acceso se perderia 
+    solo se recomienda el uso de rutas absolutas cuando se acceda a travez del enlace a
+    direcciones externas -->
+
+    <!-- Archivo a nivel del documento html accedemos por ruta relativa-->
+    <a href="K09_Kontenido.html">Ruta relativa</a>
+    <br/>
+
+    <!-- Archivo accediendo mediante la ruta absoluta -->
+    <a href="http://localhost:5500/A02_CSS/K09_Kontenido.html">Ruta Absoluta</a>
+    <br/>
+
+    <!-- Acceso a pagina externa acceso a traves de ruta absoluta -->
+    <a href="https://www.google.com">Google Enlace con ruta absoluta</a>
+
+    <!-- Acceso a un archivo dentro de una carpeta llamada Web, para 
+    esta es una mejor practica porque no importa donde se encuentra el
+    archivo index, con /A01_HTML, le indicamos que el archivo que  buscamos 
+    se encuentra en una carpeta a nivel raiz de nuestro proyecto HTML
+    es importante observar que este archivo esta dentro de la carpeta A02_CSS  -->
+     <a href="/A01_HTML/K99_pruebaParaK09deCSS.html">Relativo con acceso a una subcarpeta</a>
+
+    <!-- Otra forma de acceder a los archivos cuando estamos dentro de sub sub 
+     carpetas es indicandole a las rutas que deben de subor uno o mas niveles, por ej.
+
+     <link rel="stylesheet" href="../../estilos.css">
+     Aqui le decimos que nuestro arhcivo estilos.css esta dos carpetas hacia 
+     arriba
+     -->
+
+
+</body>
+</html>

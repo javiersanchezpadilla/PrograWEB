@@ -1,0 +1,11 @@
+Recomendación el explorador Google Crhome
+
+Explicar como podemos ejeutar el archivo HTML
+se puede ejecutar danto doble clic y esto abrira el navegador para visualizar
+el archivo, sin embargo se recomienda el uso de live Server para hacer mas 
+eficiente la ejecución entiempo real (por cada cambio automaticamente se 
+actualiza en el navegador)
+
+http://127.0.0.1:5500/index.html
+
+

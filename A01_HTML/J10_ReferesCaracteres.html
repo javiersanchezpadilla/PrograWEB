@@ -1,0 +1,47 @@
+<!-- REferencias de caracteres en HTML
+En el navcegador buscar  char ref html (https://tools.w3cub.com/html-entities)
+Nosw muestra una lista de caracteres, en caso de no poder generarlo con el 
+teclado podemos imprimirlo a traves de estos códigos, por ejemplo el simbolo
+de exclamación !    &# + nombre del caracter              = &excl;
+                    &#x + Valor hexadecimal del caracter  = &#x00021;
+                    &# + Valor decimal del caracter       = &#33;
+
+En HTML no podemos usar los simbolos de ! < >, entonces para poder imprimirlos
+usamos esta notacion, &# + el nombre del caracter, de forma automatica Visual 
+studio code lo sugiere
+-->
+<!-- <code></code>      Permite mostrar en nuestr página código, lo implementa
+                        con un font distinto al que tenemos por defecto-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Instituto Tecnológico de Acapulco</h1>
+
+    <p><code>Este es mi código</code></p>
+    <p> &excl;  Simbolo de exclamación por su nombre</p>
+    <p> &#x00021;  Simbolo de exclamación por su valor hexadecimal</p>
+    <p> &#33;  Simbolo de exclamación por su valor decimal</p>
+    <p> &lt;  Simbolo de menor que</p>
+    <p> &gt;  Simbolo de mayor que</p>
+    <p> &commat;  Simbolo de arroba</p>
+    <p>Para las letras con acentos como a,e,i,o,u, A, E, I, O, U</p>
+    <p>&aacute;  Para la letra a con acento ejm. &aacute;rbol</p>
+    <p>&Aacute;  Para la letra A con acento ejm. &Aacute;ngel</p>
+    <p>&eacute;  Para la letra e con acento ejm. &eacute;xito</p>
+    <p>&Eacute;  Para la letra E con acento ejm. &Eacute;nfasis</p>
+    <p>&iacute;  Para la letra i con acento ejm. &iacute;dolo</p>
+    <p>&Iacute;  Para la letra I con acento ejm. &iacute;tem</p>
+    <p>&oacute;  Para la letra o con acento ejm. &oacute;ptimo</p>
+    <p>&Oacute;  Para la letra O con acento ejm. &oacute;pera</p>
+    <p>&uacute;  Para la letra u con acento ejm. &uacute;ltimo</p>
+    <p>&Uacute;  Para la letra U con acento ejm. &Uacute;nico</p>
+    <p>&nbsp; inserto un espacion en blanco (nbsp no braking space)</p>
+    <p>para agregar &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 espacios </p>
+
+</body>
+</html>

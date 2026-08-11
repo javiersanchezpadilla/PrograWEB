@@ -1,0 +1,43 @@
+<!-- Ya vimos como aplicar los estilos globales desde el encabezado del 
+ documento html, ahora vamos a colocar estas definiciones en un archivo 
+ externo de extensión CSS, para eto lo colocaremos dentro de la carpeta CSS
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Antes de cerrar la etiqueta de head definimos los estilos globales -->
+    <!-- Creamos el bloque STYLE y dentro creamos selectores para los elementos
+     globales que queremos modificar, por ejemplo los encabezados -->
+    <!-- <style>
+        /* Creamos un selector para todos los encabezados */
+        h1{ 
+            color:blue;
+        }
+        /* Creamos un selector para todos los parrafos */
+        p{
+            color:white;
+            background-color: crimson;
+        }
+    </style> -->
+
+    <!-- AHORA YA NO USAREMOS LAS DEFINICIONES DE MARCADORES COMO LO HICIMOS ARRIBA, 
+    AHORA LO HAREMOS DESDE UN ARHCIVO EXTERNO DE EXTENSIÓN CSS (ESTA UBICADO
+    DENTRO DE LA CARPETA CSS), EL CONTENIDO DEL ARCHIVO SERÁ EXACTAMENTE EL MISMO QUE
+    LO QUE SE ESRIBIO ARRIBA (TODO MENOS LAS ETIQUETAS DEL TIPO STYLE), SOLO 
+    LOS MARCADORES -->
+
+
+    <!-- Ahora los estilos los esta tomando desde un archivo externo del tipo CSS -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+<body>
+    <h1>Instituto Tecnológico de Acapulco</h1>
+    <p>Este es un parrafo afectado por el estilo global</p>
+    <p>Este es otro parrafo</p>
+</body>
+</html>

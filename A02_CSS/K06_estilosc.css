@@ -1,0 +1,18 @@
+h1{
+    color:blue;
+
+    }
+
+    /* Este marcador indica que aplicará para todos los parrafos */
+p{
+    color:white;
+    background-color: crimson;
+    /* Si defino un valor para el padding, esté se aplicará para todas las
+    posiciones (arriba, abajo, izquierda y derecha) */
+    padding: 15px;
+
+    /* Manejaremos ademas un borde de 10 pixeles de color azul palido */
+    border: 10px solid powderblue;
+    /* Aplicamos un margen en todos los lados */
+    margin: 50px;
+}

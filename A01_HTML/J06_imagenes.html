@@ -1,0 +1,48 @@
+<!-- Para el manejo de imagenes podemos colocar las imagenes a nivel de los
+programas en HTML o en subcarpetas, lo mas recomendable es colocarlas 
+en subcarpetas, se creará la carpeta imagenes la cual ya contiene 3 imagenes-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acapulco</title>
+</head>
+<body>
+    <h1>Instituto Tecnológico de Acapulco</h1>
+
+    <!-- src source u origen de nuestra imagen
+     Podemos usar doble comilla o comilla simple 
+     PAra acceder rapido en src="" (entre las comillas oprimimos Control ESP
+     lo que nos mostrará las rutas y nombres de archivos)-->
+     <!-- Aqui vamos a abrir una imagen local -->
+    <img src="imagenes/html5.png" />
+
+    <!-- Abriendo una imagen a traves de una dirección https -->
+     <!-- Esto abrira una imagen de otro servidor -->
+    <img src="http://globalmentoring.com.mx/imagenes/css3.png">
+
+    <!-- Que es un link roto, es cuando no se carga la imagen, por ejemplo
+    si indico mal la direcicón la consecuencia será un link roto si usamos
+    el texto alternativo (alt="algo que se desplegara"), donde se rompio 
+    la imagen aparecera el texto alternativo-->
+    <!-- El texto alternaitivo ayuda cuando no se puede mostrar la imagen para 
+    que se indique que debia ir en esa posición -->
+    <img src="http://globalmen.com.mx/imagenes/css3.png" alt="logo css3">
+
+    <!-- Aqui cargamos otra imagen exerna -->
+    <img src="http://globalmentoring.com.mx/imagenes/javascript.png" alt="Logo JavaScript">
+
+    <!-- Modificando propiedades de la imagen como el alto y el ancho
+    width (ancho) height (alto) si solo modificamos un valor el otro se 
+    autoajusta, esto es si solo mofificamos el ancho se ajusta el alto, por
+    otro lado si solo modificamos el alto se autoajusta el ancho-->
+    <img src="imagenes/html5.png" alt="Logo html" width="50 px">
+    <img src="imagenes/html5.png" alt="Logo html" height="90 px">
+
+    <!-- Pero si modificamos amnos se desajusta la imagen ya que no será proporcional 
+     por eso solo se recomienda modificar uno solo de los parametros para que
+     la imagen se mantenga proporcional-->
+    <img src="imagenes/html5.png" alt="Logo html" width="50 px" height="200 px">
+
+</body>

@@ -1,0 +1,24 @@
+/* Para este ejemplo se usara la paleta Ocean Blue Serenity
+que usa estas combinaciones:
+
+03045e      023e8a      0077b6      0096c7      
+00b4d8      48cae4      90e0ef      ade8f4
+caf0f8 */
+
+body{
+    background-color: #caf0f8;
+
+}
+h1{
+    color:#023e8a;
+
+    }
+
+p{
+    color:#90e0ef;
+    background-color: #03045e;
+    padding: 15px;
+    border: 10px solid #00b4d8;
+    margin: auto 15px;
+    text-align: center;
+}

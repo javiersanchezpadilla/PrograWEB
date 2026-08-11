@@ -1,0 +1,41 @@
+ 
+ <!-- AQUI ABARCAREMOS MAS DE UNA COLUMNA CON UN SOLO ENCABEZADO 
+      ROW  ROWSPAN-->
+  <!-- En este ejemplo no cambia el archivo de estilos, ya que es una 
+  propiedad del mismo documento html -->
+ 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas en HTML</title>
+    <link rel="stylesheet" href="L03_estilos.css">
+ </head>
+ <body>
+
+    <table>
+         <tr>   <!-- TR Table row declara un nuevo renglon-->
+
+            <!-- *************************************************************** -->
+            <!-- la propiedad colspan indica cuantas columnas abarcara el nombre -->
+            <th colspan="2">Nombre</th>     <!-- TH Table head crea una columna dentro -->
+            <!--   <th>Apellido</th>  ya no es necesario ya que si yo defini que oy
+               a ocupar dos celdas ya no es necesario definir el apellido -->
+
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>Juan</td> <!-- TD Table data, define datos para nuestra tabla-->
+            <td>Perez</td>
+            <td>jperez@mail.com</td>
+        </tr>
+         <tr>
+            <td>MAria</td> 
+            <td>Lara</td>
+            <td>mlara@mail.com</td>
+        </tr>
+    </table>
+    
+ </body>
+ </html>

@@ -1,0 +1,64 @@
+<!-- El conepto de hojas de estilo encascada se llama así debido a que desarrolla
+un concepto que es el cascadeo en las hojas de estilo
+
+Estilos por 
+  defecto
+del navegador
+    |
+    | Los sobreescribe...
+    v
+Los estilos 
+ externos
+Archivo CSS
+    |
+    | Los sobreescribe...
+    v
+Los estilos
+integrados
+en la hoja
+    |
+    | Los sobreescribe
+    v   
+Los estilo 
+en linea
+(definidos en
+cada linea)
+
+En resumen los estilos mas internos sobreesrcriben a todos los anteriormente
+definidos, por ejemplo en el archivo css/estilos.css se definio el marcador
+h1{ 
+        color:blue;
+    }
+
+Pero si dentro del documento HTML defino un nuevo estilo para el marcador h1
+entonces este será el que se tomará, pero si aún dentro del cuerpo del documento
+html defino un estilo para h1, entonces será el que sobreesriba a todos los 
+anteriores
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 1) Se esperaria que el estilo del archivo css actuara sobre los encabezados h1 -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- 2) Como estoy definiendo un estilo despues de la carga del archivo externo css, 
+            entonces este estilo sobreescribe al anterior -->
+    <style>
+        h1{
+            color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+
+        <!-- 3) Finalmente como estoy definiendo un estilo a nivel de linea, esté reeemplaza 
+                a todos los estilos anteriormente definidos  -->
+        <h1 style="color: coral;">Este encabezado es el resultado con el estilo final</h1>
+    
+</body>
+</html>

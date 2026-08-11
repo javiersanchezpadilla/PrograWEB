@@ -1,0 +1,8 @@
+h1{ 
+        color:blue;
+    }
+/* Creamos un selector para todos los parrafos */
+p{
+    color:white;
+    background-color: crimson;
+}
