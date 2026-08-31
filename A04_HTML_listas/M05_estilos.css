@@ -1,0 +1,36 @@
+ol{
+
+    list-style: none;    /* 1. Quita los estilos de la lista*/
+    counter-reset: contador;    /* Se reinicia a cero la variable del contador
+                                   cada vez que se inicia una lista ordenada */
+}
+
+ol li{
+    counter-increment: contador;    /* se incrementa la variable contador cada
+                                       vez que se despliega un elemento de la lista*/
+}
+
+/* 2. Para  modificar los li list items en una lista ordenada
+   con el selector ::before modificare cada uno de los elementos
+   agregando un texto cada vez antes de que se visualice un texto, 
+   pero antes (before) de que se muestre el elemento de la lista
+   agregará el elemento de curso */
+
+/* 4. Para llevar el conteo de los elementos de mi lista lo vamos a hacer
+   mediante el uso de un contador mediante el uso de la funcion 
+   counter(nombre_contador)*/
+ol li::before{
+    content: 'Curso' counter(contador)  ') '; /* aqui se concatenaron los caracteres */
+    /* 5. Cambiamos el color del texto de Curso # */
+    color: #ff6f00;
+}
+
+/* 3. Para  modificar los li list items en una lista ordenada
+   con el selector ::after modificare cada uno de los elementos
+   agregando un texto cada vez antes de que se visualice un texto 
+   por ejemplo content:'...'; agregaria tres puntos al final del 
+   elemento de la lista*/
+ol li::after{
+    content: '...';
+
+}
