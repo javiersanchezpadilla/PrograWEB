@@ -1,0 +1,28 @@
+    /* Cambiamos el estilo de los encabezados h1 */
+    /* Para TODOS los encabezados h1 */
+h1 {
+    color: #f72585;
+    text-align: center;
+}
+
+    /* Cambiamos el estilo de los encabezados h2 */
+    /* PAra TODOS los encabezados H2 */
+h2 {
+    color: #3f37c9;
+}
+    /* CAmbiamos el estilo de los parrafos */
+    /* PAra TODOS lo parrafos */
+p {
+    color: #457b9d;
+}
+
+    /* Cambiamos el estilo de los DIV */
+    /* Esta es una caracteristica de las etiquetas de bloque, que al ser 
+    por linea abarcan todo el ancho de la linea */
+    /* div { <<- Cambiamos el elemento div por una clase, y ahora esta clase
+    la asociamos dentro del código HTML como si fuera un atributo de la etiqueta*/
+.mi_estilo_tarjeta {        /* Antes era div la clase se define con un PUNTO*/
+    border: 10px solid; #560bad;
+    background-color: #f1faee;
+    text-align: center;
+}

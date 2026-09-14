@@ -1,0 +1,59 @@
+<!-- ATRIBUTO CLASS EN HTML
+
+    Vamos a ver el atributo de class para aplicar estilos a nuestros elementos HTML.
+    Como hemos visto anteriormente, hemos aplicado los estilos CSS a un elemento 
+    HTML directamente, sin embargo, qué pasa si, por ejemplo, tenemos lo siguiente
+    En un primer div aplicando el estilo CSS que hemos creado, de igual manera lo
+    aplicamos en un segundo div, y así de nuevo en un tercer div, pero tenemos un 
+    cuarto div, el cual no queremos aplicar los estilos, podemos definir el elemento
+    DIV, pero ya si por alguna razon solamente queremos aplicar los estilos a ciertos
+    elementos de tipo DIV, entonces para ello podemos utilizar el concepto de clase 
+    y así crear estilos CSS y aplicarlos solamente a los elementos HTML que necesitemos 
+    (no a todos los elementos html de tipo div). 
+    
+    Para este ejemplo queremos aplicar los estilos de la etiqueta DIV solo a
+    ciertos elementos, no a todos, para ello usaremos una clase para aplicarla
+    solo alos elementos que necesitemos, esta accion se aplicara en el archivo
+    de estilos N03_estilos.css, de esta forma en el archivo de estilos 
+    creamos la clase sin referencia a una etiqueta, pero ahora dentro de la
+    etoqueta que creemos indicaremos el nombre de la clase que vamos a querer
+    que afecte a esa parte unicamente -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo CLASS en HTML</title>
+    <link rel="stylesheet" href="N03_estilos.css">
+</head>
+<body>
+    <h1>Lenguajes de programación</h1>
+
+    <!-- Se define la clase que afectara a la etiqueta, no es necesario el uso 
+    del punto, solamente se indica el nombre de la clase, el punto solo se
+    usa en la definición de la calse en el archivo de estilos css -->
+
+    <div class="mi_estilo_tarjeta">
+        <h2>Java</h2>
+        <p>Creador: James Gosling</p>
+    </div>
+
+    <div class="mi_estilo_tarjeta">
+        <h2>Python</h2>
+        <p>Creador: Guido van Rossum</p>
+    </div>
+
+    <div class="mi_estilo_tarjeta">
+        <h2>JavaScript</h2>
+        <p>Creador: Brendan Eich</p>
+    </div>
+
+
+    <div>
+        <h2>Resumen de lenguajes de programación</h2>
+        <p>www.mataweb.com.mx</p>
+    </div>
+    
+</body>
+</html>

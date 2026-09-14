@@ -1,0 +1,46 @@
+<!-- MANEJO DE ELEMENTOS EN LINEA
+ 
+     Permiten modificar sus propiedades en función de las características, por
+     ejemplo INLINE las modifica pero en la misma linea donde estamos trabajando,
+     esto quiere decir que por cada cambio el texto se queda en la misma linea
+
+    INLINE: (Elementos en linea) no aplican nueva linea al final del elemento
+    SPAN    Etiqueta pAra el manejo de los elementos del tipo INLINE
+            Los elementos en linea no aplican una nueva linea, sino que se 
+            aplican en la linea donde estamos trabajando
+
+     Cada camnio realido con <SPAN> deja el control en la misma linea (INLINE)
+     +-------+ +-----+ +-------------------+ +--+ +-----------+ +-------+
+     |   1   | |  2  | |        3          | |4 | |    5      | |   6   |
+     +-------+ +-----+ +-------------------+ +--+ +-----------+ +-------+
+     +---------------------------------------------------+ +-----+
+     |                          6                        | |  7  |
+     +---------------------------------------------------+ +-----+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos InLine y Block</title>
+</head>
+<body>
+  
+    <h1>Elemeno SPAN (inline)</h1>
+
+    <!-- Dentro de la misma linea Texto donde vamos a enfatizar y cambiar el 
+        color de algunos elementos 
+        vamos a modificar elgunos elementos en linea (span) y para que los 
+        cambios queden en la misma linea y no salte a otra -->
+
+    <!-- agregamos span para que los cambios queden en la misma linea, modifamos
+    el color, el borde y el ancho del borde con style, luego en el segundo
+    ejemplo modificamos el tipo de letra a BOLD -->
+
+    <p>Texto donde vamos a 
+        <span style="color:#e63946;border: 1px solid black;">enfatizar</span> 
+        y cambiar el 
+        <span style="color: #457b9d; font-weight: bold;">color de algunos elementos</span></p>
+    
+</body>
+</html>
