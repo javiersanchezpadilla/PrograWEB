@@ -22,19 +22,28 @@
     del punto, solamente se indica el nombre de la clase, el punto solo se
     usa en la definición de la calse en el archivo de estilos css -->
 
+    <!-- Cuano queremos aplicar varias clases a una etiqueta lo que hacemos
+    es separarlas con un espacio en blanco dentro de las comillas dobles
+                     Clase 1  Clase 2   Clase 3
+    ej.  <div class="tarjeta titulo_uno otra_clase" -->
+
     <div class="mi_estilo_tarjeta">
         <h2>Java</h2>
-        <p>Creador: James Gosling</p>
+
+    <!-- el elemento span es un elemento inline, por lo que no mandara a otra 
+         linea nueva y se va a respetar la misma linea del parrafo-->
+
+        <p><span class="titulo">Creador:</span> James Gosling</p>
     </div>
 
     <div class="mi_estilo_tarjeta">
         <h2>Python</h2>
-        <p>Creador: Guido van Rossum</p>
+        <p><span class="titulo">Creador:</span> Guido van Rossum</p>
     </div>
 
     <div class="mi_estilo_tarjeta">
         <h2>JavaScript</h2>
-        <p>Creador: Brendan Eich</p>
+        <p><span class="titulo">Creador:</span> Brendan Eich</p>
     </div>
 
 

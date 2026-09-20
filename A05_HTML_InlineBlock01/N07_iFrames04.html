@@ -1,0 +1,28 @@
+  <!-- MEDIANTE UN LINK CARGAR UNA PÁGINA WEB DENTRO DE UN IFRAME 
+   
+  En este ejemplo se cargará una página web dentro de un iFrame una
+  vez que el usuario haya dado clic sobre un vinculo
+  SE APLICARAN MEJORAS VISUALES A LA PÁGINA
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargando paginas en iFrames</title>
+    <link rel="stylesheet" href="N07_estilos.css">
+</head>
+<body>
+    <h1>Cargando una página completa desde un iFrame</h1>
+
+    <iframe src="N07_texto.html" name="marquitos" class="marco"></iframe>
+
+    <!-- Para poder centrar el link lo tenemos que envolver en un DIV 
+     y aplicamos la clase de centrar para que se pueda centrar el link -->
+    <div class="centrar">
+    <a href="https://acapulco.tecnm.mx/" target="marquitos" class="boton">Cargar página del ITA</a>
+    </div>
+    
+</body>
+</html>

@@ -43,3 +43,11 @@ p {
                                y margen izquierdo y derecho de 100 pixeles*/
     padding: 15px;          /* Por último agregamos un padding de 15 pixeles */
 }
+
+/*  Vamos a crear otra clase debe cocomenzar con un punto y en minusculas
+    Además si tenemos varias palabras podemos usar el guion medio o el guion
+    bajo ej.: .titulo-uno  o  .titulo_uno (yo recomiendo guion bajo) */
+.titulo_uno {
+    color: #f72585;
+
+}

@@ -1,0 +1,25 @@
+  <!-- MEDIANTE UN LINK CARGAR UNA PÁGINA WEB DENTRO DE UN IFRAME 
+   
+  En este ejemplo se cargará una página web dentro de un iFrame una
+  vez que el usuario haya dado clic sobre un vinculo
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargando paginas en iFrames</title>
+    <link rel="stylesheet" href="N07_estilos.css">
+</head>
+<body>
+    <h1>Cargando una página completa desde un iFrame</h1>
+
+    <!-- Para lograr esta acción primero le asinamos un nombre al iFrame -->
+    <iframe src="N07_texto.html" name="marquitos" class="marco"></iframe>
+
+    <!-- Ahora creamos el ancla con el link y le decimos que el destino sera
+    marquitos -->
+    <a href="https://acapulco.tecnm.mx/" target="marquitos">Cargar página del ITA</a>
+</body>
+</html>

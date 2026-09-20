@@ -1,0 +1,62 @@
+<!-- Agregaremos otro control de texto y ademas indicaremos
+     un valor indicador de que debe capturar en el campo
+     es loque conocemos como placeholder y LA VALIDACIÓN DE LOS
+     FORMULARIOS
+     -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios en HTML</title>
+</head>
+<body>
+
+    <h1>Formularios o formas en HTML</h1>
+
+    <!-- 
+    placeholder Le indica al usuario que es lo que debe colocar en el
+            campo a capturar
+
+            PARA VALIDAR LOS FORMULARIOS TENEMOS TRES FORMAS
+            1. mediante el control directamente (required="True")
+               podemos omitirla y no validará nada, pero de colocarla
+               debemos inicializarla con True o False
+                                                                vvvvvvvvvvvvvv
+               <input type="text" id="apellido" name="apellido" required="True"/> 
+
+            2. por medio de la etiqueta <form novalidate> (novalidate)
+               aun cuando exista por cada elemento del formulario la opcion
+               de required="True" la accion de form sobreescribe y omite
+               la validación
+                     vvvvvvvvv
+               <form novalidate>
+
+            3. por medio de un boton, podemos crear un boton que omita las
+               validaciones (formnovalidate="formnovalidate")
+                                     vvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+               <input type="submit" formnovalidate="formnovalidate"
+            value="Enviar sin validar"/>
+    -->
+
+
+<!-- <form novalidate> -->
+    <form>
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre"
+            placeholder="Escribe tu nombre" required="True"/> 
+        <br>
+
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido"
+        placeholder="Escribe tu apellido" required="True"/> 
+        <br>
+
+        <input type="submit" value="Enviar"/>
+        <input type="submit" formnovalidate="formnovalidate"
+            value="Enviar sin validar"/>
+
+    </form>
+</body>

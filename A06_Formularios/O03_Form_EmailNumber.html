@@ -1,0 +1,35 @@
+<!-- PROCESAMIENTO DE FORMULARIOS DEL TIPO E-MAIL Y NUMBER 
+ 
+    Cuando estamos enviando la información al servidor se jhace una codigicación
+    de los caracteres:
+
+    http://O03_Form_EmailNumber.html?nombre=Juan+Carlos&apellido=Rodriguez&correo=charly%40gmail.com
+                                              ^^^^                                      ^^^^          
+
+    @     Se procesa como %40 dentro de la cadena GET
+    esp   El espacio en blanco se procesa como +
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de GTP y POST</title>
+</head>
+<body>
+        <form>  <!-- Al no definir un metodo se asume como GET -->
+
+        <label for="nombre">Nombre</label><br/>
+        <input type="text" id="nombre" name="nombre"/><br/>
+
+        <label for="apellido">Apellido</label><br/>
+        <input type="text" id="apellido" name="apellido"/><br/>
+
+        <label for="correo">E-Mail:</label><br/>
+        <input type="email" id="correo" name="correo"><br/>
+
+        <input type="submit" value="Enviar"/>
+    </form>
+</body>
+</html>

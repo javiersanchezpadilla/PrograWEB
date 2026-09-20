@@ -1,0 +1,37 @@
+<!-- Un formulario nos va apermitir capturar información del usuario 
+     no perder de vista que es muy distinto crear un formulario que
+     procesar la información del formulario, la creación solo es 
+     resolver la parte visual -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios en HTML</title>
+</head>
+<body>
+
+    <h1>Formularios o formas en HTML</h1>
+    <!-- Vamos a usar la etiqueta form para la captura de los formularios -->
+    <form>
+        <!-- La etiqueta que se definió en el cuadro de texto podemos 
+             relacionarla con la etiqueta para que si el usuario da clic 
+             sobre la etiqueta de forma automatica el cursor se ubique 
+             sobre la captura del dato en el control del tipo texto 
+             ahora para llamar a la etiqueta usamos for="para_nombre"
+                 ||||||||||||||
+                 vvvvvvvvvvvvvv         -->
+        <label for="para_nombre">Nombre</label>
+        <!-- El tipo text permite capturar información del tipo texto 
+             se recomienda siempre asignar un identificador, en este
+             ejemplo se uso id="para_nombre"
+                            ||||||||||||||
+                            vvvvvvvvvvvvvv     -->
+        <input type="text" id="para_nombre"/>
+        <input type="submit" value="Enviar"/>
+
+
+    </form>
+</body>
+</html>

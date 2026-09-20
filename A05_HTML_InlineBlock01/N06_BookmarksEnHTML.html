@@ -1,0 +1,62 @@
+<!-- Los IDs tambien nos permiten crear bookmarks, esto se resuelve, 
+     directamente colocando id=etiqueta (no es necesario declararlo
+     en el archivo de estilos css), se van a crear etiquetas para p
+     poder desplazarse a cada categoria en las primeras etiquetas 
+     Java y Python se desplazara al inicio del margen (el cuadro), 
+     y en el caso de JavaScript se desplazará al inicio del texto-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo del atributo ID</title>
+    <link rel="stylesheet" href="N06_estilos.css">
+</head>
+<body>
+     <h1 id="titulo_principal">Lenguajes de programación</h1>
+
+     <!-- Aqui vamos a crear las anclas que apuntaran a los elementos de los
+     lenguajes, es importante observar que la dirección en el navegador
+     va a cambiar, por esto se le conoce como marcador -->
+
+     <!-- Cuando seleccionamos una de las opciones la página se desplaza hasta
+     el elemento seleccionado, y MUY IMPORTANTE, LA DIRECCION EN EL navegador
+     tambien cambia por ejemplo
+     http:.../A05_HTML_InlineBlock01/N06_BookmarksEnHTML.html#el_JavaScript
+     http:.../A05_HTML_InlineBlock01/N06_BookmarksEnHTML.html#el_python
+     http:.../A05_HTML_InlineBlock01/N06_BookmarksEnHTML.html#el_java -->
+
+     <a href="#el_java">Java</a> | 
+     <a href="#el_python">Python</a> |
+     <a href="#el_JavaScript">JavaScript</a>
+
+       <!-- Aqui se desplazara al inicio del marco, por eso se coloco el 
+       identificador al nivel del div -->
+       <!-- COMO VEMOS PUEDEN COHEXISTIR UDENTIFICADORES Y CLASES EN LA 
+       MISMA ETIQUETA -->
+        <div id="el_java" class="mi_estilo_tarjeta">
+        <h2>Java</h2>
+
+        <p><span class="titulo">Creador:</span> James Gosling</p>
+    </div>
+
+    <!-- Este salto tambien quedará a nivel del marco, por eso esta
+     ubicado el identificador a nivel del div -->
+    <div id="el_python" class="mi_estilo_tarjeta">
+        <h2>Python</h2>
+        <p><span class="titulo">Creador:</span> Guido van Rossum</p>
+    </div>
+
+    <div class="mi_estilo_tarjeta">
+        <h2 id="el_JavaScript">JavaScript</h2>
+        <p><span class="titulo">Creador:</span> Brendan Eich</p>
+    </div>
+
+    <div>
+        <h2>Resumen de lenguajes de programación</h2>
+        <p>www.mataweb.com.mx</p>
+    </div>
+    
+</body>
+</html>

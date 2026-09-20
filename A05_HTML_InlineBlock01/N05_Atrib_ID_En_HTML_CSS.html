@@ -1,0 +1,54 @@
+<!-- Cuando queremos aplicar un estilo a un solo elemento de la página podemos
+hacerlo mediante el uso el concepto de ID, asi que similar a una clase, vamos
+a usar el elemento ID. 
+Para este ejemplo modificaremos solamente el título que es un elemnto
+unico en nuestra página, por ejemplo en la clase anterio reutilizamos un estilo
+a atraves de una clase, ya que se uso para modificar el Creador en cada
+uno de los títulos de la página (Java, Python, JavaScript), en este caso 
+solamente se modificará el título que es único, por lo que vamos a asignarle
+un estilo UNICO, por lo que si vamos a usar el elemento ID, esté debe ser un
+elemento ÚNICO para toda la página, en cambio los elemento el tipo class, 
+pueden repetirse cuantas veces se requiera-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo del atributo ID</title>
+    <link rel="stylesheet" href="N05_estilos.css">
+</head>
+<body>
+
+    <!-- Este es el elemento único, como regla no debemos tener en la misma 
+         página mas elementos con el mismo identificado para no tener 
+         problemas con javascript 
+         Por buena práctica lo elementos del tipo ID solamente deben aplicarse
+         una sola vez, aún cuando se permite no es recomendable-->
+
+    <h1 id="titulo_principal">Lenguajes de programación</h1>
+
+        <div class="mi_estilo_tarjeta">
+        <h2>Java</h2>
+
+        <p><span class="titulo">Creador:</span> James Gosling</p>
+    </div>
+
+    <div class="mi_estilo_tarjeta">
+        <h2>Python</h2>
+        <p><span class="titulo">Creador:</span> Guido van Rossum</p>
+    </div>
+
+    <div class="mi_estilo_tarjeta">
+        <h2>JavaScript</h2>
+        <p><span class="titulo">Creador:</span> Brendan Eich</p>
+    </div>
+
+    <div>
+        <h2>Resumen de lenguajes de programación</h2>
+        <p>www.mataweb.com.mx</p>
+    </div>
+    
+</body>
+</html>

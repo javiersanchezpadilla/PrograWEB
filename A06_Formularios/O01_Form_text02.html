@@ -1,0 +1,51 @@
+<!-- Agregaremos otro control de texto y ademas indicaremos
+     un valor inicial al texto e indicaremos el valor a enviar
+     en la URL -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios en HTML</title>
+</head>
+<body>
+
+    <h1>Formularios o formas en HTML</h1>
+    <form>
+
+        <!-- 
+        for   Permite relacionar la etiqueta con el control de texto
+        id    en el contorl de texto nos permite darle una identificacion 
+        value Permite dar un valor incial dentro del contrl de texto
+        name  permite indicar el nombre que se va a enviar como parte de la
+              URL dentro de la direccion en la barra de navegación
+              aunque el nombre puede ser distinto al ID, lo recomendable
+              es que tanto el atributo name como ID sean iguales
+              la URL quedaria:
+              http://O01_formuls_text02.html?para_nombre=Karla&para_apellido=Hernandez
+              con lo anterior podemos verificar que como parte del envió se 
+              agrego el nombre y el apellido
+               nomb_atrib    valor    nomb_atrib  valor 
+              ?para_nombre=Karla&para_apellido=Hernandez
+
+              El valor & es para concatenar las cadenas de nombre y apellido
+
+        placeholder Le indica al usuario que es lo que debe colocar en el
+             campo a capturar
+        -->
+
+        <label for="para_nombre">Nombre</label>
+        <input type="text" id="para_nombre" name="para_nombre" value="Javier"/> 
+        <br>
+
+        <label for="para_apellido">Apellido</label>
+        <input type="text" id="para_apellido" name="para_apellido" value="Padilla"/> 
+        <br>
+
+        <input type="submit" value="Enviar"/>
+
+
+    </form>
+</body>
+</html>

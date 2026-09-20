@@ -1,0 +1,67 @@
+<!-- METODOS GET Y POST
+
+     Cuando estamos trabajando con nuestros formularios podemos observar que 
+     la URL de nuestro navegador tenemos la URL y despues el simbolo de 
+     interrogacion (?) y después del símbolo de interrogación, estamos 
+     agregando algunos parámetros, por ejemplo, en este caso el parámetro de 
+     nombre y el parámetro de apellido, a esto se le conoce como query string.
+
+    http://O01_formuls_texto03.html?nombre=javier&apellido=Padilla
+
+    Así que este es el query string que vamos a enviar hacia el servidor.
+    Sin embargo, qué sucede si tenemos información sensible, por ejemplo, si 
+    tenemos un campo de password y no queremos que esta información se 
+    visualice en el query string de esta URL, lo que tenemos que hacer es 
+    cambiar el tipo de método para enviar la información hacia el servidor 
+    por default, El tipo de método que se utiliza para enviar la información 
+    hacia el servidor es el método GET, pero podemos utilizar el método POST 
+    para enviar este formulario hacia el servidor y entonces, en lugar de que 
+    esta información se agregue dentro del URL del navegador, se va a enviar 
+    dentro del cuerpo del mensaje que se envía hacia el servidor.
+    Todo esto simplemente al utilizar el método POST, lo que realmente hace es
+    enviar la información a traves del HTTP Request para no tener que manejarlo 
+    por medio de la URL,quedando la dirección URL intacta.
+
+    Envio con POST
+    http:/A06_Formularios/O02_GetPost.html
+
+    Envio con GET
+    http:A06_Formularios/O02_GetPost.html?nombre=Javier&apellido=Sanchez&password=12345
+
+    Para que el metodo de envió sea GET podemos no definir nada o definirlo 
+    explcitamente (<form>) o (<form method="get">)
+
+    PAra que el método de envio sea POST debemos declararlo <form method="post">
+    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de GTP y POST</title>
+</head>
+<body>
+        <form method="post">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre"
+            placeholder="Escribe tu nombre" required="True"/> 
+        <br>
+
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido"
+        placeholder="Escribe tu apellido" required="True"/> 
+        <br>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password"
+            required="True"/> 
+        <br>
+
+        <input type="submit" value="Enviar"/>
+        <input type="submit" formnovalidate="formnovalidate"
+            value="Enviar sin validar"/>
+
+    </form>
+</body>
+</html>
