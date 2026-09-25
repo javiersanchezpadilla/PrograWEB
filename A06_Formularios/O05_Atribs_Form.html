@@ -1,0 +1,124 @@
+<!-- ATRIBUTOS DE FORM
+
+    Como hemos comentado, esta información realmente se va a procesar ya cuando veamos 
+    el tema de JavaScript o procesar esta información desde un servidor, pero cuando 
+    llegue el momento vamos a necesitar indicar cuál es la vgl que va a procesar este 
+    formulario.
+    Para ello, vamos a agregar el atributo de Action y entonces aquí podemos indicar 
+    cuál es el componente del lado del servidor o la web que va a procesar este servidor.
+    Por ejemplo, en este caso podríamos poner simplemente Mi servidor o la URL que va
+    a procesar este servidor
+
+    <form action="el_servidor_de_javier"> 
+        
+    Lo anterior me dara como resultado una cadena de este tipo
+                                          ||||||||||||||||||||
+                                          ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
+    http://127.0.0.1:5500/A06_Formularios/el_servidor_de_javier?nombre=pedro&
+    apellido=roja&correo=rojasp%40gmail.com&edad=43&masculino=masculino&
+    genero=masculino&musica=clasica&musica=jazz&autos=bmw&autos=volvo&autos=bmw&
+    autos=audi&comentario=Estos+son+los+comentarios%0D%0A++++++++++++++++
+
+    Si cambiamos el metodo de envio a POST
+    --------------------------------------
+    <form action="el_servidor_de_javier" method="post"> Al momento de enviar obtenemos
+    la cadena obtenida sera:
+
+    http://127.0.0.1:5500/A06_Formularios/el_servidor_de_javier
+
+    Toda la información ya no se envia como parte del Query String, ya no se adunta
+    al URL sino que solo envio la peticion a la URL del servidor, en este caso
+    el_servidor_de_javier pero cada uno de los parametros se encuentra como parte 
+    del cuerpo del mensaje
+
+    Argumento TARGET
+    ----------------
+    Tambien podemos mencionar el atributo de target ya que podemos indicar que la respuesta
+    se cargue la misma ventana (_self), pero tambien podemos usar el atributo de (_blank) para
+    que la respuesta se cargue en una nueva ventana
+                                         ▼▼▼▼▼    ▼▼▼▼▼
+    <form action="el_servidor_de_javier" target="_blank">
+
+    y de esta forma la respuesta la envia a una nuev página 
+
+    AUTOCOMPLETADO
+    --------------
+    Cuando capturamos información por defecto se muestran valores capturados con anterioridad
+    si queremos que no se muestre ningún valor usamos el atributo autocomplete="off" 
+    por defecto aunque no se indique su valor es "on", cuando desactivamos el atributo 
+    autocomplete el navegador deja de sujerir opciones
+
+    <form action="el_servidor_de_javier" autocomplete="off">
+    -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de GTP y POST</title>
+</head>
+<body>
+        <!--                                  ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
+        <form action="el_servidor_de_javier" autocomplete="off">
+            <fieldset>
+
+                <legend>Datos personales: </legend>
+
+                <label for="nombre">Nombre</label><br/>
+                <input type="text" id="nombre" name="nombre"/><br/>
+
+                <label for="apellido">Apellido</label><br/>
+                <input type="text" id="apellido" name="apellido"/><br/>
+
+                <!-- la etiqueta del tipo email agrega una validación básica en la captura -->
+                <label for="correo">E-Mail:</label><br/>
+                <input type="email" id="correo" name="correo"><br/>
+
+                <label for="edad">Edad:</label><br>
+                <input type="number" id="edad" name="edad" step="any"/><br>
+
+                <label>Género</label><br>
+                <input type="radio" id="femenino" name="femenino" value="femenino"/>
+                <label for="femenino">Femenino</label><br>
+                <input type="radio" id="masculino" name="masculino" value="masculino">
+                <label for="masculino">Maesculino</label><br>
+
+                <label>Género</label><br>
+                <input type="radio" id="femenino" name="genero" value="femenino"/>
+                <label for="femenino">Femenino</label><br>
+                <input type="radio" id="masculino" name="genero" value="masculino">
+                <label for="masculino">Maesculino</label><br><br>
+
+                <label>Genero de musica favorita</label><br>
+                <input type="checkbox" id="clasica" name="musica" value="clasica">
+                <label for="clasica">Clásica</label><br>
+
+                <input type="checkbox" id="jazz" name="musica" value="jazz">
+                <label for="jazz">Jazz</label><br>
+
+                <label for="autos">Marca auto favorita:</label><br>
+                <select name="autos" id="autos">
+                    <option value="volvo">Marca Volvo</option>
+                    <option value="bmw">Marca BMW</option> 
+                    <option value="audi" selected=""true>Marca Audi</option>
+                </select>
+                <br>
+                <label for="autosmultiples">Marca auto favorita:</label><br><br>
+
+                <select name="autos" id="autosmultiples" multiple="true">
+                    <option value="volvo">Marca Volvo</option>
+                    <option value="bmw">Marca BMW</option> 
+                    <option value="audi" selected=""true>Marca Audi</option>
+                </select>
+            
+                <br>
+                <textarea name="comentario" id="comentario" rows="2" cols="40">
+                    Este es mi comentario
+                </textarea><br><br>
+                
+                <input type="submit" value="Enviar"/>
+        </fieldset>
+    </form>
+</body>
+</html>

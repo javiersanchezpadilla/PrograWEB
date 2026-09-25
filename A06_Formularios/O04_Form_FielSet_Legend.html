@@ -1,0 +1,93 @@
+<!-- MANEJO DE FIELSET Y LEGEND 
+    Lo anterios permite una mejora visual para dar a entender al usuario que está 
+    dentro de un formulario, es una cuadro que engloba los campos que estamos 
+    capturando, para legen es la leyenda que hace referemcia al cuadro visual que
+    engloba los campos.
+    LO ANTERIOR NO CAMBIA NADA DE LO QUE SE ENCIA AL SERVIDOR, SOLO ES UNA MEJORA 
+    VISUAL, todos los demas elementos funcionan igual
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de GTP y POST</title>
+</head>
+<body>
+        <form>  <!-- Al no definir un metodo se asume como GET -->
+            <!-- Agregamos la etiqueta de fielset, muy importante la etiqueta
+                debe envolver los campos que queremos que se visualizen dentro
+                del marco, por lo que la etiqueta de cierra la moveremos al final
+                de los inputs, REALMENTE AL COLOCARSE DESPUÉS DE LA ETIQUETA FORMS
+                FIELSET BEDEMOS CERRARLA ANTES DEL CIERRE DE LA ETIQUETA FORMS
+                y adema agregaremos una tabulación  a todas las etiquetas que esten
+                dentro del rango fielset para entender todo lo que stará dentro 
+                (envuelto por fielset)-->
+            <fieldset>
+
+                <!-- Ahora agegamos la etiqueta de legend, esta leyenda aparecer dentro del 
+                marco de fielset, es una manera de entender de que trata el formulario -->
+
+                <legend>Datos personales: </legend>
+
+                <label for="nombre">Nombre</label><br/>
+                <input type="text" id="nombre" name="nombre"/><br/>
+
+                <label for="apellido">Apellido</label><br/>
+                <input type="text" id="apellido" name="apellido"/><br/>
+
+                <!-- la etiqueta del tipo email agrega una validación básica en la captura -->
+                <label for="correo">E-Mail:</label><br/>
+                <input type="email" id="correo" name="correo"><br/>
+
+                <label for="edad">Edad:</label><br>
+                <input type="number" id="edad" name="edad" step="any"/><br>
+
+                <label>Género</label><br>
+                <input type="radio" id="femenino" name="femenino" value="femenino"/>
+                <label for="femenino">Femenino</label><br>
+                <input type="radio" id="masculino" name="masculino" value="masculino">
+                <label for="masculino">Maesculino</label><br>
+
+                <label>Género</label><br>
+                <input type="radio" id="femenino" name="genero" value="femenino"/>
+                <label for="femenino">Femenino</label><br>
+                <input type="radio" id="masculino" name="genero" value="masculino">
+                <label for="masculino">Maesculino</label><br><br>
+
+                <label>Genero de musica favorita</label><br>
+                <input type="checkbox" id="clasica" name="musica" value="clasica">
+                <label for="clasica">Clásica</label><br>
+
+                <input type="checkbox" id="jazz" name="musica" value="jazz">
+                <label for="jazz">Jazz</label><br>
+
+                <label for="autos">Marca auto favorita:</label><br>
+                <select name="autos" id="autos">
+                    <option value="volvo">Marca Volvo</option>
+                    <option value="bmw">Marca BMW</option> 
+                    <option value="audi" selected=""true>Marca Audi</option>
+                </select>
+                <br>
+                <label for="autosmultiples">Marca auto favorita:</label><br><br>
+
+                <select name="autos" id="autosmultiples" multiple="true">
+                    <option value="volvo">Marca Volvo</option>
+                    <option value="bmw">Marca BMW</option> 
+                    <option value="audi" selected=""true>Marca Audi</option>
+                </select>
+            
+                <br>
+                <textarea name="comentario" id="comentario" rows="2" cols="40">
+                    Este es mi comentario
+                </textarea><br><br>
+                
+
+                <input type="submit" value="Enviar"/>
+
+        <!-- Aqui cerramos la etiqueta del fielset -->
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+/* Aqui se aplican los estilos mediante un archivo externo */
+/* Agregamos el selector del tipo h1 */
+
+/* En este ejemplo tomara prioridad el estilo definido dentro
+del documento HTML, para cambiar esa prioridad podemos indicar
+que este archivo tendrá mayorprioridad agregando la terminación
+!important  */
+
+h1 { /* h1 es el selector que permitira definir los estilos
+                para todos lo elementos del tipo h1 */
+            color: blue!important; 
+            text-align: right;
+}
+
+/* DEfinimos un estilo para los h2 */
+h2 {
+    color: violet;
+}

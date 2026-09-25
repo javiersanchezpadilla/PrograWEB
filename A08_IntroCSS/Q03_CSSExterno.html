@@ -1,0 +1,45 @@
+<!-- ESTILOS MEDIANTE UN ARCHIVO EXTERNO
+    
+    Podemos colocar los estilos en un archivo externo, pero es
+    necesario indiquemos dentro de la cabecera del documento HTML
+    donde se ubica y relacionarlo como una hoja de estilos
+    <link rel="stylesheet" href="Q03_estilos.css">
+
+    En este ejemplo no solo colocamos los selectores en un arcvhivo 
+    externo, sino que tambien entendemos el manejo de la prioridad,
+    revisar el archivo externo y analizar que sucede si en el selector
+    h1 quitamos la etiqueta !important, veremos que romara prioridad 
+    el estilo definido dentro del documento HTML sobre el estilo 
+    externo, pero con !important cambia, sin embargo lo correcto es
+    que sea en un archivo externo toda definición de estilos
+
+                       +--→  ESTILOS INLINE CSS     Prioridad 1
+                       |
+    TIPOS DE ESTILOS --+--→  ESTILOS INTERNOS CSS   Prioridad 2
+                       |
+                       +--→  ESTILOS EXTERNOS CSS   Prioridad 3 
+
+                       Nota: !important cambia la prioridad
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creación de selectores</title>
+    <link rel="stylesheet" href="Q03_estilos.css">
+
+    <style>
+        h1 { /* h1 es el selector que permitira definir los estilos
+                para todos lo elementos del tipo h1 */
+            color: red;
+            text-align: right;
+        }
+     </style>
+</head>
+<body>
+    <h1>Curso de Programación WEB</h1>
+
+    <h2>Elementos del tipo h2</h2>
+</body>
+</html>

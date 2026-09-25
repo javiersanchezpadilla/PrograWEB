@@ -1,0 +1,88 @@
+/* 1. Agregamos un estilo general al documento */
+html {
+    height: 100;
+}
+
+/* 2. Agregamos un etilo al cuerpo del documento eliminando el margen 
+      y el padding */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#7209b7, #3f37c0);
+}
+
+/* 3. Agregamos una clase  
+      agregamos un margen de 50 pixeles arriba y abajo y para izquierda y
+      derecha un margen auto para que se centre de acuerdo al tamaño de la 
+      pantalla
+      el background-color 0 es transparente 1 sin transparencia .5 mitad y mitad
+      */
+.contenedor {
+    margin: 50px auto;
+    width: 400px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+}
+
+/* 4. Para aplicar a los elementos dentro de la clase contenedor y cambiar
+      el estilo */
+.contenedor h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    font-size: 30px;
+    color: #4cc9f0;
+    text-align: center;
+}
+
+/* 5. Para modificar lo que este dentro de la clase contenedor creando 
+      la clase .elemento para que aplique solo a las etiquetas label
+      Cambia el color del texto de los elementos que esten dentro de un
+      elemento que contenga la clase contenedor, luego la clase elemento y
+      que este dentro de una etiqueta LABEL, si dejamos el puntero del 
+      raton sobre cualquier elemento de la definicion de la clase nos mostrará
+      donde es que tomará efecto esta clase definida por los selectores 
+
+      <element class="contenedor">
+        ...
+        <element class="elemento">
+            ...
+            <label>
+*/
+.contenedor .elemento label {
+    color: white;
+}
+
+/* 6. Ahora vamos a crear otro selector para los elementos del tipo input */
+.contenedor .elemento input {
+    width: 100%;        /* Agrega un ancho de 100 %*/
+    padding: 10px 0;    /* Padding de 10px (arriba y abajo) y 0 (izq. y der.) */
+    color: #fff;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 30px;    /* para separar los elementos */
+}
+
+
+
+
+/* 7. Agregamos los estilos para el boton de submit, aunque es un input como
+      en el selector anterior tenemos que ser especificos e indicar que seran 
+      solo los del tipo submit (que son los que nos interesa), aun que hay 
+      botones de diferentes tipos en nuestro caso solo nos interesan los del
+      tipo submir           ▼▼▼▼▼▼▼▼▼▼▼▼      */
+
+  
+.contenedor .elemento input[type="submit"] {
+    background-color: #f72585;        /* Le asignamos el color rosa */
+    border: none;                       /* le quitamos el borde al boton */
+    letter-spacing: 5px;                /* Separa las letras 5 pixeles*/
+    text-transform: uppercase;          /* Cambiar las letras del boton a mayúsculas */
+    cursor: pointer;                    /* cuando pasamos el puntero sobre el boton 
+                                           cambia a una manita */
+    padding: 25px;                      /* Aumento un padding de 15 px arriba, abajo,
+                                           izquierda y a la derecha */ 
+    margin-top: 30px;
+
+} 

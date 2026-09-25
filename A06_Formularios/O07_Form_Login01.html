@@ -1,0 +1,44 @@
+<!-- DESARROLLO DE UN FORMULARIO HTML Para soliictar el Login 
+ 
+    Recordar que stamos programando la parte del navegador WEB, aún no
+    estamos programando la parte del servidor
+
+    En esta primer parte se trabajara el documento HTML, por que no
+    tendrá mejoras visuales
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Login</title>
+    <link rel="stylesheet" href="O07_estilos.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h2>Login</h2>
+        <form id="forma" name="forma" method="post">
+            <!-- Al envolver los elementos dentro de divs, ya no hace falta 
+                 saltar la linea -->
+
+            <!-- PAra solicitar el nombre del usuario -->
+            <div class="elemento">
+                <label for="usuario">Usuario</label>
+                <input type="text" id="usuario" name="usuario" required="true">
+            </div>
+
+            <!-- Para solicitar la contraseña -->
+            <div class="elemento">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required="true">
+            </div>
+
+            <!-- Para el boton de enviar la información -->
+            <div>
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

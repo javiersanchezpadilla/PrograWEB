@@ -1,0 +1,37 @@
+caracteres para los programas
+
+Oprimir al mismo tiempo Control Shift u
+deplegara una letr "u" en pantalla, solo teclear el 
+código hexadecimal y oprimimos Enter o la barra espaciadora
+
+    código
+    Hexadecimal
+
+Flechas y Triángulos
+----------------------------------
+25bc    ▼   Triángulo hacia abajo relleno
+25bd    ▽   Triángulo hacia abajo vacio
+25b2    ▲   Triángulo arriba relleno
+25b3    ▲   Triángulo arriba hueco
+25ba    ►   Triángulo derecha relleno
+25c4    ◄   Triángulo izquierda relleno
+2192    →   Flecha derecha
+2190    ←   Flecha izquierda
+
+Figuras Geométricas
+------------------------------------
+25a0    ■   Cuadrado relleno
+25a1    □   Cuadrado hueco
+25cf    ●   Círculo relleno
+25cb    ○   Círculo hueco
+2605    ★   Estrella rellena
+2606    ☆   Estrella hueca
+
+Símbolos de Verificación y Sistema
+-------------------------------------
+2713    ✓  Check / Palomita
+2714    ✔  Check grueso
+2717    ✗  Tache / Cruz
+2718    ✘  Tache grueso
+26a0    ⚠  Advertencia
+2699    ⚙  Engrane

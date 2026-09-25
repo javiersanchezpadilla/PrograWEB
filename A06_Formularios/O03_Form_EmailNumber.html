@@ -6,8 +6,8 @@
     http://O03_Form_EmailNumber.html?nombre=Juan+Carlos&apellido=Rodriguez&correo=charly%40gmail.com
                                               ^^^^                                      ^^^^          
 
-    @     Se procesa como %40 dentro de la cadena GET
-    esp   El espacio en blanco se procesa como +
+    @     Se codifica como %40 dentro de la cadena GET
+    esp   El espacio en blanco se codifica como +
 -->
 
 <!DOCTYPE html>
@@ -26,8 +26,18 @@
         <label for="apellido">Apellido</label><br/>
         <input type="text" id="apellido" name="apellido"/><br/>
 
+        <!-- la etiqueta del tipo email agrega una validación básica en la captura -->
         <label for="correo">E-Mail:</label><br/>
         <input type="email" id="correo" name="correo"><br/>
+
+        <!-- Contiene una validación basica donde no permite capturar otra cosa que 
+        no sean valores numéricos, sin embargo si capturamos un punto por ejemplo
+        123.4 al momento de intentar enviar con el boton nos mostrará un mensaje que
+        dira que los valores validos mas aproximados son 124 y 125, EN CASO DE QUERER
+        MANEJAR VALORES CON DECIMALES DEBEMOS USAR step="any" para aceptar valores 
+        numericos enteros y decimales-->
+        <label for="edad">Edad:</label><br>
+        <input type="number" id="edad" name="edad" step="any"/><br>
 
         <input type="submit" value="Enviar"/>
     </form>

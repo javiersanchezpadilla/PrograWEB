@@ -1,0 +1,105 @@
+<!-- PROCESAMIENTO DE FORMULARIOS DEL TIPO SELECT Y TEXT AREA
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de GTP y POST</title>
+</head>
+<body>
+        <form>  <!-- Al no definir un metodo se asume como GET -->
+
+        <label for="nombre">Nombre</label><br/>
+        <input type="text" id="nombre" name="nombre"/><br/>
+
+        <label for="apellido">Apellido</label><br/>
+        <input type="text" id="apellido" name="apellido"/><br/>
+
+        <!-- la etiqueta del tipo email agrega una validación básica en la captura -->
+        <label for="correo">E-Mail:</label><br/>
+        <input type="email" id="correo" name="correo"><br/>
+
+        <label for="edad">Edad:</label><br>
+        <input type="number" id="edad" name="edad" step="any"/><br>
+
+        <label>Género</label><br>
+        <input type="radio" id="femenino" name="femenino" value="femenino"/>
+        <label for="femenino">Femenino</label><br>
+        <input type="radio" id="masculino" name="masculino" value="masculino">
+        <label for="masculino">Maesculino</label><br>
+
+        <label>Género</label><br>
+        <input type="radio" id="femenino" name="genero" value="femenino"/>
+        <label for="femenino">Femenino</label><br>
+        <input type="radio" id="masculino" name="genero" value="masculino">
+        <label for="masculino">Maesculino</label><br><br>
+
+        <label>Genero de musica favorita</label><br>
+        <input type="checkbox" id="clasica" name="musica" value="clasica">
+        <label for="clasica">Clásica</label><br>
+
+        <input type="checkbox" id="jazz" name="musica" value="jazz">
+        <label for="jazz">Jazz</label><br>
+
+        <!-- Agreamos u nlabel, en los elementos del tipo select, un usuario puede
+        elegir uno o varios elementos de un listado,al cual se le asignara unID
+        en este caso el de autos -->
+        <label for="autos">Marca auto favorita:</label><br>
+        <select name="autos" id="autos">
+            <!-- Aunque el texto dice Volvo, no es lo que se envia al servidor, lo que 
+            realmente se envia es lo marcado en la etiqueta value="volvo", etonces
+            aunque el texto diga Marca Volvo, podemos enviar como valor value=1, 
+            value="perro", etc. 
+            Cuando queremos que se muestre uno de los valores por defecto dentro dela
+            etiqueta que contiene la opcion indicamos selected="true", en este ejemplo
+            en lugar de que se muestre al primer valor Marca Volvo, se mostrará el Audi
+             -->
+            <option value="volvo">Marca Volvo</option>
+            <option value="bmw">Marca BMW</option> 
+            <option value="audi" selected=""true>Marca Audi</option>
+        </select>
+        <br>
+
+        <!-- PARA SELECCIÓN MULTIPLE DE OPCIONES -->
+        <label for="autosmultiples">Marca auto favorita:</label><br><br>
+
+        <!-- Aqui agregamos la etiqueta para selección multiple, al momento de desplegar
+        para seleccionar debemos oprimir Control y dar clic sobre cada elemento a 
+        seleccioanar o mediante un clic arrastrado que barra los elementos multiples
+        que queremos seleccionar                 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼  -->
+        <select name="autos" id="autosmultiples" multiple="true">
+            <option value="volvo">Marca Volvo</option>
+            <option value="bmw">Marca BMW</option> 
+            <option value="audi" selected=""true>Marca Audi</option>
+        </select>
+        <!-- La cadena enviada seleccionando los tres seria
+        http://127.0.0.1:5500/A06_Formularios/O03_Form_SelectTextArea.html?
+        nombre=Pedro&apellido=Gutierrez&correo=pgut%40gmail.com&edad=23&masculino=masculino&
+        genero=masculino&musica=clasica&autos=bmw&autos=volvo&autos=bmw&autos=audi
+                                         ▲▲▲▲     ▲▲▲▲        ▲▲▲▲ 
+        Lo anterior quiere decir que se están enviando tres valores en una misma variable
+        autos = [bmw, volvo, audi ]-->
+       
+        <br>
+        <!-- Manejo de text area para capturar textos grandes, por ejemplo cuand un usuario
+         captura comentarios lo común es que sean mas de dos lineas enviadas -->
+        <label for="comentario">Comentario</label>
+        <!-- Definimos el total de renglones y colomnas inciales a visualizar 
+         ahora bien el texto que colocamos para mostrar dentro del mayor que y menor que
+         toma tabulaciones, esapcios  o enters que dejemos entre estos signos y el texto
+         por ejemplo antes de la palabra Este es mi comentario hay espacios en blanco, los
+         cuales se mostrarán al momento de imprimir en pantalla el texto son 12 espacios
+         antes del inicio del texto.
+         Los valores de rows y cols son solo para visualizar, ya que al momento de usarlo
+         podemos usar mas renglones de los necesarios-->
+        <textarea name="comentario" id="comentario" rows="2" cols="40">
+            Este es mi comentario
+        </textarea><br><br>
+        
+
+        <input type="submit" value="Enviar"/>
+    </form>
+</body>
+</html>

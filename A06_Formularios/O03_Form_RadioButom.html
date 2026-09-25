@@ -1,0 +1,70 @@
+<!-- PROCESAMIENTO DE FORMULARIOS DEL TIPO RADIOBUTTON Y CHECKBOXES
+     Apunte 52B
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de GTP y POST</title>
+</head>
+<body>
+        <form>  <!-- Al no definir un metodo se asume como GET -->
+
+        <label for="nombre">Nombre</label><br/>
+        <input type="text" id="nombre" name="nombre"/><br/>
+
+        <label for="apellido">Apellido</label><br/>
+        <input type="text" id="apellido" name="apellido"/><br/>
+
+        <!-- la etiqueta del tipo email agrega una validación básica en la captura -->
+        <label for="correo">E-Mail:</label><br/>
+        <input type="email" id="correo" name="correo"><br/>
+
+        <label for="edad">Edad:</label><br>
+        <input type="number" id="edad" name="edad" step="any"/><br>
+
+        <!-- Vamos a solicitar el genero, creando un error, ya que se podrán seleccionar
+        ambos generos al mismo tiempo
+        Para este control primero es el control (circulito) y luego la etiqueta (texto) 
+        -->
+        <label>Género</label><br>
+        <input type="radio" id="femenino" name="femenino" value="femenino"/>
+        <label for="femenino">Femenino</label><br>
+        <input type="radio" id="masculino" name="masculino" value="masculino">
+        <label for="masculino">Maesculino</label><br>
+
+        <!-- Para corregir el problema del control anterior debemos hacer lo siguiente
+         el nombre (name) lo igualamos a un solo valor, de esta manera solo se podrá 
+         seleccionar uno de los dos, si está marcado uno y selecciona el otro automaticamente
+         se deja de seleccionar el otro y visceversa, ademas lo común en los RADIO
+         BUTTON es que solo se seleccione un valor de todos los mostrados
+        -->
+        <label>Género</label><br>
+        <input type="radio" id="femenino" name="genero" value="femenino"/>
+        <label for="femenino">Femenino</label><br>
+        <input type="radio" id="masculino" name="genero" value="masculino">
+        <label for="masculino">Maesculino</label><br><br>
+
+
+        <!-- Tipo de boton CHECKBOX, argumentos del checkbox (podemos seleccionar uno)
+         id      Asignamos el valor de musica clasica
+         name    Debe ser el mismo en todos los elemento checkbox que deseemos relacionar
+                 el valor de name debe ser igual que el ID
+         value   Es lainformación que se va a envier alservidor como información
+        -->
+        <label>Genero de musica favorita</label><br>
+        <input type="checkbox" id="clasica" name="musica" value="clasica">
+        <label for="clasica">Clásica</label><br>
+
+        <input type="checkbox" id="jazz" name="musica" value="jazz">
+        <label for="jazz">Jazz</label><br>
+
+
+
+
+        <input type="submit" value="Enviar"/>
+    </form>
+</body>
+</html>

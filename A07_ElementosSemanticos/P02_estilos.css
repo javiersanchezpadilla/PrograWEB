@@ -1,0 +1,73 @@
+/* Aqui se definiran los estilos a aplicar en el documento html */
+
+/* 1. Modificamos el estilo del encabezado */
+header {
+    color: #f72585;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* 2. Mejoramos nuesta etiqueta de navegación, al flotarla hacia la izquierda
+      todos los elementos se mezclan entre si, por lo que debemos flotar las 
+      secciones hacia la derecha */
+nav {
+    width: 20%;     /* 20% del espacio disponible*/
+    float: left;
+}
+
+/* 4. VAmos a mejora las anclas que se encuentren el la navegación */
+nav a {
+    background-color: #f71570;
+    /* lsi lado superior izquierdo 10px, lsd lado superior derecho 0px
+       lid lado inferior derecho   10px  lii lado inferior izquierdo 0px 
+                   lsi  lsd  lid lii*/
+    border-radius: 10px  0   10px 0;  /* lado supr 10 px derech no inferior 10px izquierda 0*/
+    color: #fff;                    /* se asigna el color blanco*/
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;              /* para que no se subrayen los textos */
+    /* como los elementos del tipo nav son del tipo INLINE, los debemos convertir para
+       que sean elementos del tipo bloque */
+    display: block;
+}
+
+/* 3. Flotamos este elemento hacia la dercha y le ponemos un ancho del 75% del
+      espacio disponible */
+section {
+    float: right;
+    width: 75%; 
+    color: #7209b7;
+    border-radius: 5px;
+    /* border: 1px solid black;    Este borde es temporal solo para ver la seccion */
+    box-shadow: 1px 0 4px rgb(0, 0, 0, .2);   /* permite agregar una sombra al rededor */
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+/* 4. Mejoramos la etiqueta de aside */
+aside {
+    float: right;
+    width: 30%;
+    padding: 5px;
+    margin: 5px;
+    font-style: italic;
+    color: #4361ee;
+    /* INSET  no queremos la sombra del lado externo la queremos del lado interno
+       5px    en el eje "x" 
+       0      cero pixeles en el eje "y"
+       5px    para el blur (difuminar) 
+       -5px   para el valor de spread (propagar) */
+    box-shadow: inset 5px 0 5px -5px #4895ef;
+}
+
+/* 5. Mejoramos la etiqueta de footer*/
+footer {
+    clear: both;
+    padding: 1px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+
+}

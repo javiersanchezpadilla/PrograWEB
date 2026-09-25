@@ -1,0 +1,139 @@
+<!-- ATRIBUTOS ELEMENTO INPUT
+
+    BOTON RESET
+    -----------
+    ADemas de los botones que tenemos configurados en nuestro formulario, podemos 
+    agregar un boton que resetee el formulario y cargue todos los valores a los 
+    valores iniciales
+
+           ▼▼▼▼▼▼▼▼▼▼▼  ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
+    <input type="reset" value="Restablecer Valores">
+
+
+    CAMPOS DE SOLO LECTURA
+    ----------------------
+    Si queremos mostar el valor de un campo pero no queremos que el usuario lo modifique
+    el usuario no puede modificar esa información pero si se va a envier al servidor
+    por ser parte del formulario.
+    CUANDO DEFINIMOS SOLO LECTURA EL USUARIO NO PUEDE MODIFICAR EL VALOR, PERO EL VALOR
+    SI ES ENVIADO EL VALOR AL SERVIDOR
+
+    <label for="idPersona">Persona:</label><br/>
+    <input type="text" id="idPersona" name="ipPersona" readonly="true" value="100"/><br/>
+                                                       ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ ▲▲▲▲▲ 
+
+                        El valor aunque no se modifica es enviado al servidor
+                                                      ▼▼▼▼▼▼▼▼▼▼▼▼▼  
+    http://127.0.0.1:5500/A06_Formularios/mi_servidor?ipPersona=100&nombre=juan&
+    apellido=perez&correo=perezj%40gmail.com&edad=19&masculino=masculino&
+    genero=masculino&musica=clasica&musica=jazz&autos=bmw&autos=bmw&autos=audi&
+    comentario=estas+son+anotaciones++++++++++
+
+    DESHABILITAR EL VALOR.
+    ----------------------
+    Podemos agregar el argumento disable para que no se vea como un campo activo y solamente
+    se vea el valor en pantalla,SOLO QUE AL DESACTIVARLO EL VALOR NO ES ENVIADO AL SERVIDOR
+    CUANDO DESHABILITAMOS EL VALOR EL VALOR SE MUESTRA EN PANTALLA, EL USUARIO NO PUEDE 
+    MODIFICARLO PERO AL ENVIAR NO ES ENVIADO AL SERVIDOR
+
+                <label for="idPersona">Persona:</label><br/>
+                <input type="text" id="idPersona" name="ipPersona"
+                       readonly="true" value="100" disabled="true"/><br/>
+                                                   ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
+
+
+    PARAMETROS OCULTOS
+    ------------------
+    Para ocultar información al momento de enviarla al servidor, el usuario no vera en 
+    pantalla esa información pero si es enviada 
+                                                                    ▼▼▼▼▼▼▼▼▼▼▼
+    http://127.0.0.1:5500/A06_Formularios/mi_servidor?ipPersona=100&hidden=SAP&
+    nombre=Juan&apellido=perez&correo=perezj%40gmail.com&edad=22&masculino=masculino&
+    genero=masculino&musica=clasica&musica=jazz&autos=bmw&autos=bmw&autos=audi&
+    comentario=anotaciones+++
+
+    -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de GTP y POST</title>
+</head>
+<body>
+        <form action="mi_servidor">  <!-- Se cambio el nombre del servidor -->
+            <fieldset>
+
+                <legend>Datos personales: </legend>
+
+                <!-- Elementos del tipo READONLY, se pueden ver pero no se pueden mofificar -->
+                <label for="idPersona">Persona:</label><br/>
+                <input type="text" id="idPersona" name="ipPersona"
+                       readonly="true" value="100" disabled="true"/><br/>
+                <!--   ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲     ▲ valor asignado solo para mostrar-->
+
+                <!-- Elementos del tipo HIDDEN no se muetran en pantalla pero si son
+                 enviados al servidor-->
+                 <input type="hidden" id="hidden" name="hidden" value="SAP">
+
+
+                <label for="nombre">Nombre</label><br/>
+                <input type="text" id="nombre" name="nombre"/><br/>
+
+                <label for="apellido">Apellido</label><br/>
+                <input type="text" id="apellido" name="apellido"/><br/>
+
+                <!-- la etiqueta del tipo email agrega una validación básica en la captura -->
+                <label for="correo">E-Mail:</label><br/>
+                <input type="email" id="correo" name="correo"><br/>
+
+                <label for="edad">Edad:</label><br>
+                <input type="number" id="edad" name="edad" step="any"/><br>
+
+                <label>Género</label><br>
+                <input type="radio" id="femenino" name="femenino" value="femenino"/>
+                <label for="femenino">Femenino</label><br>
+                <input type="radio" id="masculino" name="masculino" value="masculino">
+                <label for="masculino">Maesculino</label><br>
+
+                <label>Género</label><br>
+                <input type="radio" id="femenino" name="genero" value="femenino"/>
+                <label for="femenino">Femenino</label><br>
+                <input type="radio" id="masculino" name="genero" value="masculino">
+                <label for="masculino">Maesculino</label><br><br>
+
+                <label>Genero de musica favorita</label><br>
+                <input type="checkbox" id="clasica" name="musica" value="clasica">
+                <label for="clasica">Clásica</label><br>
+
+                <input type="checkbox" id="jazz" name="musica" value="jazz">
+                <label for="jazz">Jazz</label><br>
+
+                <label for="autos">Marca auto favorita:</label><br>
+                <select name="autos" id="autos">
+                    <option value="volvo">Marca Volvo</option>
+                    <option value="bmw">Marca BMW</option> 
+                    <option value="audi" selected=""true>Marca Audi</option>
+                </select>
+                <br>
+                <label for="autosmultiples">Marca auto favorita:</label><br><br>
+
+                <select name="autos" id="autosmultiples" multiple="true">
+                    <option value="volvo">Marca Volvo</option>
+                    <option value="bmw">Marca BMW</option> 
+                    <option value="audi" selected=""true>Marca Audi</option>
+                </select>
+            
+                <br>
+                <textarea name="comentario" id="comentario" rows="2" cols="40">
+                    Este es mi comentario
+                </textarea><br><br>
+                
+                <input type="submit" value="Enviar"/>
+
+                <input type="reset" value="Restablecer Valores">
+        </fieldset>
+    </form>
+</body>
+</html>

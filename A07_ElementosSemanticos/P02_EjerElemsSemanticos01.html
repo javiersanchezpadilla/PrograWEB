@@ -1,0 +1,65 @@
+<!-- EJERCICIO SOBRE EL USO DE LOS ELEMENTOS SEMANTICOS 
+    
+    LAs etiquetas semanticas se agregaron a partir de HTML 5
+    En este ejercicio se veran de forma general y poteriormente
+    se mejoraran visualmente con CSS
+
+    Si hacemos los disiintos bloques a traves de etiquetas div, no
+    veriamos ningún cambio, sin embargo el ocupar estas eiquetas semanticas
+    permiten que el navegador identifique mas facilmente donde estamos
+    (leer lo referente a DOM Document Object Model)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas semanticas en HTML</title>
+</head>
+<body>
+    <!-- Esta parte se considera parte del cabecero -->
+    <!-- Esto reeemplazaria a <div class="cabecera"> y posteriormente
+        se agegrba un estilo con base a la clase cabecera, ahora ya no es
+        necesario, ya que solo existe un header para todo el documento html 
+        ademas un div no tiene ningun significado semantico, aun que el resultado
+        es exactamente el mismo, PERO LE VAN PERMITIR AL NAVEGADOR WEB IDENTIFICAR
+        DONDE ESTAMOS, ASI COMO LAS PERSONAS QUE REVISEN EL CÓDIGO-->
+    <header>  
+        <h1>Etiquetas semanticas en HTML 5</h1>
+    </header>
+
+    <!-- Creamos una barra de navegación, el href="#" deja al dar clic en la misma pagina -->
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="#">Contacto</a>
+        <a href="#">Acerca de</a>
+    </nav>
+
+    <!-- Cramos una seccion -->
+    <section>
+        <h2>Seccion 1</h2>              
+        <p>Información de la sección</p>
+        <aside>                         <!-- Para agregar informaciónextra de la seccion -->
+            <p>Nombre del Autor</p>
+        </aside>
+    </section>
+    <!-- Creamos otra sección -->
+    <section>
+        <h2>Seccion 2</h2>
+        <article>
+            <h3>Articulo 1</h3>
+        </article>
+        <article>
+            <h3>Articulo 2</h3>
+        </article>
+    </section>
+
+    <footer>
+        <h2>
+            <a href="https://www.google.com">ir a Google</a>
+        </h2>
+    </footer>
+</body>
+</html>
