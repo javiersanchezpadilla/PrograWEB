@@ -4,7 +4,7 @@ MODELO DE CAJAS DE CSS (BOX MODEL)
 
 Las CAJAS css, el CONTENIDO esta envuelto en una caja de PADDING, el padding
 está dentro de otra caja llamada BORDE, el borde este contenido en la caja del
-MARGE
+MARGEN
 
 
     +-----------------------------------------------------------------------+
@@ -23,3 +23,81 @@ MARGE
     |   +---------------------------------------------------------------+   |
     |                                           Botom                       |
     +-----------------------------------------------------------------------+
+
+Cada elemento de una página web (una imagen, un párrafo, un botón) es como un 
+regalo envuelto en una caja. El Box Model (o Modelo de Caja) es la regla que 
+usa CSS para calcular el espacio que ocupa cada uno de esos "regalos" en la 
+pantalla.
+
+Para entenderlo fácilmente, vamos a desarmar la caja de adentro hacia afuera:
+
+Las 3 capas de la caja
+----------------------
+    A)  El Contenido (CONTENT): Es el regalo que está adentro. Por ejemplo, el 
+        texto que estás leyendo o una foto.
+    B)  El Relleno (PADDING): Es el papel burbuja o el espacio que hay entre 
+        tu regalo y las paredes internas de la caja.
+        Ejemplo práctico: Si tienes un botón con texto y le pones padding, el 
+        botón se ve más gordo y espacioso por dentro. El texto respira y no 
+        queda pegado a la orilla.
+    C)  El Borde (BORDER): Es el cartón duro de la caja. Es la línea que dibuja 
+        el límite exterior del elemento.
+        Ejemplo práctico: Puedes hacer que el borde sea una línea negra sólida, 
+        de color rojo o invisible.
+    d)  El Margen (MARGIN): Es el espacio que dejas entre esta caja y las demás 
+        cajas que están a su alrededor en la mesa.
+        Ejemplo práctico: Si pones dos botones juntos y quieres que no estén 
+        pegados, les agregas margin para empujar a los vecinos y crear distancia.
+
+¿Qué son Top, Bottom, Left y Right?
+-----------------------------------
+    Tanto el relleno (PADDING) como el margen (MARGIN) se pueden controlar por 
+    cada uno de los 4 lados de la caja de forma independiente. Sus nombres en 
+    inglés son súper intuitivos:
+
+    top: Arriba.
+    bottom: Abajo.
+    left: Izquierda.
+    right: Derecha.
+
+Ejemplo en la vida real:
+------------------------
+Imagina que estás escribiendo una carta en una hoja de papel:
+    El PADDING sería el espacio que dejas desde el borde del papel hacia adentro 
+    antes de empezar a escribir.
+    El MARGIN sería la distancia que guardas entre esa hoja de papel y los 
+    cuadernos que tienes al lado en tu escritorio.
+
+Si configuras 
+
+    margin-top: 20px;, le estás diciendo: Empújate 20 píxeles hacia abajo, 
+                                          alejándote del elemento que tengas arriba".
+
+En código CSS se vería así:
+
+    .mi-caja {
+    /* Espacio por dentro de la caja */
+    padding-top: 10px;
+    padding-right: 20px;  
+    padding-bottom: 10px; 
+    padding-left: 20px;
+
+    /* Línea de la caja */
+    border: 2px solid black;
+
+    /* Espacio por fuera (separación con otros elementos) */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    }
+
+Truco: Para no escribir las 4 líneas siempre, CSS te deja escribirlo en una sola 
+línea siguiendo el sentido de las manecillas del reloj: Arriba, Derecha, Abajo, 
+Izquierda (como las agujas del reloj: 12, 3, 6, 9). 
+
+                12          
+                ▲           Arriba   derecha    Abajo   izquierda
+            9   |    3
+
+                6
+
+    Ejemplo: margin: 15px 20px 15px 20px;

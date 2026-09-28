@@ -8,11 +8,19 @@ p{
     color:white;
     background-color: crimson;
     /* Si defino un valor para el padding, esté se aplicará para todas las
-    posiciones (arriba, abajo, izquierda y derecha) */
-    padding: 15px;
+    posiciones (arriba, derecha, abajo  e izquierda) */
+    /* padding: 15px; */
+    padding: 10px 30px 50px 60px;
 
     /* Manejaremos ademas un borde de 10 pixeles de color azul palido */
-    border: 10px solid powderblue;
+    /* border: 10px solid powderblue; */
+    border-width: 10px 20px 30px 40px;
+    border-style: solid;
+    border-color: powderblue;
+
+
+
     /* Aplicamos un margen en todos los lados */
     margin: 50px;
+
 }
