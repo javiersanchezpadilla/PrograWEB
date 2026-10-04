@@ -1,10 +1,32 @@
+/* MUY IMPORTANTE!!!!
+   A los elementos de PADDING y MARGIN No podemos agregarles color */
+
 h1 {
     text-align: center;
     color: #e63946;
 }
 
 div {
-    padding: 10px;
-    border: 15px solid #457b9d;
-    margin: 20px;
+    padding: 10px;                /* 10 px del lado izq y 10px del der */
+    border: 15px solid #457b9d; /* 15 px del lado izq y 15px del der */
+    margin: 20px;                 /* 20 px del lado izq y 20px del der */
+    background-color: #f1faee;
+
+    /* le asignamos un ancho fijo de 300 pixeles en este caso este ancho 
+    es asignado unicamente al elemento HTML, si queremos saber el ancho 
+    real tenemos que sumar, así que para saber el ancho total de nuestro 
+    elemento hay que sumarle lo siguiente hay que sumarle el padding, 
+    el ancho del padding y también el ancho de nuestro borde.
+    En este caso, para saber el total, tenemos que sumar el borde 
+    izquierdo y derecho, el padding izquierdo y derecho, y 
+    finalmente el ancho de nuestro contenido.
+    Tenemos 300 píxeles, psteriormente, del lado izquierdo tenemos un 
+    padding de 10 píxeles, del lado izquierdo 10 píxeles, del lado 
+    derecho llevamos 320 píxeles y finalmente el borde.
+    Tenemos un borde de 15 píxeles del lado izquierdo y 15 píxeles del 
+    lado derecho, así que vamos a tener un total de 350 píxeles.
+    Que es el ancho completo de nuestro elemento, esto sin considerar 
+    los márgenes, pero es importante lo que hemos comentado respecto a 
+    sumar el borde */
+    width: 300px;
 }

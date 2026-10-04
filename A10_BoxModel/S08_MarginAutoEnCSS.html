@@ -1,0 +1,47 @@
+<!-- MARGIN AUTO PARA CENTRAR ELEMENTOS EN CSS
+
+    Vamos a poder definir un ancho para un elemento HTML y ademas
+    centrarlo, ESTO SOLO FUNCIONA PARA ELEMENTOS DEL TIPO BLOQUE
+
+    Recordar que tenemos dos tipos de elementos:
+
+    ELEMENTOS EN LINEA (INLINE CON SPAN)
+    -----------------------------------
+    INLINE: (Elementos en linea) no aplican nueva linea al final del elemento
+    SPAN    Etiqueta pAra el manejo de los elementos del tipo INLINE
+            Los elementos en linea no aplican una nueva linea, sino que se 
+            aplican en la linea donde estamos trabajando
+
+     Cada camnio realido con <SPAN> deja el control en la misma linea (INLINE)
+     +-------+ +-----+ +-------------------+ +--+ +-----------+ +-------+
+     |   1   | |  2  | |        3          | |4 | |    5      | |   6   |
+     +-------+ +-----+ +-------------------+ +--+ +-----------+ +-------+
+    
+    MANEJO DE ELEMENTOS EN BLOQUE (BLOCK CON DIV)
+    ---------------------------------------------
+
+     BLOCK: (Elementos en bloque) aplican una nueva linea por cada elemento
+     DIV    Para el manejo de los elementos del tipo BLOCK (inician en una
+            nueva linea)
+     +-------+ 
+     |   1   | 
+     +-------+ cada camnbio realizado con <DIV> Se inician en una nueva linea
+     +-------+
+     |   2   |
+     +-------+ cada camnbio realizado con <DIV> Se inician en una nueva linea
+
+-->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box model en CSS</title>
+    <link rel="stylesheet" href="S08_estilos.css">
+</head>
+<body>
+    <h1>Box Model CSS</h1>
+    <div>Mi contenido</div>
+</body>
+</html>

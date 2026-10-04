@@ -1,0 +1,22 @@
+/* MANEJO DE OUTLINE
+
+    Es el elemento intermedio entre el MARGEN y el BORDE, este
+    elemento no afecta el ancho o alto del elemento HTML */
+
+h1 {
+    text-align: center;
+    color: #e63946;
+}
+
+div {
+    padding: 10px;                /* 10 px del lado izq y 10px del der */
+    border: 15px solid #457b9d; /* 15 px del lado izq y 15px del der */
+    margin: 20px;                 /* 20 px del lado izq y 20px del der */
+    background-color: #f1faee;
+    width: 300px;
+    outline: 10px solid #a8dadc; /* No suma al tamaño del elemento HTML*/
+
+    /* El elemento outline-offset es la separación entre el borde y este 
+    elemento de outline  SOLAMENTE PERMITE UN VALOR*/
+    outline-offset: 10px;
+}

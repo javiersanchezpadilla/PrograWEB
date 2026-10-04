@@ -1,0 +1,37 @@
+/* MANEJO DE BOX-SIZING 
+
+Permite manejar un tamaño fijo de un elemento HTML
+*/
+
+/* Como el elemento div agrega un marco por defecto pordemos cncelarlo 
+    usamos el selector universal */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #e63946;
+}
+
+
+/* El manejo de la propiedad de max-width nos permite un manejo mas
+flexible de tal manera que si reducimos lapantalla, reajusta el tamaño,
+hasta el punto donde ya no es posible dado el tamaño del elemento HTML y
+finalmente será cuando aparezca la barra de SCROLL
+Definir un max-width de 300 pixeles significa que no podrá crecer mas de
+300 pixeles, el reajuste es solamente cuando reducimos la pantalla */
+
+/* Tambien podemos definir así como el ancho el alto, pero además tambien es 
+posible especificarlo en porcentaje */
+div {
+    padding: 10px;
+    border: 1px solid #457b9d;
+    margin: 0px;
+    background-color: #f1faee;
+    /* max-width: 300px;   Cambiamos de width a max-width*/
+    max-width: 100%;
+    max-height: 100px;
+    box-sizing: border-box;
+}

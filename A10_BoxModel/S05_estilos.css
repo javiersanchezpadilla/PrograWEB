@@ -1,0 +1,43 @@
+/* MANEJO DE PADDING
+
+*/
+
+h1 {
+    text-align: center;
+    color: #e63946;
+}
+
+/* Si solo especificamos un valor aplicará para todos los lados
+    padding: 10px;  Aplica 10px --> top, right, bottom y left
+
+    es equivalente a definir:
+        padding-top: 10px;          padding-right: 10px;
+        padding-bottm: 10px;        padding-left: 10px;
+
+    PERSONALIZAR CON DOS VALORES:
+    -----------------------------
+    padding: 10px 5px;
+
+    es equivalente a definir:  (10px top y bottom y 5px right y left)
+        padding-top: 10px;          padding-right: 5px;
+        padding-bottom: 10px;       padding-left: 5px;
+
+
+    PERSONALIZAR CON TRES VALORES:
+    -----------------------------
+    padding: 10px 5px 15px;
+
+    es equivalente a definir: (10px top, 5px right y left, 15px bottom)
+        padding-top: 10px;          padding-right: 5px;
+        padding-bottom: 15px;       padding-left: 5px;        
+*/
+
+div {
+    padding: 10px;
+    border: 15px solid #457b9d;
+    margin: 20px;
+    background-color: #f1faee;
+    width: 300px;
+    outline: 10px solid #a8dadc;
+    outline-offset: 10px;
+}

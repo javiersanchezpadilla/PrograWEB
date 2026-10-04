@@ -1,0 +1,47 @@
+<!-- BOX SIZING EN CSS
+
+    Para calcular el ancho total de un elemento HTML, como se explico 
+    anteiormente tenemos que sumar:
+    
+    ANHO ELMENTO HTML = el tamañano de margen + borde + padding + elemento HTML
+    
+    Sin embargo esto puede crear situaciones no deseadas cono pasarnos del ancho
+    para resolver esto podemos forzar a tener un elemento de tamaño exacto para 
+    no preocuparnos de tener que contar y sumar estos pixeles, para esto podemos
+    agregar la propiedad de BOX-SIZING: valorPX, lo que hace esta propiedad es
+    que sin importar los tamaños de cada elemento los ajusta de tal manera que
+    el tamaño final del elemento sea el valor definido por la propiedad
+    BOX-SIZZING (ver la aplicación dentro del archivo de estilos).
+    MUY IMPORTANTE!!! NO INCLUYE EL MARGEN SOLO PADDING Y BORDE
+
+    +-----------------------------------------------------------------------+
+    |              MARGIN                       Top                         |
+    |   +---------------------------------------------------------------+   |
+    |   |               BORDER                  Top                     |   |
+    |   |   +-------------------------------------------------------+   |   |
+    |   |   |               pADDING             Top                 |   |   |  
+    | L | L | L +-----------------------------------------------+ R | R | R |
+    | e | e | e |    CONTENTIDO HTML (Texto, imagenes, etc)     | i | i | i |
+    | f | f | f |                                               | g | g | g |
+    | t | t | t +-----------------------------------------------+ h | h | h |
+    |   |   |                                   Bottom            t | t | t |
+    |   |   +-------------------------------------------------------+   |   |
+    |   |                                       Botom                   |   |
+    |   +---------------------------------------------------------------+   |
+    |                                           Botom                       |
+    +-----------------------------------------------------------------------+
+-->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box model en CSS</title>
+    <link rel="stylesheet" href="S06_estilos.css">
+</head>
+<body>
+    <h1>Box Model CSS</h1>
+    <div>Mi contenido</div>
+</body>
+</html>

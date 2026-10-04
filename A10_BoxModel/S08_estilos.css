@@ -1,0 +1,32 @@
+/* MANEJO DE BOX-SIZING 
+
+Permite manejar un tamaño fijo de un elemento HTML
+*/
+
+/* Como el elemento div agrega un marco por defecto pordemos cncelarlo 
+    usamos el selector universal */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #e63946;
+}
+
+/* Para poder centrar de foma automatica en elemento, en este caso en div
+   Esto aplica solo para elemento del tipo INLINE en elementos del tipo BLOQUE
+   actua de forma distinta
+    margin: auto;   automaticamente centra del lado derecho e izquierdo
+    margin: 0 auto; 0 aplica a arriba y abajo, auto derecha e izquierda
+
+*/
+div {
+    padding: 10px;
+    border: 1px solid #457b9d;
+    margin: auto;   /* de forma automarica se centrara el elemento div */
+    background-color: #f1faee;
+    max-width: 300px;
+    box-sizing: border-box;
+}

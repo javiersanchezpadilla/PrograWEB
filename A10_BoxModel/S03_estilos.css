@@ -1,0 +1,27 @@
+/* MANEJO DE OUTLINE
+
+    Es el elemento intermedio entre el MARGEN y el BORDE, este
+    elemento no afecta el ancho o alto del elemento HTML */
+
+h1 {
+    text-align: center;
+    color: #e63946;
+}
+
+/* En el elemento OUTLINE Podemos aplicar los estilos que usamos en
+los bordes
+punteado: dotted;           discontinuo: dashed;        solido: solid;
+doble: double;              surco: groove;              recuadro: inset;
+outset: outset;             sin_borde: none             oculto: hidden;
+*/
+div {
+    padding: 10px;                /* 10 px del lado izq y 10px del der */
+    border: 15px solid #457b9d; /* 15 px del lado izq y 15px del der */
+    margin: 20px;                 /* 20 px del lado izq y 20px del der */
+    background-color: #f1faee;
+    width: 300px;
+
+             /*   |||||     double  groove   dotted   inset   outset
+                  ▼▼▼▼▼ */
+    outline: 10px solid #a8dadc; /* No suma al tamaño del elemento HTML*/
+}

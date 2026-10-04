@@ -1,0 +1,44 @@
+/* MANEJO DE HERENCIA
+
+Permite heredar una propiedad desde un elemento PADRE unicamente
+en nuestro ejemplo el emento padre es <div> y dentro tenemos un 
+parrago <p>, por lo que solo podrá heredar desde <div>, 
+
+Como hereda:
+
+Si en <div> defino      en <p> hereda (inherit)
+-----------------------------------------------
+margin:                 margin
+margin-top:             margin-top:
+margin-right:           margin-right:
+margin-bottom:          margin-bottom:
+margin-left:            margin-left:
+
+*/
+
+h1 {
+    text-align: center;
+    color: #e63946;
+}
+
+div {
+    padding: 10px;
+    border: 1px solid #457b9d;
+
+    /* margin: 100px;  /* Definimos un margen de 100 pixeles*/
+    /* vamos a afectar solamente el margen izquierdo */
+    margin-left: 100px;
+    background-color: #f1faee;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+/* Si dejamos solamente
+    margin: inherit;  se hereda el margen de 100pixeles en todos los lados
+                      top right bottom y left
+    margin-left: inherit; Solo hereda el margen izquierdo
+*/
+p.interno {
+    /* margin: inherit; Con esto se heredara el margen de 100 pixels*/
+    margin-left: inherit;
+}

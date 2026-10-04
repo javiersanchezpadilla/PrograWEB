@@ -1,0 +1,33 @@
+/* MANEJO DE BOX-SIZING 
+
+Permite manejar un tamaño fijo de un elemento HTML
+*/
+
+/* Como el elemento div agrega un marco por defecto pordemos cncelarlo 
+    usamos el selector universal */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #e63946;
+}
+
+/* Dentro de BOX-SIZING manejamos la propiedad de border-box, lo cual
+quiere decir que sin importar los elmentos de definidos en borde y padding
+para el elemento, incluso el ancho (width), simpre respatara el tamaño de 
+300 pixeles, muy importante NO INCLUYE EL MARGEN (ese se respeta ya que es
+la distancia entre los elementos HTML)
+*/
+div {
+    padding: 10px;
+    border: 0px solid #457b9d;    /* Ya no es requerido el tamaño en pixeles */
+    margin: 0px;                    /* Ya no es requerido el tamaño en pixeles */
+    background-color: #f1faee;
+    width: 300px;           /* Valor referencia para ancho total de la caja*/
+    box-sizing: border-box; /* Ajustará el ancho del elemento HTML a 300*/
+}
+
+

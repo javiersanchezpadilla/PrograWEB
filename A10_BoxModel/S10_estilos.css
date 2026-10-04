@@ -1,0 +1,51 @@
+/* MANEJO DE MARGIN COLLAPSE
+
+El conepto de Margin Collapse actua en los margenes superior e inferior 
+solamente, tenemos dos cajas y al momento de repreentarlas en pantalla
+en lugar de sumar ambos margenes (de la caja 1 + el margen de la caja 2),
+toma el margen mayor y encima el otro (colapsa COLLAPSE) recordar que la
+distancia vertical es visibilidad para el usuario, por eso junta los 
+margenes creando uno solo.
+
+Esta fusión únicamente ocurre en los márgenes superiores e inferiores, 
+es decir, que este margen también se está fusionando con el margen del título.
+y si tuviéramos más elementos en la parte inferior, también se funcionarían 
+estos márgenes, ahora, si el margen del elemento superior es mayor que el 
+margen del elemento inferior, entonces el margen que queda al final es el 
+margen más grande (como ya se habia definido al inicio)
+un margen en la clase caja1 es de 5px y en la caja2 es de 30 pixeles, y
+si pensamos que el margen total será de 35 (margen caja 1 + margen caja 2)
+es incorrecto, ya que de forma vertical los margenes colapsan quedando el
+margen mayor de 30
+*/
+
+
+h1 {
+    text-align: center;
+    color: #e63946;
+}
+
+/* Para poner en practica lo anterios se van a crear dos clases que van a
+reemplazar al elemento <div> 
+
+caja1 tiene un margen de 5 pixeles*/ 
+.caja1 {
+    padding: 10px;
+    border: 1px solid #457b9d;
+    margin: 5px;        /* este margen al ser menor colapsara quedando de 30*/
+    background-color: #f1faee;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+/* caja2 tiene un margen de 30 pixeles, se aplicaran las clase a los elementos
+<div> en el documento HTML para ver el resultado de que margen colapsa, se
+entiende que el margen mayor colapsara al menor quedando un margen de 30 pixeles*/
+.caja2 {
+    padding: 10px;
+    border: 1px solid #457b9d;
+    margin: 30px;   /* Ete es el margen que se tomara en cuenta por ser mayor*/ 
+    background-color: #f1faee;
+    max-width: 300px;
+    box-sizing: border-box;
+}
