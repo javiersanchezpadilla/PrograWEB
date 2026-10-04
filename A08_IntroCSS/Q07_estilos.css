@@ -1,0 +1,9 @@
+/* Vamos a aplicar estilos a las etiquetas */
+
+
+/* Aqui estamos indicando que vamos a aplicar los mismos estilos
+en los elementos h1 h2 p */
+h1, h2, p {
+    color: crimson;
+    text-align: center;
+}

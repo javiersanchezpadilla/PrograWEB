@@ -1,0 +1,28 @@
+/* Declaramos un elemento ID y una clase
+
+    recordar que el elemento ID solo se debe usar una 
+    sola vez en nuestro documento, mientras que las clases
+    podemos reutilizarlas cuantas veces sea necesaria
+*/
+
+#el_titulo {
+    color: crimson;
+    text-align: center;
+}
+
+/* Para declarar la clase debe comenzar con un únto, el primer
+    caracter debe ser una letra y si deseamos unir mas de una 
+    palabra debemos usar el guion bajo o guion medio
+    
+    .centrar     .centrar_texto      .centrar-texto
+
+    Para usarlo:   
+    <elemento   class="centrar"   <-- sin el punto .centrar
+    */
+.centrar {
+    text-align: center;
+}
+
+.texto_grande {
+    font-size: 20px;
+}

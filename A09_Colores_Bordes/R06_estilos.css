@@ -1,0 +1,28 @@
+/* MANEJO DEL REDONDEO EN LOS BORDES 
+
+   border-radius: 4all;   (top, richt, botom, left)
+   border-radius: top right botom left;
+*/
+
+h1 {
+    text-align: center;
+}
+
+.solido {
+    border: solid red;
+    border-width: 10px; 
+    border-radius: 15px;
+}
+
+/* REdondeado solo en algunas esquinas */
+/* Este redondeo aplicara:
+                                        20px Esq. sup. izquierda
+                                         9px Esq. sup. derecha
+   border-radius: 20px 0px 10px 0px;    10px Esq. inf. derecha
+                                         0px Esq. inf. izquierda
+*/  
+
+.redondeado {
+    border: 5px solid blueviolet;
+    border-radius: 20px 0px 10px 0px;
+}

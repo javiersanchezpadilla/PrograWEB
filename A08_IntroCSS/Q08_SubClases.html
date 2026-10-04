@@ -1,0 +1,36 @@
+<!-- Como aplicar otros tipos de SELECTORES -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de clases</title>
+    <link rel="stylesheet" href="Q08_estilos.css">
+</head>
+<body>
+    <h1>Tecnológico Nacional de México Campus Acapulco</h1>
+
+    <!-- en el archivo de estilos se creó la subclase
+     
+        p.centrar {
+           text-align: center;
+            }
+        Lo cual quiere decir que este estilo solo se aplicará a las
+        etiquetas del tipo parrafo, si intentamos usarlas por ejemplo en
+        la etiqueta <div> no tendran efecto alguno
+    -->
+
+    <p class="centrar">Iniciando el curso CSS</p>
+    <p>www.tecnologico.edu.mx</p>
+
+    <!-- Aqui no tendra efecto la clase centrar debido a que es una subclase
+    de la etiqueta parrafo, por lo que al intentar usarla en la etiqueta 
+    <div> no tendrá efecto
+         ▼▼▼▼▼▼▼▼▼▼▼▼▼▼                     -->
+    <div class="centrar">
+        nuevo texto
+    </div>
+    
+</body>
+</html>

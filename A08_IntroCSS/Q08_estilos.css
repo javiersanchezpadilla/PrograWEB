@@ -1,0 +1,12 @@
+/* SUBCLASES */
+
+/* Este tipo de definición nos dice que SOLAMENTE APLICARA SOBRE 
+    LOS ELEMENTOS DEL TIPO PARRAFO (p) y se debe llamar como class="centrar"
+    no podrá usarse en ningún otro elemento que no sean los parrafos
+
+
+DEntro del HTML  <p class="centrar">....
+*/
+p.centrar {
+    text-align: center;
+}

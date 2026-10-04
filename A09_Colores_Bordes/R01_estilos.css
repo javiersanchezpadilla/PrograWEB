@@ -1,0 +1,34 @@
+h1 {
+    text-align: center;
+}
+
+.rojo {
+    background-color: firebrick;
+    /* color: white;   ya no es necesario ya se agrupo*/
+}
+
+.rosa {
+    background-color: hotpink;
+}
+
+.amarillo {
+    background-color: gold;
+}
+
+.violeta {
+    background-color: blueviolet;
+}
+
+.verde {
+    background-color: lime;
+}
+
+.azul {
+    background-color: turquoise;
+}
+
+/* Vamos a agrupar los estilos donde aplicaremos el color 
+blanco para las letras */
+.rojo, .rosa, .violeta  {
+    color: white;
+}

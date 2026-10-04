@@ -1,0 +1,12 @@
+/* Vamos a definir un estilo del tipo ID 
+    #Nombre_del_estiloTipoID
+    
+    y para aplicarlo dentro del documento HTML vamos a hacerlo
+    indicando
+    <elemento id="para_el_titulo"
+    */
+
+#para_el_titulo {
+    color: crimson;
+    text-align: center;
+}

@@ -1,0 +1,33 @@
+/* PROPIEDAD DE  BORDE */
+
+/* En el manejo del color una vez seleccionado el color podemos dejar
+el cursor sobre la definicion de color y Visual nos mostrara una 
+paleta de colores para poder cambiar de dos maneras, 
+1. dando clic sobre el nombre de la paleta para cambiar la forma de 
+   definicion del color (RGC, por nombre, Hexadecimal)
+2. dentro de la paleta dando clic sobre el color para que cambien
+   los valores  */
+
+h1 {
+    text-align: center;
+}
+
+.rojo {
+    border: 10px solid #c71414;
+    /* background-color: firebrick; */
+}
+
+.rosa {
+    border: 10px dashed rgb(209, 14, 111);
+    /* background-color: hotpink; */
+}
+
+.amarillo {
+    border: 10px double #ffd700;
+    /* background-color: gold; */
+}
+
+.azul {
+    border: 10px dotted hsl(174, 72%, 56%);
+    /* background-color: turquoise; */
+}

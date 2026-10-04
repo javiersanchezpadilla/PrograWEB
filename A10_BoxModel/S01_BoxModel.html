@@ -1,0 +1,66 @@
+<!-- MODELO DE CAJAS DE CSS (BOX MODEL)
+     ==================================
+
+     Básicamente cualquier elemento den HTML esta envuelto en el box model
+Las CAJAS css, el CONTENIDO esta envuelto en una caja de PADDING, el padding
+está dentro de otra caja llamada BORDE, el borde este contenido en la caja del
+MARGEN
+    +-----------------------------------------------------------------------+
+    |              MARGIN                       Top                         |
+    |   +---------------------------------------------------------------+   |
+    |   |               BORDER                  Top                     |   |
+    |   |   +-------------------------------------------------------+   |   |
+    |   |   |                 PADDING           Top                 |   |   |  
+    | L | L | L +-----------------------------------------------+ R | R | R |
+    | e | e | e |    CONTENTIDO HTML (Texto, imagenes, etc)     | i | i | i |
+    | f | f | f |                                               | g | g | g |
+    | t | t | t +-----------------------------------------------+ h | h | h |
+    |   |   |                                   Bottom            t | t | t |
+    |   |   +-------------------------------------------------------+   |   |
+    |   |                                       Botom                   |   |
+    |   +---------------------------------------------------------------+   |
+    |                                           Botom                       |
+    +-----------------------------------------------------------------------+
+
+Cada elemento de una página web (una imagen, un párrafo, un botón) es como un 
+regalo envuelto en una caja. El Box Model (o Modelo de Caja) es la regla que 
+usa CSS para calcular el espacio que ocupa cada uno de esos "regalos" en la 
+pantalla. 
+
+Siguiendo esta analogia si tenemos un regalo, el papel de burbujas para que el
+regalo no se maltrate es el PADDING, la caja es el BORDE y el MARGEN es la 
+distancia entre mi caja y otras cajas, es la separación 
+
+EL PADDING Y EL MARGIN SON TRANSPARENTES, SOLO EL BORDE PUEDE TENER COLOR.
+--------------------------------------------------------------------------
+
+Para el PADING podemos definir una cantidad de pixeles en la parte superior,
+derecha, inferior e izquierda (top, right, botom, left), de igual manera para
+el BORDE podemos hacer lo mismo, definir una distancia en pixels en la parte 
+superior (top), derecha (right), inferior (botom) e izquierda (left), ademas es
+el único elemento dentro del BOX MODEL que puede tener color, por último el 
+MARGIN es el elemento que separa al elemento HTML del resto de los elementos, 
+teniendo una distancia en pixeles de separación en la parte superior (top),
+derecha (right), inferior (botom) e izquierda (left).
+
+PARA CALCULAR EL TAÑAMO DE LOS ELEMENTOS HTML (pixeles = pixs)
+--------------------------------------------------------------
+Longitud = pixs margen izq + pixs borde izq + pixs padding izq + largo elemento HTML + 
+           pixs padding der + pixs borde der + pix margen der
+
+Altura = pix margen sup + pix borde sup + pixs padding sup + alto elemento HTML +
+         pixs padding der + pixs borde der + pixs margen der
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box model en CSS</title>
+    <link rel="stylesheet" href="S01_estilos.css">
+</head>
+<body>
+    <h1>Box Model CSS</h1>
+    <div>Mi contenido</div>
+</body>
+</html>

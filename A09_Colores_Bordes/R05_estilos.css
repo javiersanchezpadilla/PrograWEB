@@ -1,0 +1,84 @@
+/* MANEJO DE COLORES EN LOS BORDES 
+
+    Uso de la propiedad border-color: La ventaja de usar está propiedad
+    es que podemos manejar distintos colores por cada lado
+
+    Cuando aplicamos la propiedad simplificada de border, solamente
+    podemos aplicar de forma general un color para todos los lados
+
+    Cuando usamos la propiedad border-color: podemos definir un color
+    por cada uno de los lados
+*/
+
+h1 {
+    text-align: center;
+}
+
+/* Aqui estamos aplicando un color de borde distinto por lado
+                Arriba color crimson    Derecha color hotpink
+                Abajo color gold        Izquierda color lime
+*/
+.punteado {
+    border-style: dotted;
+    border-width: 20px 10px 5px 2px;
+    border-color: crimson hotpink gold lime;
+}
+
+
+/* Tambien podemos aplicar los colores en otros sistemas de color 
+por ejemplo podemos usar hexadecimal, RGB, HSLT y transparencias) */
+.discontinuo {
+    border-style: dashed;
+    border-width: thin;  /* thin, medium, thick */
+    border-color: #457b9d;
+}
+
+.solido {
+    border-width: 10px 5px 2px; 
+}
+
+
+/* Cuando aplicamos solo dos valores se aplican de la siguiente forma
+                                    10px  Arriba y abajo (top bottom)
+   border-width: 10px 5px 2px;       5px  Derecha e Izquierda (Right left) */
+   
+.doble {
+    border: 5px double blueviolet; /* Al no definir color se toma negro*/ 
+    border-width: 10px 5px;
+}
+
+.surco {
+    border-width: 10px;     /* Podemos definir el tamaño así*/
+    border-style: groove;
+}
+
+.cresta {
+    border: 10px ridge ;
+}
+
+.recuadro {
+    border: 10px inset;
+}
+
+.outset {       /* recuadro inverso */
+    border: 10px outset;
+}
+
+.sin_borde {
+    border: none;
+}
+
+.oculto {
+    border: hidden;
+}
+
+/* Aplicamos elementos mezclados (mixtos)
+   Aplica la regla del reloj (12, 3, 6, 9)
+
+   Arriba       punteado         (dotted)
+   derecha      solido           (solid)
+   abajo        discontinuo      (dashed)
+   izquierda    doble            (double) */
+.mixto {
+    border-style: dotted solid dashed double;
+}

@@ -6,6 +6,7 @@ código hexadecimal y oprimimos Enter o la barra espaciadora
 
     código
     Hexadecimal
+CONTROL SHIFT U
 
 Flechas y Triángulos
 ----------------------------------

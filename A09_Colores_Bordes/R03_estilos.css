@@ -1,0 +1,67 @@
+/* MANEJO DE LOS TIPOS DE BORDES 
+
+    Podemos usar la instrucción border-style que permite definir un 
+    estilo para un borde
+
+    border-style: estilo;  
+
+    Alternativas: border permite definir simulataneamente mas caracteristicas
+
+    border: pixeles estilo color;
+*/
+
+h1 {
+    text-align: center;
+}
+
+.punteado {
+    border-style: dotted;
+}
+
+.discontinuo {
+    border-style: dashed;
+}
+
+.solido {
+    border: 10px solid red;
+}
+
+.doble {
+    border: 5px double; /* Al no definir color se toma negro*/ 
+}
+
+.surco {
+    border-width: 10px;     /* Podemos definir el tamaño así*/
+    border-style: groove;
+}
+
+.cresta {
+    border: 10px ridge ;
+}
+
+.recuadro {
+    border: 10px inset;
+}
+
+.outset {       /* recuadro inverso */
+    border: 10px outset;
+}
+
+.sin_borde {
+    border: none;
+}
+
+.oculto {
+    border: hidden;
+}
+
+/* Aplicamos elementos mezclados (mixtos)
+   Aplica la regla del reloj (12, 3, 6, 9)
+
+   Arriba       punteado         (dotted)
+   derecha      solido           (solid)
+   abajo        discontinuo      (dashed)
+   izquierda    doble            (double) */
+.mixto {
+    border-style: dotted solid dashed double;
+}

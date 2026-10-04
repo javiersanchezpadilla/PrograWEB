@@ -1,0 +1,90 @@
+/* MANEJO DE LOS TIPOS DE BORDES 
+
+    Podemos usar la instrucción border-style que permite definir un 
+    estilo para un borde
+
+    border-style: estilo;  
+
+    Alternativas: border permite definir simulataneamente mas caracteristicas
+
+    border: pixeles estilo color;
+*/
+
+h1 {
+    text-align: center;
+}
+
+/* Aqui estamos aplicando un ancho de borde con las siguientes caracteristicas
+                                        Superiod  20px
+                                        Derecho   10px
+   border-width: 20px 10px 5px 2px;     Inferior   5px
+                                        Izquierdo  2px     */
+.punteado {
+    border-style: dotted;
+    border-width: 20px 10px 5px 2px;
+}
+
+/* Cuando solo definimos un valor en border-width se aplica para todos los lados 
+   Además hay valores preestablecidos como 
+   thin     grosor delgado (es el mas delgado de todos)
+   medium   grosor medio
+   thick    grosor mas ancho
+*/
+.discontinuo {
+    border-style: dashed;
+    border-width: thin;  /* thin, medium, thick */
+}
+
+/* Cuando aplicamos solo tres valores se aplican de la siguiente forma
+                                    10px  Arriba (top)
+                                     5px  Derecha e Izquierda (Right left)
+   border-width: 10px 5px 2px;       2px  Abajo (Bottom)*/
+.solido {
+    border-width: 10px 5px 2px; 
+}
+
+
+/* Cuando aplicamos solo dos valores se aplican de la siguiente forma
+                                    10px  Arriba y abajo (top bottom)
+   border-width: 10px 5px 2px;       5px  Derecha e Izquierda (Right left) */
+   
+.doble {
+    border: 5px double blueviolet; /* Al no definir color se toma negro*/ 
+    border-width: 10px 5px;
+}
+
+.surco {
+    border-width: 10px;     /* Podemos definir el tamaño así*/
+    border-style: groove;
+}
+
+.cresta {
+    border: 10px ridge ;
+}
+
+.recuadro {
+    border: 10px inset;
+}
+
+.outset {       /* recuadro inverso */
+    border: 10px outset;
+}
+
+.sin_borde {
+    border: none;
+}
+
+.oculto {
+    border: hidden;
+}
+
+/* Aplicamos elementos mezclados (mixtos)
+   Aplica la regla del reloj (12, 3, 6, 9)
+
+   Arriba       punteado         (dotted)
+   derecha      solido           (solid)
+   abajo        discontinuo      (dashed)
+   izquierda    doble            (double) */
+.mixto {
+    border-style: dotted solid dashed double;
+}
