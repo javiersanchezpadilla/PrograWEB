@@ -1,0 +1,58 @@
+/* Aplicamos al BODY un fondo azul y le damos a las letras un color */
+
+
+/* Con la propiedad background-image declaramos una imagen de fondo 
+url() nos permite indicar la ruta y el nombre del archivo que vamos
+a utilizar, ahora bien dado que el tamaño de la imagen no siempre coindice 
+con la resolución de la pantalla, se repetira la imagen, para evitar eso 
+usaremos
+repeat-x    para que se repita unicamente en el eje x
+repeat-y    para que se repita unicamente en el eje y
+no-repeat   Para que no se repita la imagen
+
+La propiedad background-position nos permitira ubicar imagenes en nuestra
+pantalla, solo cuidar que la resolucion no afecte y sea mayor para poder
+ver el resultado esperado de la imagen ubicada en la posición que queremos 
+
+SIMPLIFICACIÓN DE BACKGROUND:
+-----------------------------
+Existe una opcion simplificada para evitar el uso de tanta propiedad CSS 
+para el caso del background-**
+
+    background-color: dodgerblue;
+    background-image: url("S30_fondoPNG.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+
+    TOTAS LAS INSTRUCCIONES ANTERIORES CAMBIARIAN POR UNA SOLA
+    ----------------------------------------------------------
+    background: dodgerblue url("S30_fondoPNG.png") no-repeat right top;
+
+Puede reemplazar a todas las anteriores excepto
+    background-attachment: fixed;   <-- es obligatoria
+*/
+body {
+    background-color: dodgerblue;
+    color: cornsilk;
+    background-image: url("S30_fondoPNG.png");
+    background-repeat: no-repeat;
+    background-position: right top; /* Carga la imagen del lado derecho y arriba*/
+
+    /* Esta propiedad influye al momento de dar scroll, cuando esta activada la imagen, sigue
+    al scroll (se desplaza hacia abajo), para que aparezca el scroll tenemos que modificar el 
+    tamaño de la pantalla generalmente hacerla mas grande y así aparecera la barra de scroll
+    
+    background-attachment: scroll;  Forza a la imagen a seguir al scroll
+    background-attachment: fixed;   Evita que la imagen siga al scroll (se queda fija de fondo)
+
+    Para verificar esto podemos aumentar la altura de la etiquete <h1>  */
+    background-attachment: fixed;
+}
+
+
+/* Podemos especificar estilos a los elementos HTML*/
+h1 {
+    text-align: center;
+    /*background-color: dodgerblue;*/
+    height: 1000px;     /* PAra probar el sroll con la imagen incluimos esta linea*/
+}

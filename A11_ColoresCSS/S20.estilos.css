@@ -1,0 +1,35 @@
+/* Archivo de estilos para el manejo de los colores 
+    para los nombres delos colores podemo consultas
+
+    https://www.htmlcolorcodes.com
+*/
+
+h1 {
+    text-align: center;
+    color: #e63946; /* Usamos color por valor hexadecimal */
+}
+
+/*  Los elementos del tipo <div> son deltipo bloque por lo que
+    cada elemento ocupa una linea, para resolver esto lo hacemos
+    flotar a la izquierda FLOAT: LEFT; de esta forma el siguiente
+    elemento se pegara hasta llenar la pantalla y cuando ya no haya
+    mas espacio entonces se pasara a la siguiente linea la siguiente 
+    caja, y así poder  */
+.caja {
+    padding: 10px;
+    color: white;   /* Definimos el color por el nombre */
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    margin: 5px auto;
+    font-size: 10px;
+    float: left;    /* <-- Esta propiedad permite que floten a la izquierda*/ 
+}
+
+.rojo {
+    background-color: crimson; /* rojo escarlata*/
+}
+
+.rosa {
+    background-color: deeppink;
+}
