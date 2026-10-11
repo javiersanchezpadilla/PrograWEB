@@ -1,0 +1,54 @@
+/* Estos elementos tienen su propiedad display del tipo BLOCK, lo que 
+hace que ocupe todo el ancho de la página, si queremos podemo modificar
+la propiedad de display a inline, esto no cambia al tipo de elemento,
+solo cambia la manera en que se despliega en pantalla
+
+display: block;     valor asignado por defecto
+display: inline;    se acomodan en linea los valores
+
+Tambien podemos cambiar las propiedades de los elementos inline para que
+en lugar de que se comporten como elementos inline se comporte como elemento
+del tipo bloque
+
+*/
+
+h1, div, p {
+    border: 3px solid blueviolet;
+    text-align: center;
+    color: cornflowerblue;
+    padding: 10px;
+    display: block;     /* Propiedad display */
+}
+
+/* Aunque hayamos definido arriba propiedades para <h1> como el archivo
+se lee de arriba hacia abajo toma la última definición como valida.
+Al ocultar con la propiedad display no se muestra en pantalla y no se 
+ocupa ningun espacio, sin enbargo el elemento sigue activo como parte de
+la página */
+h1 {
+    display: none;
+}
+
+/* Cuando ocultamos con la propiedad VISIBILITY se oculta el elemento en 
+pantalla sin embargo el espacio donde debe de ir se respeta aunque no se 
+vea nada */
+p {
+    visibility: hidden;
+}
+
+
+span {
+    display: block;     /* Cambiamos su propiedad de INLINE a BLOCK*/ 
+    border: 1px solid blue;
+
+}
+
+/* Cambiamos el comportamiento de las anclas de INLINE a BLOCK*/ 
+a {
+    display: block;     /* El valor por defecto es INLINE */
+}
+
+/* Cambiamos el comportamiento de las listas de BLOCK a INLINE */
+li {
+    display: inline;
+}

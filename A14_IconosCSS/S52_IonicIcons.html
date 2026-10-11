@@ -1,0 +1,61 @@
+<!-- MANEJO DE ICONOS EN IONICS
+
+Buscamos "ionic icons"    (https://ionic.io/ionicons)
+Ir a la sección de USAGE, donde se recomienda hacer lo siguiente:
+
+Son archivos del tipo JavaScript, por lo que se debe colocar
+antes del final del documento html (cierre de body), no es un elemento CSS, así
+que copiamos el link 
+
+Uso básico
+----------
+Cuando seleccionamos un icono nos mostrara el componente para poder utilizarlo 
+directamente
+
+<ion-icon name="heart"></ion-icon>
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iconos en CSS</title>
+    <link rel="stylesheet" href="S52_estilos.css">
+</svg>
+</head>
+<body>
+    <h1><ion-icon name="home-outline"></ion-icon>
+        Iconos de IONICONS
+    </h1>
+    <div>
+
+        <p>
+            <ion-icon name="search-outline"></ion-icon>
+            Busqueda
+        </p>
+    </div>
+
+    <div>
+        <p>
+            <ion-icon name="checkmark-done-outline" class="icono_azul"></ion-icon>
+            Operación realizada con éxito
+        </p>
+    </div>
+
+    <div>
+        <p>
+            <ion-icon name="play-circle-outline" class="icono_azul"></ion-icon>
+            Reproducir
+        </p>
+    </div>
+       
+
+    <!-- Estas dos lineas se requiere para utilizar los iconos de ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+
+

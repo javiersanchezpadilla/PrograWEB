@@ -1,0 +1,91 @@
+/* FUENTES EN CSS   
+
+Aunque existen mas tipos de fuentes estos son los mas comunes
+
+Cuando seleccionamos un font-family se nos brindan por defecto las opciones
+por defecto para cargar en caso de que la fuente no exista, por ejemplo 
+
+font-family: Georgia, 'Times New Roman', Times, serif;
+
+Lo anterior quiere decir que en caso de no contar con la fuente 'Times New Roman',
+la siguiente opcion es cargar Time y en caso de no encontrarla buscara cualquier 
+fuente del tipo SERIF (notar que 'Times New Roman' hace uso de las comillas simples
+debido a que como es una palabra compuesta por tres palabras es necesario envolver
+toda la cadena para que la identifique como una sola y no tres opciones
+
+*/
+
+h1 {
+    color: #ef476f;
+    text-align: center;
+    text-transform: uppercase;
+    /* SOMBRA AL TEXTO. aplicamos 2 pixeles en el eje "x", 2 pixeles 
+    en el eje "y", el tercer valor es blur significa que tanto se 
+    difuna la sombre y por último se define el color de la sombre  */     
+    text-shadow: 2px 2px 2px #ced4da;
+}
+
+.caja {
+    padding: 5px;           /* padding */
+    width: 40%;
+    height: 80px;           /* altura */
+    border-radius: 5px;     /* borde redondeado de 5 pixeles */
+    color: white;          
+    text-align: center;     /* texto alineado al centro */
+    margin: 10px;           /* margen de separación entre cajas de 10 pixeles */
+    font-size: 20px;        /* tamaño de la fuente de 20 px*/
+
+    /* Esta propiedad pemite que al ser un elemento de bloque <div> pemita
+       que las cajas floten y se alineen a la izquierda para que puedan entrar
+       mas cajas (realmente se vera como un elemento inline */
+    float: left;
+}
+
+/* Esta clase aplicara a las etiquetas del tipo caja */
+.caja.fuente_serif {
+    background-color: #5a189a;
+}     
+
+/*  Se define el tipo de fuente a usar, en este caso tratará de cargar el 
+    tipo Times New Roman, en caso de no poder encontrala buscara un tipo mas
+    generico, la fuente times, al final dfinimos el tipo de fuente al que
+    pertenece la familia "serif", observar que como la propiedad 
+    'Times New Roman' contiene espacios en blanco se usan las comillas dobles
+    para envolver todo el texto que contiene los espacios*/
+
+.fuente_times {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.fuente_georgia {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.caja.sans-serif {
+    background-color: #00b4d8;
+}
+
+.fuente_arial {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.fuente_verdana {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.caja.monospace {
+    background-color: #f15bb5;
+}
+
+.fuente_courier {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.caja.cursiva {
+    background-color: #ff8500;
+}
+
+/* Esta fuente la modificamos manualmente, ya que no nos da por defecto */ 
+.fuente_lucida {
+    font-family: 'Lucida Handwriting', cursive;
+}

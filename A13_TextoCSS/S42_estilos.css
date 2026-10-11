@@ -1,0 +1,80 @@
+/* ESTILOS DE FUENTES EN CSS   
+
+    El estilo normal es por defecto el que se adopta, de ahi podemos elegir
+    por ejemplo:
+    font-style: normal, italicas (es un estilo)
+    font-weight: bold  (valor de ancho para la fuente incluso en numero)
+    font-variant: small-caps; Son estilos para aplicar a las fuentes, este efecto
+                  hace que el texto completo se cambia a mayúscular, pero ademas 
+                  la primer letra de cada palabra sea mas grande (alto) que el resto
+
+    IMPORTANTE!!! El resultado depende del tipo de letra que se este trabajando
+*/
+
+h1 {
+    color: #ef476f;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #ced4da;   /* Sombra al texto */
+}
+
+.caja {
+    padding: 5px;      
+    width: 40%;
+    height: 80px;      
+    border-radius: 5px;
+    color: white;          
+    text-align: center;
+    margin: 10px;   
+    font-size: 20px;
+    float: left;            /* permite que la caja flote a la izquierda */
+}
+
+.caja.fuente_serif {
+    background-color: #5a189a;
+}     
+
+.fuente_times {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;                 /* Definimos el estilo italica */ 
+    font-weight: normal;                /* Definimos el ancho de la fuente */
+    font-variant: small-caps;           /* Primer letra de cada palabras mas GRANDE */
+}
+
+.fuente_georgia {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;                 /* Estilo italica */
+    font-weight:bold ;                  /* Ancho BOLD */
+}
+
+.caja.sans-serif {
+    background-color: #00b4d8;
+}
+
+.fuente_arial {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;                /* Estilo oblicuo */
+    font-weight: bolder;                /* Fuente mas ancha */ 
+}
+
+.fuente_verdana {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;                   /* Aplicamos un acncho de 900 */ 
+}
+
+.caja.monospace {
+    background-color: #f15bb5;
+}
+
+.fuente_courier {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.caja.cursiva {
+    background-color: #ff8500;
+}
+
+/* Esta fuente la modificamos manualmente, ya que no nos da por defecto */ 
+.fuente_lucida {
+    font-family: 'Lucida Handwriting', cursive;
+}

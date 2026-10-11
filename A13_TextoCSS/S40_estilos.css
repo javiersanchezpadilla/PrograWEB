@@ -1,0 +1,90 @@
+/* PROPIEDADES PARA EL MANEJO DE TEXTOS */
+
+/* Debemos tener buen contraste cunado usamos letras en color obscuro, 
+bemos usar un background claro, y por otro lado con colores de 
+fuentes claros debemos usar fondos obscuros */
+
+h1 {
+    color: #ef476f;             /* Asigna el color al texto */
+    background-color: beige;    /* Define el fondo del texto */
+    text-align: center;           /* Permite definir la alineación */
+    text-transform: uppercase;    /* TRansforma el texto a mayúsculas */
+
+    /* la iguiente propiedad permite crear una SOMBRA AL TEXTO.
+       aplicamos 2 pixeles en el eje "x", 2 pixeles en el eje "y", el 
+       tercer valor es blur significa que tanto se difuna la sombre y
+       por último se define el color de la sombre (es un tono de gris) 
+       la sombra debe ser un tono muy ligero */ 
+    text-shadow: 2px 2px  2px #cef4da;
+
+    /* Propiedad para espaciar las letras del texto, letter-spacing
+       permite separar los caracteres individuales 
+       valores positivos los separa
+       valores negativos los junta*/
+    letter-spacing: 3px;
+
+    /* para separar las palabras, usamos word-spacing */
+    word-spacing: 3px;
+}
+
+/* Estilos para el elemento <div> */ 
+.caja {
+    padding: 15px;  /* Aplicamos un padding de 15 px top, right, botom, left */
+    margin: auto;   /* Un margin auto para que se centre */ 
+    width: 70%;     /* Un ancho del 50% de la pantalla */
+    background-color: #219ebc;      /* Un color de fondo */
+    border-radius: 5px; /* Radio en los bordes de 5pixeles*/ 
+}
+
+/* Clase de texto para aplicar a los parrafos */ 
+.texto {
+    text-align: justify;    /* Justificar nuestro texto dentro de la caja */
+
+    /* PAra cambiar el sentido de lectura del texto: (por defecto es ltr left to right 
+       ltr left to right      rtl right to left  no es comun usarlo pero existe*/ 
+    direction: ltr;
+
+    /* text-deoration sirve cuando usamos elementos del tipo links, se puede usar en los
+       textos pero como se menciono es mas común usarlos solo en los elementos del tipo link
+       realmente si no es un link no deberiamos usar el elemnto subrayado
+       el valor por defecto es none, pero podemos especificarlo si es necesario, en el caso
+       de los links el valor por defecto del texto-decoration es underline
+       none             sin singuna de coracion     underline   Subrayado
+       line-throungh    texto tachado               overline    Es una linea sobre el texto*/ 
+    text-decoration: underline;
+
+    /* Para definir un indentado */
+    text-indent: 30px;
+}
+
+.texto2 {
+    /* El valor por defecto de la altura de la linea en todos los navegadores es de 1,2
+       no se definen pixeles, solo el valor directo un valor de 3 separa las lineas, un valoe
+       de 0.8 junta mucho las lineas*/
+    line-height: 3;
+
+    /* LA propiedad white space permite modificar el comportamiento del texto
+       por ejemplo si definimos el valor nowrap el texto del parrafo no sera envuento por el <div>
+       saliendo del cuadro, miestras que si usamos como argumento normal, queda envuento dentro de 
+       los limites del <div> aun disminuyendo el tamaño de la ventana */
+    white-space: normal;
+    text-shadow: 1px 1px 2px #cef4da;
+
+
+}
+
+h2 {
+    color: blueviolet;
+    background-color: yellow;
+    letter-spacing: 10px;
+    word-spacing: 20px;
+    text-decoration: line-through;
+}
+
+h3 {
+    color: blue;
+    background-color: antiquewhite;
+    
+    /* Aqui aplicamos dos propiedades juntas linea sobre el texto y linea bajo el texto */
+    text-decoration: overline underline;
+}

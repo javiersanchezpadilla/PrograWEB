@@ -1,0 +1,98 @@
+/* PROPIEDAD FONT
+
+En la clase de font-roboto, tenemos aplicado varios atributos 
+
+.font-roboto { 
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+Sin embargo, estos elementos no tenemos que ponerlos por separado, podemos 
+ponerlos todos en una sola línea.
+Sin embargo, tenemos que respetar un orden y el orden es el siguiente.
+
+font: font-style font-variant font-weight *font-size/line-height *font-family;
+                                            ▲▲▲▲▲▲▲▲              ▲▲▲▲
+                                            requerido            requerido
+
+Los demás elementos son opcionales, pero si los vamos a poner tenemos que respetar ese orden
+*/
+
+
+/* Para cargar los tipos de letra (sofia-Roboto-Eagle Lake-Rouge Script-Edu austria-Lobster-zen-kurenaido) */
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Eagle+Lake&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Lobster&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rouge+Script&family=Sofia&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Trocchi&family=Zen+Kurenaido&display=swap');
+
+
+h1 {
+    color: #ef476f;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #ced4da;   /* Sombra al texto */
+    /* font-family: "Sofia Sans", sans-serif; */
+}
+
+.font-sofia {                       /* Clase para la fuente sofia*/
+  font-family: "Sofia", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.caja {
+    padding: 5px;      
+    width: 40%;
+    height: 80px;      
+    border-radius: 5px;
+    color: white;          
+    text-align: center;
+    margin: 10px;   
+    font-size: 20px;
+    float: left;                  /* permite que la caja flote a la izquierda */
+}
+
+.caja.fuente_fondo {
+    background-color: #5a189a;
+}     
+
+/* Por ejemplo, en este caso vamos a utilizar y sustituir cada uno de los elementos anteriores utilizando
+   font: font-style font-variant font-weight *font-size/line-height *font-family;
+                                              ▲▲▲▲▲▲▲▲▲              ▲▲▲▲▲▲▲▲▲▲▲
+                                              requerido               requerido
+  */
+.font-roboto {                    /* Clase para la fuente roboto */
+/*  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;  */
+  font: italic small-caps bolder 20px Roboto, sans-serif;
+}
+
+.font-eagle {                     /* Clase para la fuente eagle */
+  font-family: "Eagle Lake", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-edu-austria {               /* Clase para la fuente esu austria */
+  font-family: "Edu AU VIC WA NT Guides", cursive;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.font-lobster {                 /* Clase para la fuente lobster */
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-zen-kurenaido {        /* Clase para la fuente zen kurenaido */
+  font-family: "Zen Kurenaido", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

@@ -1,0 +1,115 @@
+/* TAMAÑOS DE LAS FUENTES EN CSS   
+
+    Permite modificar el tamaño de las fuentes:
+    Existen fuentes responsivas y las que no lo son, en muchos de los casos cuando
+    modificamos el tañamo de la ventana el tamaño de la fuente no cambia (se sigue
+    viendo exactamente igual), para hacer uso responsivo podemos usar las terminaciones
+    'v'(viewport) (vw ViewPort weight ANCHO, vh heiht ALTO), SIN EMBARGO ESTAS FUENTES
+    DEL TIPO VIEWPORT NO RESPONDEN AL ZOOM (el tamaño quede igual) mientras que las otras
+    que no son respondivas si responden al zoom moficiando el tañamo. Es importante 
+    señalar que no todos lo navegadores soportan el uso de fuentes definidas a traves
+    del uso del ViewPort
+
+
+    Propiedades:
+    ------------
+    large    largo
+    larger   un poco mas grande            medium      mediana
+    small    pequeño                       smaller     un poco mas pequeño
+    x-large  un poco mas grande            x-small     un poco mas pequeño
+    xx-small todavia un poco mas pequeño   xx-large    todavia un povo mas grande
+
+    Valor de pixeles:
+    -----------------
+    Podemos modificarlo por el numero de pixeles, todos los navegadores tienen 
+    como valor por defecto el tamaño de 16 pixeles (16px)
+
+    Unidades EM:
+    ------------
+    Una unidad EM (1em) equivale a 16 pixeles (16px)
+    16 pixeles / 16 = 1 em (no es soportado por navegadores antiguos
+    20 pixeles / 16 = 2.5 em
+
+    Unidades ViewPort:
+    ------------------
+    Responde el tamaño de acuerdo al tamaño de la ventana (ES RESPONSIVO)
+    vw  ViewPort weight ANCHO (responde al ancho de nuestra ventana y adapta tamaño)
+    vh  ViewPort heiht ALTO (responde al alto de nuestra ventana y adapta tamaño)
+    1vw es equivalente al 1% de nuestra pantalla considerando solo en ancho de la ventana
+    3vw es equivalene al 3% de nuestra pantalla considerando solo el ancho de la ventana
+
+*/
+
+h1 {
+    color: #ef476f;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #ced4da;   /* Sombra al texto */
+}
+
+.caja {
+    padding: 5px;      
+    width: 40%;
+    height: 80px;      
+    border-radius: 5px;
+    color: white;          
+    text-align: center;
+    margin: 10px;   
+    font-size: 20px;
+    float: left;            /* permite que la caja flote a la izquierda */
+}
+
+.caja.fuente_serif {
+    background-color: #5a189a;
+}     
+
+.fuente_times {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;            
+    font-weight: normal;           
+    font-variant: small-caps;
+    font-size: small;           /* Tamaño pequeño (small) no es un espacio
+                                   responsivo, responde de acuerdo al tamaño 
+                                   de nuestra ventana del navegador NO RESPONSIVO */ 
+}
+
+.fuente_georgia {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;            
+    font-weight:bold ;             
+    font-size: 30px;            /* tamño de 30 pixeles NO RESPONSIVO */
+}
+
+.caja.sans-serif {
+    background-color: #00b4d8;
+}
+
+.fuente_arial {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;           
+    font-weight: bolder;   
+    font-size: 2em;             /* 2em = 16 pixeles * 2 NO RESPONSIVO */ 
+}
+
+.fuente_verdana {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;              
+    font-size: 3vw;             /* Viewport widht (responde al ancho SI RESPONSIVO) */ 
+}
+
+.caja.monospace {
+    background-color: #f15bb5;
+}
+
+.fuente_courier {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.caja.cursiva {
+    background-color: #ff8500;
+}
+
+/* Esta fuente la modificamos manualmente, ya que no nos da por defecto */ 
+.fuente_lucida {
+    font-family: 'Lucida Handwriting', cursive;
+}

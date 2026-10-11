@@ -1,0 +1,48 @@
+<!-- PROPIEDAD DISPLAY EN CSS
+
+Básicamente, la propiedad display de CSS nos va a permitir mostrar u 
+ocultar elementos o también modificar la forma en que se muestran algunos 
+elementos HTML.
+Las etiquets <h1>, <p<> y <div> tienen en comun que son elementos del tipo
+block por lo que requieren una nueva linea cada vez que se usan -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiqueta Display en CSS</title>
+    <link rel="stylesheet" href="T01_estilos.css">
+</head>
+<body>
+    <!-- Cada vez que se usa uno de estos elementos se ocupa una nueva linea 
+     lo que quiere decir que la propiedad display de cada uno de estos elementos
+     es del tipo display y que su valor es BLOCK, pero se puede cambiar-->
+    <h1>Encabezado del tipo h1</h1>
+    <div>Elemento del tipo div</div>
+    <p>Elemento del tipo parrafo</p>
+
+    <!-- Tambien podemos cambiar a los elementos del tipo INLINE para que cambie su 
+    comportamiento de INLINE podemos cambiarlo a BLOCK 
+    En este ejemplo de acuerdo a su forma normal de operar no mostraria el 
+    texto en una nueva linea, ya que su propiedad es INLINEA pero vamos a 
+    cambiarla-->
+    <p>Este es un texto <span>con un salto de linea</span></p>
+
+    <!-- Los elementos del tipo ancla se comportan como elementos INLINE
+     por defecto su comportamiento es INLINE pero podemos cambiarlo a BLOCK -->
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+    
+
+    <!-- Los elementos del tipo lista son del tipo BLOCK, pero vamos a 
+     cambiar el comportamiento a que se visualize INLINE -->
+     <ul>
+        <li>Articulo 1</li>
+        <li>Articulo 2</li>
+        <li>Articulo 3</li>
+        <li>Articulo 4</li>
+     </ul>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!-- MANEJO DE ICONOS EN GOOGLE
+
+Buscamos "icons google"    (https://fonts.google.com/icons)
+Actualmente los iconos de google son manejados como un font
+Sin embargo es mucho mas sencillo el manejo de la versión 
+SVG, ya sea bajar el icono vectorizado o enlazar con la 
+etiqueta <svg>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iconos en CSS</title>
+    <link rel="stylesheet" href="S51_estilos.css">
+</svg>
+</head>
+<body>
+    <h1>Iconos de GOOGLE</h1>
+    <div>
+        <!-- FORMA 1. Como si fuera una imagen normal (La más sencilla)
+             Cuando descargas el archivo SVG desde la página de google 
+             (o cualquier otro lado), lo guardas en tu carpeta y lo puedes 
+             llamar directamente con la etiqueta <img> de HTML, tal cual 
+             harías con una foto 
+             (Nosotros definimos el alto y ancho del icono vectorial)
+             width="40" height="40" -->
+        <p>
+            <img src="IconosGoogle/settings_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="Andoid" width="40" height="40">
+            Está es la primera forma de manejar los iconos
+        </p>
+    </div>
+
+    <div>
+        <p>
+            <img src="IconosGoogle/check_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="Andoid" width="40" height="40">
+            Operación realizada con éxito
+        </p>
+    </div>
+
+        <!-- FORMA 2. Copiar y pegar el código directamente (La favorita de 
+             los diseñadores) Cuando le das clic al botón de copiar SVG en la 
+             página de Google, te llevas un bloque de código que empieza 
+             con <svg ...> y termina con </svg>. Lo único que haces es pegarlo 
+             tal cual en tu HTML: -->
+    <div>
+    <button>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg>
+        Una estrella
+    </button>
+    </div>            
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+    color: crimson;
+}
+
+div {
+    padding: 15px;
+    margin: auto;
+    max-width: 400px;
+}
+
+.icono_azul {
+    font-size: 2.5em;
+    color: cornflowerblue;
+    vertical-align: bottom;
+}
+
+button {
+    color: red;
+}
+
+.mi-boton { 
+  background-image: url('IconosBootstrap/tux.svg');
+}
+
+img {       /* Es para centrar la imagen con el texto*/
+    vertical-align: middle;
+}

@@ -1,0 +1,131 @@
+/* FUENTES EXTERNAS DE GOOGLE
+
+Para este tema se ocupará la segunda versión de los fonts de google, por eso la direccion comenzara 
+con css2
+@import url('https://fonts.googleapis.com/css2?family=Sofia&......
+                                         ▲▲▲▲
+En el caso de querer el manejo de efectos tenemos que hacerlo enla versión 1 de los fonts de google
+(no tiene el valor 2) y las distintas familias se separan con un pipe (|) y al final se coloca la
+palabra effects para indicar el efecto, para mas información consultar "GOOGLE FONTS DOCUMENTATION"
+
+
+Esto es lo que obtenemos cuando usamos la opcion @import
+
+Tipo de letra Sofia
+<style>     <-- lo quitamos, no sera necesario ya que lo usaremos dentro del archivo CSS
+@import url('https://fonts.googleapis.com/css2?family=Sofia&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Trocchi&display=swap');
+</style>    <-- no será necesario hay que qutarlo
+
+Tipo de letra ROBOTO
+
+<style>     Lo podemos quitar no se requiere dentro del CSS (solo en html)
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sofia&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Trocchi&display=swap');
+</style>    Lo podemos quitar
+
+
+Cuando las direcciones son identicas y lo único que cambia es el nombre de la fuente 
+por ejemplo "family=Roboto" lo que podemos hacer es agregar dentro de la misma direccion 
+un &family=nombreFont, y si el nombre de la fuente tiene espacios en blanco entonces usamos
+el signo de "+" en cada espacio en blanco family=Sofia&family=Sofia+Sans&family=Roboto
+Pero SOLO CUANDO LAS DIRECCIONES SON IDENTICAS Y solo cambia el nombre de la fuente
+
+
+Para cargar el tipo de letra Sofia
+@import url('https://fonts.googleapis.com/css2?family=Sofia&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Trocchi&display=swap');
+
+Para cargar el tipo de letra (sofia-Roboto)
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sofia&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Trocchi&display=swap');
+
+
+Para cargar el tipo de letra (sofia-Roboto-Eagle Lake)
+@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sofia&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Trocchi&display=swap');
+
+Para cargar el tipo de letra (sofia-Roboto-Eagle Lake-Rouge Script)
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Eagle+Lake&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rouge+Script&family=Sofia&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Trocchi&display=swap');
+
+
+Para cargar el tipo de letra (sofia-Roboto-Eagle Lake-Rouge Script-Edu austria)
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Eagle+Lake&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rouge+Script&family=Sofia&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Trocchi&display=swap');
+
+
+Para cargar el tipo de letra (sofia-Roboto-Eagle Lake-Rouge Script-Edu austria-Lobster)
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Eagle+Lake&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Lobster&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rouge+Script&family=Sofia&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Trocchi&display=swap');
+
+
+A medida que vamos seleccionando font distintos la dirección para importar incluye todas las anteriormente seleccionadas, por
+eso solo basta indicar la ultima selección, en este caso esta liga de importación ya contiene los tipos:
+Sofia, Roboto, Eagle LAke, Rouge Script, Edu Austria, LObster y zen-kurenaido
+Para reiniciar buscar el boton de borrar selección y comenzamos desde cero la incorporación de las fuentes
+
+También existe una opción para descargar los fonts directamente para instalarlos en nuestro proyecto
+*/
+
+
+/* Para cargar los tipos de letra (sofia-Roboto-Eagle Lake-Rouge Script-Edu austria-Lobster-zen-kurenaido) */
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Eagle+Lake&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Lobster&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rouge+Script&family=Sofia&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Trocchi&family=Zen+Kurenaido&display=swap');
+
+
+h1 {
+    color: #ef476f;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #ced4da;   /* Sombra al texto */
+    /* font-family: "Sofia Sans", sans-serif; */
+}
+
+.font-sofia {                       /* Clase para la fuente sofia*/
+  font-family: "Sofia", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.caja {
+    padding: 5px;      
+    width: 40%;
+    height: 80px;      
+    border-radius: 5px;
+    color: white;          
+    text-align: center;
+    margin: 10px;   
+    font-size: 20px;
+    float: left;                  /* permite que la caja flote a la izquierda */
+}
+
+.caja.fuente_fondo {
+    background-color: #5a189a;
+}     
+
+.font-roboto {                    /* Clase para la fuente roboto */
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.font-eagle {                     /* Clase para la fuente eagle */
+  font-family: "Eagle Lake", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.font-edu-austria {               /* Clase para la fuente esu austria */
+  font-family: "Edu AU VIC WA NT Guides", cursive;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.font-lobster {                 /* Clase para la fuente lobster */
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-zen-kurenaido {        /* Clase para la fuente zen kurenaido */
+  font-family: "Zen Kurenaido", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
