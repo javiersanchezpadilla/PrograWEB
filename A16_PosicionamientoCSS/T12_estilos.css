@@ -1,0 +1,39 @@
+/* Posicionamientos en CSS POSICIONAMIENTO ESTATICO (position:static;)
+
+Tenemos cinco tipos de posicionamientos en CSS
+
+static      Estático
+relative    Relativo
+fixed       Ajustado o arreglado
+absolute    Absoluto
+sticky      Pegajoso 
+
+El que hemos estamo trabajando es el estatico
+position: static;    <-- Es el valor por defecto
+
+Al trabajar este posicionamiento las propiedades de 
+top, left, right, bottom no surten ningún efecto sobre el elemento
+
+*/ 
+
+
+h1 {
+    text-align: center;   
+    color: crimson;      
+}
+
+div {
+    position: static;       /* ES QUE HEMOS TRABAJADO HASTA AHORITA */
+    
+    /*  Al ser estatico no importa que valores definamos en las propiedades
+        top, bottom, left, right las ignora completamente, sin importar que 
+        eliminemos la etiqueta position: static; la manera de trabajar <div>
+        es siempre estica, así que no importa si esta o no el funcionamiento
+        seré el mismo en ambos casos */
+    top: 200px;             
+    left: 400px;
+
+    max-width: 50%;    
+    border: 3px solid firebrick; 
+    margin: auto;   /* Esta propiedad permite centrar el elemento div */
+}

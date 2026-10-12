@@ -1,0 +1,38 @@
+/* Centrar elementos del tipo DIV */
+
+h1 {
+    text-align: center;     /* Centramos el encabezado */
+    color: crimson;       /* Le asignamos un color */
+}
+
+/*  PAra poder centrar un elemento del tipo <div> primero se requiere definir 
+    un tamaño y usar la propiedad margin: aunto */
+
+/*  una de las ventajas de utilizar un porcentaje en lugar de píxeles 
+    directamente es cuando hacemos más pequeña esta pantalla conforme la vamos 
+    haciendo más pequeña, podemos observar que de manera automática se va 
+    ajustando el tamaño de nuestro elemento div.
+    Qué pasa si utilizamos en lugar del 50 por ciento un valor fijo como 
+    400 pixeles (que es un valor fijo), entonces cuando hacemos más pequeña la
+    pantalla, se puede observar que el elemento no se ajusta, sin embargo, 
+    podemos observar que este elemento div sigue centrado, pero si hacemos más 
+    grande, por ejemplo, en nuestra pantalla podemos observar que ahora en la 
+    parte inferior tenemos esta barra de scroll (de desplazamiento), en ocasiones
+    esto, puede no ser deseado, ya que la idea es que nuestros elementos se ajusten
+    al tamaño de nuestra pantalla conforme se va reduciendo o haciendo más grande 
+    nuestra pantalla, podemos ver que esta barra desaparece en cuanto este elemento 
+    ya tiene el espacio suficiente para poderse desplegar.
+    Algo similar al porcentaje ocurre cuando utilizamos la propiedad de Max Width
+    Con eso es lo que estamos indicando, que el valor máximo es de 400 píxeles, 
+    pero si el tamaño de la pantalla es menor, entonces se ajusta a ese tamaño
+    (como máximo son 400 píxeles, pero puede ser menos) estoevita que se desplieggue
+    la barra de desplazamiento inferior (scroll) */
+div {
+    /* width: 400px; */
+    /* max-width: 400px; */
+    max-width: 50%; /* respeta el 50% aunque se modifique el tamaño de la ventana o 
+                        la escala (zoom) mantiene el 50% de la escala de la ventana */
+    /* width: 50%;     /* PAra poder centralo primero requerimos definor un tamalo 50% de la pantalla */
+    border: 3px solid firebrick;    /* Le vamos a asignar un borde */
+    margin: auto;   /* ESTA PROPIEDAD PERMITE CENTRAR EL ELEMENTO DIV */
+}
