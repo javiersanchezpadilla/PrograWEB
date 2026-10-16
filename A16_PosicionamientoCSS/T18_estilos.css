@@ -1,0 +1,102 @@
+h1 {
+    text-align: center;
+    color: crimson;
+}
+
+
+/*  Aun si no definimos que la posición es estática, por defecto se
+    asume que lo es, cuando agregamos elementos del tipo estatico, 
+    ninguna propiedad afecta como top, left, right, bottom*/ 
+div.estatiquito {
+    position: static;
+    top: 10px;
+    padding: 15px;
+    border: 3px solid greenyellow;
+    background-color: whitesmoke;
+}
+
+/* Al ser relativo los valores top, left se calcular con base ala posicion
+    que corresponde donde tenia que ubicarse el elemento originalmente como
+    elemento estatico, esto es, como elemento estatico tiene una forma de
+    ubicarse en lapantalla, sin embargo al ser relatico toma ese punto inicial
+    de ubicacion  y a partir de ahi se calculan las posiciones top=10 pixels
+    y left=10 pixels*/
+/*  Si agregamos un z-index:-1 (atras), si inspeccionamos la página veremos
+    que no se puede seleccionar el elemnto porque estará atras del resto*/
+div.relativito {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    padding: 15px;
+    border: 3px solid blueviolet;
+    background-color: whitesmoke;
+    /* z-index: -1;   Unica el elemento <div> atras de todo*/ 
+}
+
+
+/* Dentro del inspector (para que sea mas sencillo) aumentamos el padding
+y notaremos que el cuadro sobre sale del elemento relativo, pero si mandamos
+el elemento mediante la propiedad z-index hacia a atras y aumentamos el 
+padding veremos como aumenta el cuadro pero por atras 
+La idea es jugar con los valores de padding, primero con z-index positivo
+y luego volver a cambiar los valores del padding con los valores del 
+z-index negativos
+                       
+con z-index positivo (se va al frente) o por defecto así se verá               
+               
++-----------------------------+  Elemento <div> relativo
+|                             | 
+|                             | 
+|              +------------+ | 
+|              |        <---+------Elemento <div> absoluto
+|              +------------+ |
++-----------------------------+
+
+Si modificamos el padding el tamaño aumenta pero sobre el elemento relativo
+                            Elemento <div> absoluto
+               +------------+
+               |            |  
++--------------|            |-+ Elemento <div> relativo
+|              |            | |
+|              |            | |
+|              |            | | 
+|              |            | |
+|              +------------+ |
++-----------------------------+
+
+
+Con z-index negativo el <div> absoluto se va hacia atras
+z-index: -1;
+
++-----------------------------+  Elemento <div> relativo
+|                             | 
+|                             | 
+|                             | 
+|                             |   <-----Elemento <div> absoluto (esta atras)
+|                             |
++-----------------------------+
+
+nuevamente  si modificamos el padding crece pero por la parte de atras.
+                            Elemento <div> absoluto
+               +------------+
+               |            |
+               |            |  
++-----------------------------+ Elemento <div> relativo
+|                             |
+|              |            | |
+|                             | 
+|              |            | |
+|              +--  --  -- -+ |
++-----------------------------+
+
+*/ 
+
+div.absolutito {
+    position: absolute;
+    bottom: 0;      /* Con referencia al elemeto relativo solamente*/
+    right: 0;       /* Con referencia al elemeto relativo solamente */
+    padding: 112x;   /* Aumentar con varios valores */
+    border: 3px solid cornflowerblue;
+    background-color: whitesmoke;
+     z-index: -1;    /* Lo manda hacia atras,probar con z-index: 1 */
+}

@@ -1,0 +1,73 @@
+<!-- POSICIONAMIENTO DEL TIPO ABSOLUTO EN CSS 
+ 
+En este segundo ejemplo declaramos un elemento <div> como padre
+y otro elemento del tipo <div> como hijo para entender como con
+este tipo de posicionamiento el hijo seguira al padre de forma 
+absoluta (el elemento hijo no atenderá el scroll, solo seguira al
+padre)
+
++-----------------------------+ Elemento padre <div>
+|                             |
+|                             |
+|              +------------+ | Elemento hijo <div> (absoluto al padre <div>)
+|              |            | |
+|              +------------+ |
++-----------------------------+
+
+La posicion del hijo (absoluta) se basará de acuerdo a la posicion del padre, 
+en caso de que no existiera un elemento que contenga al elemento hijo se toma 
+el <body>
+
+MUY IMPORTANTE!!!!
+-------------------
+Por defecto los elementos como <div> tienen una posición estatica, por lo que
+si queremos que esto funcione tenemos que especifica el posicionamiento relativo 
+para que entonces pueda tomar efecto este posicionamiento del elemento hijo como 
+absoluto
+-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centrar elementos Div</title>
+    <link rel="stylesheet" href="T15_estilos.css">
+ </head>
+ <body>
+    <h1>Centrar elementos del tipo Div</h1>
+
+    <!-- ELEMENTO PADRE -->
+    <!-- DEbemos cambiar su posicionamiento a relativo, ya que por defectoes
+         relativo 
+         
+        +-----------------------------+ Elemento padre <div>
+        |  <div> padre                |
+        |                             |
+        |              +------------+ | Elemento hijo <div> (absoluto al padre <div>)
+        |              | <div> hijo | |
+        |              +------------+ |
+        +-----------------------------+ botton:0;  
+                                        Right: 0;
+        El movimiento relativo del hijo es con referencia al padre, podemos
+        pensar que almover el scroll sigue el movimiento del scroll, pero 
+        realmente esta siguiendo la posición absoluta (bottom:0 y right:0)
+        del elemento padre
+         -->
+    <div class="relativito">
+        DIV Padre relativo
+
+        <!-- ELEMENTO HIJO -->
+        <!-- tenemos que envolver este elemento <div> (padre) para que lo 
+            pueda seguir el elemento hijo-->
+        <div class="absolutito">Elemento del tipo div</div>
+
+    </div>
+
+      <p class="padding_grandote_para_scroll">Este es un primer parrafo</p>
+      <p>Este es un segundo parrafo que no fue afectado por las</p>
+      <p>caracteristicas del div (por ser posicion relativa)</p>
+
+
+
+ </body>
+ </html>

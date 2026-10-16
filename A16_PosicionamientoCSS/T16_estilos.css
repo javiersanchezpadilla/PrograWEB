@@ -1,0 +1,48 @@
+/* POSICIONAMIENTO STICKY (PEGAJOSO) (position: sticky;)
+
+Tenemos cinco tipos de posicionamientos en CSS
+
+static      Estático
+relative    Relativo        
+fixed       Ajustado o arreglado    
+absolute    Absoluto            
+sticky      Pegajoso            <-----
+
+Debemos tomar en cuenta lo siguiente:
+
+En el navegador Safari e Internet Explores se requiere agregar lo
+siguiente:
+
+div {
+    position: sticky; 
+    position: -webkit-sticky;   <----- Agregar esta linea (safari, I.Explorer)
+    top: 0;           
+    border: 3px solid firebrick; 
+}
+
+*/ 
+
+
+h1 {
+    text-align: center;   
+    color: crimson;      
+}
+
+/*  creamos propiedades para el marcador del tipo <div>
+    cuando el valor top llegue al valor de 0 top:0; será en ese punto
+    cuando se active la posicion sticky (similar a fixed), pero solamente
+    cuando se cumpla esta condicion (que es cuando se mueve el scroll)
+*/ 
+div {
+    position: sticky;     /* POSICIONAMIENTO STICKY */
+    top: 0;             /* solo se activa cuand el elemento <div> llega
+                           a la posición top:0; */
+    border: 3px solid firebrick; 
+}
+
+/*  LA idea de este padding grandote es que afecte al primer
+    parrafo y se active la barra de scroll y poder ver el efecto
+    de la posición del elemento <div>  */
+.padding_grandote_para_scroll {
+    padding-bottom: 900px;
+}

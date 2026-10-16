@@ -1,0 +1,49 @@
+/* POSICIONAMIENTO ABSOLUTE (ABSOLUTA) (position: absolute;)
+
+Tenemos cinco tipos de posicionamientos en CSS
+
+static      Estático
+relative    Relativo        
+fixed       Ajustado o arreglado    
+absolute    Absoluto            <-----
+sticky      Pegajoso 
+*/ 
+
+
+h1 {
+    text-align: center;   
+    color: crimson;      
+}
+
+/* creamos la clase absoluto, para aplicarlo al elemento <div>, el cual
+tendremos que envolver en otro elemento padre <div>, recordar que el p
+posicionamiento por defecto de los lemento <div> es estatico, por lo que
+debemos cambiar eso y así pueda tomar efecto el posicionamiento absouto
+*/ 
+div.absolutito {
+    position: absolute;     /* POSICIONAMIENTO ABSOLUTO */
+    bottom: 20px;           /* 20 pixels con refernecia al padre */
+    right: 10px;            /* 10 pixels con refernecia al padre */
+    border: 3px solid firebrick; 
+}
+
+/*  Esto va a aplicarse al elemento padre <div> para que podamos aplicar
+    al hijo la posición absoluta.
+    Por que hacer esto? cuando una posición es estatica, no tiene efecto
+    los margenes, entonces tampoco tendría efecto el movimiento relatico
+    del elemento <div> hijo*/ 
+div.relativito {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    top: 100px;
+    left: 100px;
+    border: 3px solid cornflowerblue
+}
+
+/*  LA idea de este padding grandote es que afecte al primer
+    parrafo y se active la barra de scroll y poder ver el efecto
+    de la posición del elemento <div>  */
+.padding_grandote_para_scroll {
+    padding-bottom: 900px;
+}

@@ -1,0 +1,42 @@
+<!-- POSICIONAMIENTO DEL TIPO FIX A AJUSTADO EN CSS 
+ 
+Tenemos cinco tipos de posicionamientos en CSS
+
+static      Estático
+relative    Relativo
+fixed       Ajustado o arreglado   <-------
+absolute    Absoluto
+sticky      Pegajoso 
+
+Posicionamiento del tipo fixed (ajustado)
+Esto nos va a servir para colocar botones de manera fija o accesos
+a chats y que al desplazarse no se muevan de posicion. o menus
+de navegación fijos sin que sean afectados por las barras de scroll
+-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centrar elementos Div</title>
+    <link rel="stylesheet" href="T13_estilos.css">
+ </head>
+ <body>
+    <h1>Centrar elementos del tipo Div</h1>
+    <!-- Este elemento <div> sera afectado solamente por la posicion 
+         relativa, el resto no se afectará -->
+    <div>Elemento del tipo div</div>
+
+
+      <!-- la idea del padding grandote es para activar la barra de 
+           scroll y poder ver el efecto sobre el elemento <div> que
+           no se movera jamas
+                ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼   -->
+      <p class="padding_grandote_para_scroll">Este es un primer parrafo</p>
+      <p>Este es un segundo parrafo que no fue afectado por las</p>
+      <p>caracteristicas del div (por ser posicion relativa)</p>
+
+
+ </body>
+ </html>
+ 

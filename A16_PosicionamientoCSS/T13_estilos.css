@@ -1,0 +1,54 @@
+/* POSICIONAMIENTO FIXED (AJUSTADO) (position: fixed;)
+
+Tenemos cinco tipos de posicionamientos en CSS
+
+static      Estático
+relative    Relativo        
+fixed       Ajustado o arreglado    <-----
+absolute    Absoluto
+sticky      Pegajoso 
+*/ 
+
+
+h1 {
+    text-align: center;   
+    color: crimson;      
+}
+
+/* Cuando utilizamos la posición de tipo fix o ajustada, nuestro 
+elemento de tipo <div> se va a colocar de manera relativa al 
+viewport, es decir, la pantalla que tengamos disponible en nuestra 
+página, así que, por ejemplo, en este caso estamos indicando la 
+posición de tipo fix y entonces de manera relativa al viewport, es 
+decir, a toda nuestra pantalla disponible se ajustara a un top de 100 
+y un left de 50 (ver sección de ajustes de estilo del selector div
+IMPORTANTE!!! al tener como referencia el viweport (la pantalla) aunque
+hagamos scroll la posición se mantendrá fija en todo momento
+
+podemos jugar con los valores por ejemplo
+
+top: 0;   Se fijara en la esquina superior izquierda
+left: 0;  al ser cero no es necesario indicar px (pixeles)
+
+bottom:0;   queda fijo en la esquina inferior derecha
+right: 0;
+
+
+MOVER LA BARRA DE SCROLL PARA VER EL EFECTO DE QUE NO SE MUEVE EL ELEMENTO
+--------------------------------------------------------------------------
+*/ 
+div {
+    position: fixed;       /* POSICIONAMIENTO AJUSTADO */
+    
+    top: 100px;  
+    left: 50px;  
+    border: 3px solid firebrick; 
+}
+
+/*  LA idea de este padding grandote es que afecte al primer
+    parrafo y se active la barra de scroll y poder ver el efecto
+    de la posición del elemento <div> que queda fijo sin moverse 
+    aunque movamos la barra de scroll */
+.padding_grandote_para_scroll {
+    padding-bottom: 900px;
+}

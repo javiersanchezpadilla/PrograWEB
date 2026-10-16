@@ -1,0 +1,37 @@
+h1 {
+    text-align: center;
+    color: crimson;
+}
+
+/* 1. Creamos el selector para el primer <div> la clase contenedor*/
+div.contenedor {
+    position: relative;     /* posicion relativa*/
+    border: 3px dashed greenyellow;
+    width: 30%;             /* Para que no ocupe todo el espacio*/
+    margin: auto;           /* auto para que se centre */
+}
+
+/* 2. Creamos el selector para imagen*/ 
+img.imagen {   
+    width: 100%;    /* Para que ocupe todo el ancho del contenedor*/ 
+
+    /* Le podemos aplicar a las imagens cierta opacidad (Transparencia) */
+    opacity: 0.2;   /* 1 es valor por default, 0 no muestra imagen*/
+}
+
+/* 3. Agergamos la clase de centro que aplique solo al elemento <div> */
+div.centro {
+    position: absolute;     /* Posicionamiento absoluto */
+
+    /* Para que se centre se centra en el eje vertical*/ 
+    top: 50%;               /* se va a colocar ala mitad */
+
+    /* este borde es solo para visualziar el resultado */
+    /* border: 1px solid blue;  */
+
+    /* Le decimos que ocupe el 100% del contenedor externo*/ 
+    width: 100%;    
+
+    text-align: center; /* para centrar solo basta text-align*/ 
+    font-size: 25px;
+}

@@ -1,0 +1,62 @@
+<!-- POSICIONAMIENTO DEL TIPO ABSOLUTO EN CSS 
+ 
+Tenemos cinco tipos de posicionamientos en CSS
+
+static      Estático
+relative    Relativo
+fixed       Ajustado o arreglado   
+absolute    Absoluto            <-------
+sticky      Pegajoso 
+
+En este ejemplo PADRE = <body> HIJO = <div>, por lo que el hijo deberá
+seguir al padre en el posicionamiento absoluto.
+
++-----------------------------+ Elemento padre <body>
+|                             |
+|                             |
+|              +------------+ | Elemento hijo <div> (absoluto al padre <body>)
+|              |            | |
+|              +------------+ |
++-----------------------------+
+
+A diferencia de la posición fija en la cual si hacemos Scroll, podemos observar 
+que se mantiene de manera fija el elemento de tipo <div>, ahora vamos a ver la 
+posición absoluta, en lugar de utilizar el valor de fix o fijo, vamos a utilizar
+el valor de absoluto absoluto, normalmente esa posición la vamos a utilizar 
+cuando estamos trabajando dentro de otro elemento de tipo <div>, así que 
+normalmente vamos a tener un elemento de tipo <div> (como padre) y dentro de 
+este elemento podemos utilizar esta posición absoluta, así que se va a posicionar 
+de manera absoluta, pero tomando en cuenta el elemento que lo contiene (el 
+elemento padre), así que si en este caso definimos otro elemento de tipo <div> 
+(hijo), (el <div> mas externo será el padre y el interno será el <div> hijo),
+entonces, considerando el elemento padre (el elemento más externo) se posiciona 
+de manera absoluta.
+
+Ahora, qué sucede si este elemento con el valor de absoluto se agrega sin haber 
+agregado otro elemento padre?, entonces se va a tomar en cuenta el document body
+como el elemento padre, (Es decir, nuestra página)
+
+el elemento hijo en todo momento seguira al elemento padre mediante una posción
+absoluta
+
+-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centrar elementos Div</title>
+    <link rel="stylesheet" href="T14_estilos.css">
+ </head>
+ <body>
+    <h1>Centrar elementos del tipo Div</h1>
+
+    <div>Elemento del tipo div</div>
+
+      <p class="padding_grandote_para_scroll">Este es un primer parrafo</p>
+      <p>Este es un segundo parrafo que no fue afectado por las</p>
+      <p>caracteristicas del div (por ser posicion relativa)</p>
+
+
+ </body>
+ </html>

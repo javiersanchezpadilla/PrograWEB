@@ -1,0 +1,26 @@
+/* Propiedad DISPLAY en CSS 
+
+la propiedad de span es de tipo inline, y en los elementos de tipo inline 
+no podemos controlar los elementos como el margen o el padding, es decir, 
+que el alto de los elementos de tipo inline no los podemos modificar por 
+default, así que para ello vamos a ver la propiedad de display y su valor 
+de inline block.
+*/
+
+
+h1 {
+    text-align: center;
+    color: #457b9d;
+}
+
+div.contenedor {
+    /* border: 3px dashed greenyellow;  se van a usar clases*/
+    width: 80%; 
+    height: 20%; 
+
+    /* para que en caso de que nuestro texto sobresalga del contenedor
+       muestre las barras de scroll*/
+    overflow: auto; 
+    margin: auto;
+    border: 3px dashed #a8dadc;
+}

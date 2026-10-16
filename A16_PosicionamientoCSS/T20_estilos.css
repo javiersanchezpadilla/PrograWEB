@@ -1,0 +1,33 @@
+/* Propiedad OVERFLOW en CSS 
+
+Todo aquello que rebasa el área destinada para un conenedor se le llama
+OVERFLOW, tenemos distintas formas de tratarlo.
+
+overflow: visible;  <-- queda igual a no colocarlo se ve el area desbordada
+overflow: hidden;   <-- oculta el área desbordada
+overflow: scroll;   <-- agrega las barras de scroll dentro del contenedor
+                        tanto las barras de scroll vertical como horizontal
+overflow: auto;     <-- agrega las barras de scroll SOLO EN CASO DE SER 
+                        NECESARIO, si el texto no rebasa (overflow) no coloca
+                        las barras de scroll
+overflow-x: ;       <-- podemos definir estas propiedades solo para el eje "x"
+overflow-y: ;       <-- podemos definir estas propiedades solo para el eje "y"
+
+Estas propiedades solo se van a poder manejar si definimos la propiedad
+height (altura), de lo contrario en tamaño del contenedor sera igual al
+tamaño del texto que ocupará el espacio                        
+*/
+
+
+h1 {
+    text-align: center;
+    color: crimson;
+}
+
+div.contenedor {
+    border: 3px dashed greenyellow;
+    width: 30%; 
+    height: 50px;           /* Define la altura del contenedor de forma fija */ 
+    margin: auto;           /* auto para que se centre */
+    overflow: scroll;
+}

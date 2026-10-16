@@ -1,0 +1,50 @@
+<!-- POSICIONAMIENTO DEL TIPO STICKY (PEGAJOSO) EN CSS 
+ 
+Tenemos cinco tipos de posicionamientos en CSS
+
+static      Estático
+relative    Relativo
+fixed       Ajustado o arreglado  
+absolute    Absoluto
+sticky      Pegajoso             <-------
+
+Este tipo de posicionamiento permite ubicar un elemento en lapantalla, 
+sin embargo cuando el elemento es desplazado mediante la barra de scroll
+se queda fijo en la pantalla (algo similar a los elemento del tipo FIXED)
+la diferencia es que si tiene moviemiento del acuerdo al scroll vertical
+u horizontal, solamente se fija cuando llega a uno de los bordes de la 
+pantalla.
+
+Un elemento de tipo sticky funciona como un posicionamiento relativo, 
+siempre y cuando se pueda seguir mostrando en pantalla, pero en cuanto 
+el elemento sale de pantalla entonces funciona como un elemento de tipo 
+fix, así que se mantiene fijo en todo momento, una vez que está fuera de 
+pantalla este elemento, esto puede ser útil, por ejemplo, para menús de 
+navegación, ya que si tenemos un menú de navegación en cuanto a ese menú 
+de navegación sale de pantalla, entonces se puede quedar de manera fija 
+en todo momento y no importa la información que estemos visualizando de 
+nuestra página en todo momento si ese menú está fuera del espacio que le 
+correspondía, entonces se queda de manera fija, y en cuanto regresamos a 
+la parte superior, que es donde normalmente están los menús, entonces 
+se vuelve a posicionar donde corresponde
+
+-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centrar elementos Div</title>
+    <link rel="stylesheet" href="T16_estilos.css">
+ </head>
+ <body>
+    <h1>Centrar elementos del tipo Div</h1>
+
+    <p>Elemento del tipo parrafo</p>
+    <div>Elemento del tipo div sticky</div>
+    <p class="padding_grandote_para_scroll">Este es un primer parrafo</p>
+
+
+ </body>
+ </html>
+ 

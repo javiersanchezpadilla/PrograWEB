@@ -1,0 +1,36 @@
+/* Propiedad FLOAT en CSS 
+
+float: none;    <-- Este es el valor por defecto
+float: left;    <-- flota los elementos a la izquierda
+*/
+
+
+h1 {
+    text-align: center;
+    color: crimson;
+}
+
+/*  Al flotar el elemento a la izquierda permite colocar un elemento al lado
+    del otro.
+    
+    Cuando flotamos un elemento se hacia la izquierda, esto permite que los 
+    demás elementos que vamos agregando se agreguen a su vez a su derecha
+    así que todos los elementos se van cargando hacia la izquierda y entonces 
+    se van colocando de manera automática hacia la derecha de cada elemento.
+    Pero si cada uno de estos elementos está flotado hacia la izquierda y si 
+    agregamos otro elemento de tipo <div> podemos ver que de manera automática 
+    se siguen colocando hacia la derecha de los elementos que ya tenemos 
+    |agregados, pero si está flotado hacia la izquierda, agregamos un cuarto 
+    elemento y entonces observamos que cuando ya no cabe más estos elementos, 
+    el siguiente elemento se vuelve a flotar hacia la izquierda, pero ya ocupa 
+    una nueva línea, ya que ya no tiene espacio disponible hacia la derecha y 
+    entonces se coloca de nueva cuenta en una nueva línea pero hacia la 
+    izquierda.
+    */
+div.contenedor {
+    border: 3px dashed greenyellow;
+    width: 30%; 
+    height: 100px; 
+    overflow: auto;
+    float: left;        /* <-- puede flotar a la izquierda, derecha o none  */
+}

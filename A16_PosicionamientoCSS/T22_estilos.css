@@ -1,0 +1,73 @@
+/* Propiedad FLOAT en CSS 
+
+float: none;    <-- Este es el valor por defecto
+float: left;    <-- flota los elementos a la izquierda
+
+El resultado van a ser los dos elementos <div> flotando uno a la izquierda
+y el otro a la derecha en la misma linea. el problema es que vamos a asignar
+propiedades de float a la izquierda y para el otro contenedor float a la 
+derecha, para que podamos agregar más elementos de tipo <div> y ya no se 
+carguen hacia la izquierda o a la derecha, vamos a utilizar una propiedad que 
+se llama CLEAR, con esta propiedad en lugar de que se muestre este elemento 
+flotado hacia la izquierda o derecha, se va a limpiar esta propiedad de float
+Basicamente es como un reset a partir de donde se especifique esta propiedad
+para que los elementos se muestren de manera normal a como se comportan sin 
+el uso de FLOAT.
+
++-----------+                     +------------+
+|           |                     |            |            
+|           |                     |            |
++-----------+                     +------------+
+<div> contenedor 1             <div> contenedor 2
+float: left;                   float: right;
+
+Aqui se presenta el problema porque puede ser afectado el <div> 3 ya que puede
+flotar a la izquierda o a la derecha,para resolver esto usaremos CLEAR
+
+                +-------------+
+                |             | <div> contenedor 3
+                |             | margin: auto;
+                +-------------+
+
+clear: left;    <-- En caso de tener elementos flotados a la izquierda
+clear: right;   <-- En caso de tener elementos flotados a la derecha
+clear: both;    <-- En caso de tener ambos (izquierda y derecha)                
+
+
+*/
+
+
+h1 {
+    text-align: center;
+    color: crimson;
+}
+
+div.contenedor {
+    /* border: 3px dashed greenyellow;  se van a usar clases*/
+    width: 30%; 
+    height: 100px; 
+    overflow: auto;
+}
+
+div.contenedor.flotado {
+    float: left;        /* puede flotar a la izquierda, derecha o none  */
+}
+
+div.contenedor.flotado.contenedor1 {
+    border: 3px dashed greenyellow;
+}
+
+/*  Aunque la clase flotado manda que el elemento debe flotar a la izquierda
+    este último al ser hoja de estilos en cascada sobre escribe al primero 
+    dejando el elemento flotado a la derecha */
+div.contenedor.flotado.contenedor2 {
+    border: 3px dashed cornflowerblue;
+    float: right;
+}
+
+/* Nuevo contenedor SIN QUE FLOTE*/
+div.contenedor.contenedor3 {
+    clear: both;        /* RESETEA la propiedad de float*/ 
+    border: 3px dashed darkorange;
+    margin: auto;       /* Centrar nuestro elemento a la mitad de la pantalla*/ 
+}

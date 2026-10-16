@@ -1,14 +1,12 @@
-<!-- POSICIONAMIENTO EN CSS 
+<!-- POSICIONAMIENTO RELATIVO EN CSS 
  
 Tenemos cinco tipos de posicionamientos en CSS
 
 static      Estático
-relative    Relativo
+relative    Relativo          <--------
 fixed       Ajustado o arreglado
 absolute    Absoluto
 sticky      Pegajoso 
-
-Posicionamiento del tipo estático (es el que hemos trabajado)
 -->
  <!DOCTYPE html>
  <html lang="en">
@@ -16,10 +14,20 @@ Posicionamiento del tipo estático (es el que hemos trabajado)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centrar elementos Div</title>
-    <link rel="stylesheet" href="T11_estilos.css">
+    <link rel="stylesheet" href="T12_estilos.css">
  </head>
  <body>
     <h1>Centrar elementos del tipo Div</h1>
+    <!-- Este elemento <div> sera afectado solamente por la posicion 
+         relativa, el resto no se afectará -->
     <div>Elemento del tipo div</div>
+
+      <!-- Se esperaria que los parrafos fueran afectados por la posicion
+           del <div> pero no es así por ser relativa -->
+      <p>Este es un primer parrafo</p>
+      <p>Este es un segundo parrafo que no fue afectado por las</p>
+      <p>caracteristicas del div (por ser posicion relativa)</p>
+
+
  </body>
  </html>

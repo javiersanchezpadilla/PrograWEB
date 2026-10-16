@@ -1,0 +1,50 @@
+/* POSICIONAMIENTO ABSOLUTE (ABSOLUTA) (position: absolute;)
+
+Tenemos cinco tipos de posicionamientos en CSS
+
+static      Estático
+relative    Relativo        
+fixed       Ajustado o arreglado    
+absolute    Absoluto            <-----
+sticky      Pegajoso 
+
++-----------------------------+ Elemento padre <body>
+|                             |
+|                             |
+|              +------------+ | Elemento hijo <div> (absoluto al padre <body>)
+|              |            | |
+|              +------------+ |
++-----------------------------+
+
+Cuando hacemos scroll el elemento <div> no sigue el scroll, sigue de forma 
+absoluta al elemento padre (al <body>)
+*/ 
+
+
+h1 {
+    text-align: center;   
+    color: crimson;      
+}
+
+/* aquí como el elemento padre es el <body>,ya que este elemento
+<div> esta contenido en el <body> el elemento hijo <div> sigue al 
+padre de forma absoluta, si nos movemos con el scroll podemos observar 
+que en lugar de que se quede de manera fija sigue el movimiento del 
+padre (del <body>) y se ajusta de acuerdo a nuestra pantalla, ealmente 
+el elemento <div> no sigue al scroll a quien sigue es al elemento <body> 
+de forma absoluta
+*/ 
+div {
+    position: absolute;       /* POSICIONAMIENTO ABSOLUTO */
+    bottom: 0;  
+    right: 0;
+    border: 3px solid firebrick; 
+}
+
+/*  LA idea de este padding grandote es que afecte al primer
+    parrafo y se active la barra de scroll y poder ver el efecto
+    de la posición del elemento <div> que seguira de forma absoluta
+    al elemento padre que la contiene (el <body>) */
+.padding_grandote_para_scroll {
+    padding-bottom: 900px;
+}

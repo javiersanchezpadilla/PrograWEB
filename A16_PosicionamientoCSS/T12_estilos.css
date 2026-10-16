@@ -1,18 +1,15 @@
-/* Posicionamientos en CSS POSICIONAMIENTO ESTATICO (position:static;)
+/* Posicionamientos en CSS POSICIONAMIENTO RELATIVO (position: relative;)
 
 Tenemos cinco tipos de posicionamientos en CSS
 
 static      Estático
-relative    Relativo
+relative    Relativo        <-----
 fixed       Ajustado o arreglado
 absolute    Absoluto
 sticky      Pegajoso 
 
-El que hemos estamo trabajando es el estatico
-position: static;    <-- Es el valor por defecto
-
-Al trabajar este posicionamiento las propiedades de 
-top, left, right, bottom no surten ningún efecto sobre el elemento
+Al trabajar este posicionamiento (relativo) las propiedades de 
+top, left, right, bottom SI surten efecto sobre el elemento
 
 */ 
 
@@ -22,16 +19,37 @@ h1 {
     color: crimson;      
 }
 
+/* Al usar una posición relativa afecta solamente al elemento, 
+esto quiere decir que el resto de los elemento no serán afectados,
+la posición relativa afecta solo al elemento seleccionado, en es caso
+el <div>, podemos ver en el documento HTML que existen dos elemento
+del tipo parrafo <p> y no son afectados sin importar que estan debajo
+del elemento <div>*/ 
 div {
-    position: static;       /* ES QUE HEMOS TRABAJADO HASTA AHORITA */
+    position: relative;       /* POSICIONAMIENTO RELATIVO */
     
-    /*  Al ser estatico no importa que valores definamos en las propiedades
-        top, bottom, left, right las ignora completamente, sin importar que 
-        eliminemos la etiqueta position: static; la manera de trabajar <div>
-        es siempre estica, así que no importa si esta o no el funcionamiento
-        seré el mismo en ambos casos */
-    top: 200px;             
-    left: 400px;
+    /*  En este caso, si va a afectar los elementos de top, left, bottom y right.
+        Así que dependerá de los valores que pongamos se va a mover 
+        nuestro elemento de tipo div y se va a mover de manera relativa 
+        según la posición natural de nuestro elemento de tipo div.
+        Recordemos que este elemento de tipo div es de tipo bloque, por
+        lo tanto, dependiendo de la posición donde se deba colocar este 
+        elemento de manera natural, entonces se va a mover de manera 
+        relativa a esa posición según los valores que indiquemos. */
+
+    /*  Primero tenemos que poner el valor de posición y posteriormente 
+        podemos indicar por medio de top left, right y bottom como 
+        queremos mover este elemento de tipo div.
+        Es MUY IMPORTANTE ENTENDER que si lo que quiero es mover el 
+        elemento <div> hacia abajo lo que tengo que hacer es incrementar
+        el margen superior (desplaza <div> hacia abajo), si lo que quiero 
+        es mover el elemento <div> a la izquierda, tengo que afectar la 
+        propuedad right (para que el valos desplaze el <div> a la izq.
+        si lo que quiero es mover el <div> hacia arriba lo que tengo que
+        aumentar es la propiedad bottom (para que lo desplaze hacia arriba)
+         */ 
+    top: 100px;     /* Mueve el <div> hacia abajo*/
+    left: 50px;     /* Mueve el <div> hacia la derecha */
 
     max-width: 50%;    
     border: 3px solid firebrick; 

@@ -1,0 +1,34 @@
+<!-- PROPIEDAD Z-INDEX EN CSS
+
+En este ejemplo vamos a colocar un elemento absoluto dentro del elemento
+relativo
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Z-index</title>
+    <link rel="stylesheet" href="T18_estilos.css">
+</head>
+<body>
+    <h1>Centrar elemento Div</h1>
+    <p>Elemento de parrafo</p>
+
+    <!-- Agregamos un elemento div del tipo estatico -->
+    <div class="estatiquito">
+        Elemento no posicionado (static)
+    </div>
+
+    <!-- Agregamos otro elemento div pero del tipo relativo -->
+     <div class="relativito">
+        Segundo elemento del tipo relativo
+        <div class="absolutito">
+            Tercer elemento del tipo absoluto
+        </div>
+     </div>
+
+    <p>Segundo elemento de parrafo</p>
+    
+</body>
+</html>

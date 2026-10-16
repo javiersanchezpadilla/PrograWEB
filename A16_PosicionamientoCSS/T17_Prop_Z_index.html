@@ -1,0 +1,64 @@
+<!-- PROPIEDAD Z-INDEX EN CSS
+
+
+Ya vimos cómo posicionar elementos, vamos a ver el concepto de Z index.
+Tenemos varios ejes para posicionar nuestros elementos, por ejemplo, el 
+eje "x" es el eje horizontal, el eje "y" el eje vertical, pero también tenemos 
+un eje "Z" y donde se van a ir superponiendo los elementos según coincidan.
+Así que los elementos HTML que vayamos agregando a nuestra página según el 
+orden en que se van agregando se van a ir superponiendo, sin embargo, esa 
+superposición va a depender de varios factores, por ejemplo, si tenemos 
+elementos no posicionados, como un párrafo <p>, un elemento div <div>, ya sea 
+con el atributo de posición igual a "static" o que no hayamos especificado 
+esta propiedad, entonces se dice que esos son elementos no posicionados.
+
+En cambio, cuando algún elemento le agregamos la propiedad de posición 
+diferente a esta, entonces se dice que son elementos posicionados, como ya se
+vio anteriormente, pueden ser relativos, absolutos, stickys o de tipo fix.
+Así que todas estas posiciones se consideran elementos posicionados.
+
+Así que vamos a ver cómo funciona este eje "X" y además la propiedad "Z-Index", 
+ya que esta propiedad de "Z-index" nos va a permitir indicar un valor y 
+conforme vamos avanzando en este eje "Z", entonces el valor es más grande.
+Podemos empezar en cero, posteriormente en 1, 2, etcétera (0, 1, 2, 3, ..., etc)
+de esta manera el valor Z-index más grande es el último elemento que se va a 
+mostrar y también podemos utilizar un valor negativo, estos valores negativos
+se van a ir poniendo los elementos detrás de otros elementos (-1, -2, -3, etc.)
+esos elementos van a estar ocultos por elementos que tienen un valor de Z-index 
+más grande por default, los elementos no posicionados tienen el valor de Z-index 
+igual a atto, así que conforme se vayan leyendo los elementos HTML se van a ir 
+agregando de manera automática, por lo que el último elemento en agregar es el 
+que se va a ver hasta adelante (elementos no posicionados) y posteriormente 
+todos los elementos posicionados van a estar encima de los elementos no 
+posicionados y de igual manera, el último, el que va a estar encima de todos 
+los demás, es el elemento que se agregue al final, esto si no se modifica la 
+propiedad de Z-Index, ya que si queremos manipular, cómo es que se van a
+enciman otras par esos elementos? entonces la propiedad de Z-index, como hemos 
+indicado, podemos modificar su valor un número mayor o un número menor para 
+ponerlo por encima o por detrás de cierto cierto elemento. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Z-index</title>
+    <link rel="stylesheet" href="T17_estilos.css">
+</head>
+<body>
+    <h1>Centrar elemento Div</h1>
+    <p>Elemento de parrafo</p>
+
+    <!-- Agregamos un elemento div del tipo estatico -->
+    <div class="estatiquito">
+        Elemento no posicionado (static)
+    </div>
+
+    <!-- Agregamos otro elemento div pero del tipo relativo -->
+     <div class="relativito">
+        Segundo elemento del tipo relativo
+     </div>
+
+    <p>Segundo elemento de parrafo</p>
+    
+</body>
+</html>
