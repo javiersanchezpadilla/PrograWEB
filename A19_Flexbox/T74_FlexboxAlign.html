@@ -1,0 +1,55 @@
+<!-- FLEXBOX  MAS PROPIEDADES DE FLEXBOX
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox en CSS</title>
+    <link rel="stylesheet" href="T74_estilos.css">
+</head>
+<body>
+    <h1>Flexbox en CSS</h1>
+
+    <!-- Podemos modificar el orden en que se muestran los elementos en este
+         ejemplo por defecto se muestra Texto 1  Texto 2   Texto 3, pero
+         podemos cambiar el orden, el valor por defecto es el cero, así que si
+         definimos para todos los elementos order: 0, el orden será de acuerdo
+         a la manera en que se hayan dado de alta los elementos-->
+    <p>Cambiando el orden de los elementos a mostrar con la propiedad order: N</p>
+    <div class="contenedor">
+        <p style="order: 2">Texto 1</p>
+        <p style="order: 3">Texto 2</p>
+        <p style="order: 1;">Texto 3</p>
+    </div>
+
+    <!-- CAmbiar el tamaño de los elementos con flex-grow-->
+     <p>Cambiando el tamaño de los elementos con la propiedad flex-grow: N</p>
+    <div class="contenedor">
+        <p style="flex-grow: 1;">Texto 1</p>
+        <p style="flex-grow: 1;">Texto 2</p>
+        <p style="flex-grow: 5;">Texto 3</p>
+    </div>
+
+    <!-- Cambiar el tamaño de los elementos con flex-basis -->
+     <p>Cambiando el tamaño de los elementos con la propiedad flex-basis: pixeles</p>
+    <div class="contenedor">
+        <p style="flex-basis: 200px;">Texto 1</p>
+        <p>Texto 2</p>
+        <p>Texto 3</p>
+    </div>
+
+    <!-- Alineando los elementos de forma individual, los elementos se mantienen
+         con la propiedad stretch (align-items: stretch;) pero hemos cambiado 
+         las propiedades del segundo elemento -->
+     <p>Cambiando el tamaño de los elementos de forma individual con la propiedad align-self: center:</p>
+    <div class="contenedor estirado">               <!-- Estira los parrafos  -->
+        <p style="flex-basis: 200px;">Texto 1</p>   <!-- Cambia la alineación de este elemento solamente  -->
+        <p style="align-self: center;">Texto 2</p>
+        <p>Texto 3</p>
+    </div>
+
+</body>
+</html>

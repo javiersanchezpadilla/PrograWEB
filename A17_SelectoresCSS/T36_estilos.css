@@ -1,0 +1,74 @@
+/* PSEUDO ELEMENTOS EN CSS
+
+Básicamente los pseudo elementos nos permiten agregar un estilo a ciertos 
+elementos HTML, para hacer uso de un pseudo elemento lo podemos llamar 
+mediante el uso de los dos puntos dos veces (::)
+
+selector :: pseudo_elemento ;
+clase.selector :: pseudo_elemento ;
+*/ 
+
+h1 {
+    text-align: center;
+    color: #e63946;
+}
+
+div.contenedor {
+    width: 30%;
+    height: 20%;
+    margin: auto;
+    border: 3px solid #a8dadc;
+    padding: 15px;
+    color: #457b9d;
+    text-align: center;
+}
+
+/* Agregamos el pseudo elemento de selección 
+    para ello usamos dos veces los dos puntos (::) cuando seleccionemos el 
+    texto del parrafo vamos a hacer el siguiente cambio 
+    Seleccionar el texto significa arrastrar el cursor del raton sobre el 
+    texto y es entonces cuando se vera con letras rojas y fondo amarillo
+    para comprobarlo podemos seleccionar el encabezado o el segundo parrafo
+    y el efecto no va a ser el mismo, en caso de quisieramos que apliqie a todos
+    los parrafos tendriamos que definirlo así
+
+    p::selection {      <- Para que aplique como selector global (para todos)
+    color: red;
+    background-color: yellow;
+    }
+
+
+    */
+
+/* PSEUDO ELEMENTO para cuando se selecciona el texto contenido en el parrafo*/
+div.contenedor p::selection {   
+    color: red;
+    background-color: yellow;
+}
+
+/* PSEUDO ELEMENTO para cambiar solo la primer linea (first-line) del parrafo 
+    Este pseudo elemento es dinámico porque aunque aumentemos la escala, aún
+    así solo mostrara la primer linea con small-caps*/
+div.contenedor p::first-line{
+    font-variant: small-caps;
+    color: blue;
+}
+
+/*  PSEUDO ELEMENTO para cambiar la primer solo letra de un parrafoo*/
+div.contenedor p::first-letter {
+    color: red;
+    font-size: 1.5em;
+}
+
+/*  PSEUDO ELEMENTO para agregar algo antes del parrafo, en este caso vamos a
+    insertar un guion medio y un espacio antes de iniciar el parrafo */
+div.contenedor p::before {
+    content: "- ";      /* Elemento a insertar antes del parrafo */ 
+}
+
+/*  PSEUDO ELEMENTO para agregar algo después del parrafo, en este caso vamos 
+    a insertar un espacio y un guion medio después de terminar el parrafo 
+    tambien podemos insertar imagenes contenr: url() o cadenas completas   */
+div.contenedor p::after {
+    content: " -";      /* Elemento a insertar después del parrafo */ 
+}

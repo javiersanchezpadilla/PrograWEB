@@ -1,0 +1,68 @@
+<!-- USO DE LOS SELECORES TIPO CHILD (HIJO SOLAMENTE) EN CSS  
+
+Ahora vamos a ver el selector de tipo child o de tipo hijo.
+En este caso, el selector anterior que hemos aplicado, que es de tipo 
+descendiente, ya que aplica a todos los elementos, sin importar si son 
+elementos hijos directos o indirectos, cuando se menciona que es un hijo
+director nos referimos a que esta inmediatamente definido dentro del mismo
+nivel abajo del selector (<div>) y cuando se dice que es indirecto es que
+existe otra etiqueta que es hija directa del elemento padre, pero que a su
+ves contiene elementos hijos correspondientes a la etiqueta original (nietos)
+
+<div class="contenedor descendiente">
+    Selectores descendientes (en cualquier nivel interno)
+    <p>primer renglon</p>           <-- Hijo directo de <div>
+    <p>segund renglon</p>           <-- Hijo directo de <div>
+    <section>
+        <p>Tercer renglon</p>       <-- Hijo INDIRECTO de <div> (nieto)
+    </section>
+</div>
+
+En este ejemplo <section> es hijo directo de <div> y las etiquetas de parrafo
+<p> son hijas de <section> e hijos indirectos de <div> (nietos)
+Bien, ahora lo que vamos a ver es el elemento de tipo hijo, y en este caso 
+ese tipo de selector solamente va a seleccionar a los elementos que son hijos 
+directos, es decir, que ya no se van a seleccionar a los elementos que no son
+hijos directos del elemento <div> (ya no deben entrar nietos, bisnietos, etc)
+-->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores combinados en CSS</title>
+    <link rel="stylesheet" href="T31_estilos.css">
+ </head>
+ <body>
+    <h1>Selectores combinados en CSS</h1>
+
+    <!-- Ejemplo de los selectores descendientes (aplica a todos los hijos) -->
+    <div class="contenedor descendiente">
+        Selectores descendientes (en cualquier nivel interno)
+        <p>primer renglon</p>   <!-- aplica el selector descendiente -->
+        <p>segund renglon</p>   <!-- aplica el selector descendiente -->
+        <section>
+            <p>Tercer renglon</p>   <!-- aplica el selector descendiente -->
+        </section>
+    </div>
+
+
+    <!-- Ejemplo de los selectores Hijo (Solo aplica a los hijos directos)
+                           ▼▼▼▼▼-->
+    <div class="contenedor hijo">
+        Selectores HIJO solamente (CHILD en el primer nivel)
+        <p>primer renglon</p>   <!-- elemento hijo directo -->
+        <p>segund renglon</p>   <!-- elemento hijo directo -->
+        <section>               <!-- es hijo directo de div pero no es parrafo-->
+            <p>Tercer renglon</p>   <!-- elemento hijo NO directo (nieto) -->
+        </section>
+        <div>                   <!-- es hijo directo de div pero no es parrafo-->
+            <p>Cuarto renglon</p><!-- elemento hijo NO directo (nieto) -->
+        </div>
+        <p>Quinto renglon</p>   <!-- elemento hijo directo -->
+    </div>
+    
+ </body>
+ </html>
+ 

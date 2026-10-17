@@ -1,0 +1,49 @@
+/* Alinear horizontalmente los elementos en FlexBox */
+
+h1 {
+    text-align: center;
+    text-shadow: 2px 2px 2px #a8dadc;
+    color: #e63046;
+}
+
+/* Como alinear los elementos con FlexBox
+
+justify-content: flex-start;    Valor por defacto alineado a la izquierda
+justify-content: center;        Centrado <- Es el mas ocupadi
+justify-content: flex-end;      Justifica hacia la derecha
+justify-content: space-between; distribuye los elementos en el espacio total
+                                de acuerdo a las dimensaiones del la caja, lo
+                                que hace es distribuir los elementos de forma
+                                uniforme
+justify-content: space-around;  distribuye dejando margenes iguales entre los
+                                lados de la caja y los elementos, quedando los
+                                espacios proporcionales entre todos ellos.
+                                Deja espacio alrededor de cada elemento
+justify-content: space-evenly;  Deja exactamente el mismo espacio entre todos los
+                                elementos incluyendo los margenes izquierdos y
+                                margenes derechos
+*/
+div.contenedor {
+    display: flex;
+    background-color: #560bad;
+    flex-flow: row wrap;    /* Renglon y envuelto */
+
+    /* justify-content: flex-start;     /* Justificado a la izquierda */
+    /* justify-content: center;         /* Centrado */
+    /* justify-content: flex-end;       /* Justifica hacia la derecha */
+    /* justify-content: space-between;  /* distribuye uniformemente el espacio
+                                           y coloca de forma uniforme los elementos */
+    /* justify-content: space-around;      /* deja espacio proporcional entre todos
+                                           los elementos aun antes del primero y
+                                           del último */
+    justify-content: space-evenly;      /* espacio igual entre todos los elementos */
+
+}
+
+div.contenedor > p {
+    background-color: #4895ef;
+    color: #f1faee;
+    margin: 20px; 
+    padding: 15px;
+    font-size: 1.5em;
+}

@@ -1,0 +1,67 @@
+<!-- USO DE LOS SELECORES TIPO SIBLING (ADYACENTES) EN CSS  
+
+En este caso el selector adyacente únicamente va a seleccionar los elementos
+que estén directamente después del elemento que hemos configurado, no dentro
+del elemento, solo los adyacentes (los que esen junto a...), adyancete 
+significa que esta junto al elemento que hemos configurado,  despues del 
+elemento adyacente no cuenta
+
+    <div class="contenedor">
+        Selector Adyacente:
+        <p>Primer renglon</p>   <- Esta dentro del elemento es hijo no aplica
+    </div>
+    <p>Segundo renglon</p>      <- ES ADYACENTE al elemento <div>
+                                   Este es el que se va a modificar solamente
+    <p>Tercer renglon</p>       <- YA NO ES ADYACENTE al elemento <div>
+                                   ya no se modificará
+-->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores combinados en CSS</title>
+    <link rel="stylesheet" href="T32_estilos.css">
+ </head>
+ <body>
+    <h1>Selectores combinados en CSS</h1>
+
+    <!-- Ejemplo de los selectores descendientes (aplica a todos los hijos) -->
+    <div class="contenedor descendiente">
+        Selectores descendientes (en cualquier nivel interno)
+        <p>primer renglon</p>   <!-- aplica el selector descendiente -->
+        <p>segund renglon</p>   <!-- aplica el selector descendiente -->
+        <section>
+            <p>Tercer renglon</p>   <!-- aplica el selector descendiente -->
+        </section>
+    </div>
+
+
+    <!-- Ejemplo de los selectores Hijo (Solo aplica a los hijos directos)
+                           ▼▼▼▼▼-->
+    <div class="contenedor hijo">
+        Selectores HIJO solamente (CHILD en el primer nivel)
+        <p>primer renglon</p>   <!-- elemento hijo directo -->
+        <p>segund renglon</p>   <!-- elemento hijo directo -->
+        <section>               <!-- es hijo directo de div pero no es parrafo-->
+            <p>Tercer renglon</p>   <!-- elemento hijo NO directo (nieto) -->
+        </section>
+        <div>                   <!-- es hijo directo de div pero no es parrafo-->
+            <p>Cuarto renglon</p><!-- elemento hijo NO directo (nieto) -->
+        </div>
+        <p>Quinto renglon</p>   <!-- elemento hijo directo -->
+    </div>
+
+     <!-- Ejemplo de los selectores Hijo (Solo aplica a los hijos directos)
+                           ▼▼▼▼▼▼▼▼▼-->
+    <div class="contenedor adyacente">
+        Selector Adyacente:
+        <p>Primer renglon</p>   <!-- no aplica a los elementos hijo  -->
+    </div>
+    <p>Segundo renglon</p>      <!-- elemento adyacente SI APLICA -->
+    <P>Tercer renglon</P>       <!-- elemento no adyacente NO APLICA -->
+    
+ </body>
+ </html>
+ 

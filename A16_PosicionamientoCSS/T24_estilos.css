@@ -1,0 +1,82 @@
+/* Propiedad DISPLAY en CSS 
+
+la propiedad de span es de tipo inline, y en los elementos de tipo inline 
+no podemos controlar los elementos como el margen o el padding, es decir, 
+que el alto de los elementos de tipo inline no los podemos modificar por 
+default, así que para ello vamos a ver la propiedad de display y su valor 
+de inline block.
+*/
+
+
+h1 {
+    text-align: center;
+    color: #457b9d;
+}
+
+div.contenedor {
+    /* border: 3px dashed greenyellow;  se van a usar clases*/
+    width: 80%; 
+    height: 20%; 
+
+    /* para que en caso de que nuestro texto sobresalga del contenedor
+       muestre las barras de scroll*/
+    overflow: auto; 
+    margin: auto;
+    border: 3px dashed #a8dadc;
+}
+
+/* Recordemos que los elementos span son INLINE, por lo que no aplica todas
+las propiedades, por ejemplo el alto no lo puede aplicar, el padding tampoco
+sabemos que un elemento INLINE por defecto su display es INLINE 
+display: inline; p ero podemo cambiarlo como display: inline-block;  con esto
+cambiamos sus propiedades para que actue y se comporte con caracteristicas de 
+BLOQUE (BLOCK) para que pueda funcionar la definicion de la altura
+height: 50px;
+
+Con esto combinamos las caracteristicas de un elemento INLINE con un elemento
+del tipo BLOCK, se comporta como un elemento INLINE pero permite o admite
+propiedades de los elementos del tipo BLOCK
+*/
+span {
+    font-weight: bolder;
+    font-style: italic;
+    font-size: larger;
+    background-color: #a8dadc;
+    border: 1px solid #457b9d;
+    height: 50px;
+    padding: 5px;
+    display: inline-block;  /* <-- esta propiedad permite definir altura*/
+}
+
+/* Definimos las propiedades para las listas desordenadas */
+.mi_menu {
+    list-style-type: none;  /* quitamos la bolita de la viñeta*/
+    text-align: center;
+}
+
+/*  1. Definimos la propiedad                       DISPLAY: INLINE-BLOCK;
+    
+    y observaremos como los elementos de la lista se organizarian en linea
+    De hecho, eso también sucede si utilizamos      DISPLAY: INLINE;  
+    Podemos observar que tenemos el mismo efecto, sin embargo, si utilizamos 
+    esta definición no podemos separar el título ni tampoco el elemento <div>
+    ya que recordemos que no podemos controlar el alto (HEIGHT) del elemento
+    ni tampoco el padding (PADDING) o margen (MARGIN), así que por ello 
+    necesitamos de la propiedad INLINE-BLOCK para separar este menú de los 
+    demás elementos, esto permite que el elemento INLINE tenga comportamientos
+    de un elemento BLOCK y así poder agregar un PADDING, un MARGIN y un HEIGHT
+ */
+
+.mi_menu li {
+    display: inline-block;
+    padding: 15px;
+    margin: 20px;
+    background-color: #e63946;
+    border-radius: 5px;
+}
+
+/* 2. Definimos las propiedades para el ancla */
+a {
+    text-decoration: none;  /* le quitamos es subrayado al vinculo */
+    color: #f1faee;       /* Le asignamos un color al texto */
+}

@@ -1,0 +1,65 @@
+/* SELECTORES HERMANOS EN CSS
+
+La clase de hermano va a seleccionar todos los elementos que son hermanos
+Va a seleccionar todos los elementos que son hermanos después de encontrar 
+el elemento principal (es este caso <div>), Así que después de configurarlo
+Si le hemos aplicado el selector de hermano, entonces todos los párrafos 
+que encuentre después, les va a aplicar un mismo estilo no solamente al 
+elemento adyacente, sino a todos los elementos que se encuentren después 
+al mismo nivel de este elemento <div>, por ello se dice que son hermanos, 
+ya que se encuentran exactamente al mismo nivel, NO DENTRO SINO AL MISMO NIVEL
+*/
+
+h1 {
+    text-align: center;
+    color: #e63946;
+}
+
+div.contenedor {
+    width: 80%;
+    height: 20%;
+    margin: auto;
+    border: 3px solid #a8dadc;
+    padding: 15px;
+    color: #457b9d;
+}
+
+/*  Selector desdendiente (Afecta hijos, nietos, bisnietos, etc)
+    Se define despues de la clase dejando un espacio en blanco
+    SELECTOR.CLASE.CLASE SELECTOR
+                           ▼  */
+div.contenedor.descendiente p {     
+    background-color: #fdffb6;
+}
+
+/*  Clase CHILD se usa el simbolo mayor que (>) 
+    SELECTOR.CLASE.CLASE > SELECTOR
+                    ▼       */
+div.contenedor.hijo > p {
+    background-color: #ffc6ff;
+}
+
+/*  Selector SIBLING (ADYACENTE) (Afecta solo al elemento pegado inmediato)
+    Se define despues de la clase con un signo +
+    CLASE.CLASE + SELECTOR      <-- define el elemento adyacente 
+                         ▼  */
+div.contenedor.adyacente + p {
+    background-color: #caffbf;
+}                        
+
+/*  Selector SIBLING (ADYACENTE) (Afecta solo al elemento pegado inmediato)
+    Se define despues de la clase con un signo +
+    CLASE.CLASE + SELECTOR      <-- define el elemento adyacente 
+                         ▼  */
+div.contenedor.adyacente + p {
+    background-color: #caffbf;
+}                        
+
+/*  Selector HERMANO (Afecta solo a los elemento shermanos)
+
+    Se define despues de la clase con un signo ~ (Tilde     Alt 126)
+    CLASE.CLASE ~ SELECTOR      <-- define el elemento hermano
+                       ▼  */
+div.contenedor.hermano ~ p {    /* Solo a odos los parrafos al mismo nivel */
+    background-color: #9df6ff;
+}                        

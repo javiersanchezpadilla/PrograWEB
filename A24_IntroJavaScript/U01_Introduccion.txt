@@ -1,0 +1,18 @@
+¿QUÉ ES JavaScript?
+
+Básicamente JavaScript es un lenguaje interpretado el cual puede ser ejecutado 
+y entendido por navegadores web.
+Por ejemplo, cualquier navegador como Google, Chrome, Firefox, Safari, Internet 
+Explorer, cualquiera de estos navegadores puede interpretar correctamente el 
+lenguaje de programación en JavaScript, por ello, es uno de los lenguajes más 
+utilizados en los navegadores, a esto también se le da a conocer como FRONT-END.
+Es decir, la presentación de una aplicación web es lo que visualiza el usuario 
+final, pero JavaScript no solamente se utiliza en la parte de front end, es 
+decir, en el navegador, sino que también se utiliza en la parte del servidor, 
+en la parte del backend, ya que las aplicaciones web al día de hoy han 
+evolucionado bastante y JavaScript no solamente es parte de FRONT-END, sino 
+también parte del backend con tecnologías como NodeJS en la parte del backend
+ y frameworks basados en JavaScript, cómo son los frameworks de Angular, Vue.j,
+ React. Así que todas estas tecnologías utilizan de una u otra forma el 
+ lenguaje de JavaScript, por ello, va a ser muy importante empezar a entender 
+ correctamente este lenguaje desde las bases.

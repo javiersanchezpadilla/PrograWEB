@@ -24,3 +24,26 @@ div.contenedor {
     margin: auto;
     border: 3px dashed #a8dadc;
 }
+
+/* Recordemos que los elementos span son INLINE, por lo que no aplica todas
+las propiedades, por ejemplo el alto no lo puede aplicar, el padding tampoco
+sabemos que un elemento INLINE por defecto su display es INLINE 
+display: inline; p ero podemo cambiarlo como display: inline-block;  con esto
+cambiamos sus propiedades para que actue y se comporte con caracteristicas de 
+BLOQUE (BLOCK) para que pueda funcionar la definicion de la altura
+height: 50px;
+
+Con esto combinamos las caracteristicas de un elemento INLINE con un elemento
+del tipo BLOCK, se comporta como un elemento INLINE pero permite o admite
+propiedades de los elementos del tipo BLOCK
+*/
+span {
+    font-weight: bolder;
+    font-style: italic;
+    font-size: larger;
+    background-color: #a8dadc;
+    border: 1px solid #457b9d;
+    height: 50px;
+    padding: 5px;
+    display: inline-block;  /* <-- esta propiedad permite definir altura*/
+}

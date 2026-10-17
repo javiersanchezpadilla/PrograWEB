@@ -1,0 +1,36 @@
+/* SELECTORES DESCENDIENTES EN CSS
+
+Un selector descendiente va a seleccionar todos los elementos que hayamos 
+agregado, por ejemplo, en un elemento de tipo <div>, podemos cambiar 
+background de todos los elementos de tipo párrafo que estén dentro de este
+elemento del tipo <div> (al ser descendiente afecta a todo lo que este dentro)
+*/
+
+h1 {
+    text-align: center;
+    color: #e63946;
+}
+
+div.contenedor {
+    width: 80%;
+    height: 20%;
+    margin: auto;
+    border: 3px solid #a8dadc;
+    padding: 15px;
+    color: #457b9d;
+}
+
+/* Para crear una clase descendiente, debemos tener en cuenta que tendremos un 
+selectortor combinado que vamos a aplicar como un selector descendiente, para 
+ello simplemente ponemos espacio y posteriormente el elemento HTML que queremos
+seleccionar.
+En este caso va a ser los párrafos que se encuentran dentro de un elemento de tipo
+<div> que tiene aplicado la clase.
+
+En primer lugar de contenedor y posteriormente la clase de descendiente.
+
+se define despues de la clase + espacio blanco 
+                           ▼  */
+div.contenedor.descendiente p {     
+    background-color: #fdffb6;
+}

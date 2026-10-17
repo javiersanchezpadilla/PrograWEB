@@ -1,0 +1,54 @@
+/* PODEMOS CAMBIAR O AJUSTAR LA MANERA DE DESPLEGAR LOS ELEMENTOS HTML */
+
+h1 {
+    text-align: center;
+    text-shadow: 2px 2px 2px #a8dadc;
+    color: #e63046;
+}
+
+/*  Propiedades en desplegado ROW
+
+flex-direction: columns;            muestra los elemento de forma vertical
+flex-direction: column-reverse;     invierte el orden de los elementos por 
+                                    columna
+
+Cuando desplegamos la información en formato row o row-reverse, cuando se 
+reduce la ventana los elementos que no caben en la pantalla quedan fuera
+visualmente.
+
+flex-direction: row;                es el orden normal en que se muestran los 
+                                    valores por renglon (valor por defecto)
+flex-direction: row-reverse;        En renglon pero en orden invertido                                
+
+flex-wrap: nowrap;                  Es el valor por defecto, cuando cambiamos
+                                    el tamaño de la ventana, los elementos que
+                                    no caben salen de la pantalla visualmente
+flex-wrap: wrap;                    Cuando ajustamos el tamaño de la ventana los
+                                    elementos se reacomodan en el espacio 
+                                    disponible.
+
+Podemos mediante una sola propiedad abarcar ambas flex-direction y flex-wrap
+flex-flow:
+
+*/ 
+div.contenedor {
+    display: flex;
+    background-color: #560bad;
+    /* flex-direction: column;  /* Cambia la manera de visualizar los elementos */
+    /* flex-direction: column-reverse; /* invierte el orden de las columnas */
+    /* flex-direction: row-reverse;    /* en renglon invirtiendo el orden */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap;        /* si cambiamos el ancho de la ventana los elementos
+                               se reajustan y reacomodan segun se necesiten al 
+                               nuevo tamaño */
+    flex-flow: row wrap;    /* permite definir ambas propiedades en una sola 
+                               linea*/
+}
+
+div.contenedor > p {
+    background-color: #4895ef;
+    color: #f1faee;
+    margin: 20px; 
+    padding: 15px;
+    font-size: 1.5em;
+}

@@ -1,0 +1,35 @@
+/* GRADIENTE LINEAL EN DIAGONAL*/
+
+html {
+    height: auto;   /* en el eje vertical se centra cualquier elemento*/
+    min-height: 100%;   /* para que se expanda en el eje vertical al 100%*/
+}
+
+/* EN DIAGONAL   
+
+Podemos definir el angulo que queremos en grados, 90 grados, 150 grados, etc
+
+                        Definimos el angulo (deg = degress)
+                                ||||||  */
+body {                      /*  ▼▼▼▼▼▼  */
+    background: linear-gradient(145deg, #24404d, #6dbff1);
+    color: #f1faee;
+}
+
+h1 {
+    text-align: center;
+}
+
+div.contenedor {
+    width: 40%;
+    height: 30%;
+    margin: auto;
+    border: 3px solid #a8dadc;
+    padding: 15px;
+    text-align: center;
+}
+
+img {
+    width: 80%;
+    height: 80%;
+}

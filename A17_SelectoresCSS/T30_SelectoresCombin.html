@@ -1,0 +1,41 @@
+<!-- USO DE LOS SELECORES COMBINADOS EN CSS  (SELECTOR DESCENDIENTE)
+
+El primer selector combinado se conoce como SELECTOR DESCENDIENTE, es decir 
+que una vez que hemos seleccionado un elemento, se va a aplicar el estilo 
+que hayamos configurado para todos los elementos descendientes, sin importar 
+si son elementos directos o indirectos, es decir, que son elementos hijos y 
+a su vez elementos dentro de otros elementos.
+-->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores combinados en CSS</title>
+    <link rel="stylesheet" href="T30_estilos.css">
+ </head>
+ <body>
+    <h1>Selectores combinados en CSS</h1>
+
+    <!-- Vamos aplicar un selector descendiente 
+         Aplicamos la clase descendiente (ver archivo CSS), y al ser
+         descendiente profundiza dentro de toda la estrucura sin importar
+         a que nivel se encuentre.
+         En este caso, el selector que hemos aplicado, que es de tipo 
+         descendiente, como hemos observado, aplica a todos los elementos, 
+         sin importar si son elementos hijos directos de este elemento <div> 
+         o si son elementos que son hijos pero indirectos, ya que se 
+         encuentran dentro de otros elementos (nietos, bisnietos, tataranietos).
+                           ▼▼▼▼▼▼▼▼▼▼▼▼-->
+    <div class="contenedor descendiente">
+        Selectores descendientes (en cualquier nivel interno)
+        <p>primer renglon</p>   <!-- aplica el selector descendiente -->
+        <p>segund renglon</p>   <!-- aplica el selector descendiente -->
+        <section>
+            <p>Tercer renglon</p>   <!-- aplica el selector descendiente -->
+        </section>
+    </div>
+    
+ </body>
+ </html>

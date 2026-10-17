@@ -1,0 +1,28 @@
+/* MAS PROPIEDADES CON  FLEXBOX  */
+
+h1 {
+    text-align: center;
+    text-shadow: 2px 2px 2px #a8dadc;
+    color: #e63046;
+}
+
+div.contenedor {
+    display: flex;
+    background-color: #560bad;
+    flex-flow: row wrap;                /* Renglon y envuelto */
+    justify-content: center;            /* centrado */
+    height: 150px;                      /* Aumentamos la altura para el ejemplo */
+    align-items: center;                /* Toma la linea vertical base para alinear */
+}
+
+div.contenedor > p {
+    background-color: #4895ef;
+    color: #f1faee;
+    margin: 20px; 
+    padding: 15px;
+    font-size: 1.5em;
+}
+
+div.contenedor.estirado {
+    align-items: stretch;
+}

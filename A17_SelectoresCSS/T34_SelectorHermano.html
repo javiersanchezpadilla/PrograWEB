@@ -1,0 +1,72 @@
+<!-- USO DE LOS SELECORES TIPO HERMANO EN CSS  
+
+La clase de hermano va a seleccionar todos los elementos que son hermanos
+Va a seleccionar todos los elementos que son hermanos después de encontrar 
+el elemento principal (es este caso <div>), Así que después de configurarlo
+Si le hemos aplicado el selector de hermano, entonces todos los párrafos 
+que encuentre después, les va a aplicar un mismo estilo no solamente al 
+elemento adyacente, sino a todos los elementos que se encuentren después 
+al mismo nivel de este elemento <div>, por ello se dice que son hermanos, 
+ya que se encuentran exactamente al mismo nivel, NO DENTRO SINO AL MISMO NIVEL
+-->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores combinados en CSS</title>
+    <link rel="stylesheet" href="T34_estilos.css">
+ </head>
+ <body>
+    <h1>Selectoresw combinados en CSS</h1>
+
+    <!-- Ejemplo de los selectores descendientes (aplica a todos los hijos) -->
+    <div class="contenedor descendiente">
+        Selectores descendientes (en cualquier nivel interno)
+        <p>primer renglon</p>   <!-- aplica el selector descendiente -->
+        <p>segund renglon</p>   <!-- aplica el selector descendiente -->
+        <section>
+            <p>Tercer renglon</p>   <!-- aplica el selector descendiente -->
+        </section>
+    </div>
+
+
+    <!-- Ejemplo de los selectores Hijo (Solo aplica a los hijos directos)
+                           ▼▼▼▼▼-->
+    <div class="contenedor hijo">
+        Selectores HIJO solamente (CHILD en el primer nivel)
+        <p>primer renglon</p>   <!-- elemento hijo directo -->
+        <p>segund renglon</p>   <!-- elemento hijo directo -->
+        <section>               <!-- es hijo directo de div pero no es parrafo-->
+            <p>Tercer renglon</p>   <!-- elemento hijo NO directo (nieto) -->
+        </section>
+        <div>                   <!-- es hijo directo de div pero no es parrafo-->
+            <p>Cuarto renglon</p><!-- elemento hijo NO directo (nieto) -->
+        </div>
+        <p>Quinto renglon</p>   <!-- elemento hijo directo -->
+    </div>
+
+
+     <!-- Ejemplo de los selectores Hijo (Solo aplica a los hijos directos)
+                           ▼▼▼▼▼▼▼▼▼-->
+    <div class="contenedor adyacente">
+        Selector Adyacente:
+        <p>Primer renglon</p>   <!-- no aplica a los elementos hijo  -->
+    </div>
+    <p>Segundo renglon</p>      <!-- elemento adyacente SI APLICA -->
+    <P>Tercer renglon</P>       <!-- elemento no adyacente NO APLICA -->
+    
+
+     <!-- Ejemplo de los selectores Hermano
+                           ▼▼▼▼▼▼▼-->
+    <div class="contenedor hermano">
+        Selector Hermano: (SIBLING)
+        <p>Primer renglon</p>   <!-- no aplica a los elementos hijo  -->
+    </div>
+    <p>Segundo renglon</p>      <!-- elemento adyacente SI APLICA -->
+    <P>Tercer renglon</P>       <!-- elemento no adyacente NO APLICA -->
+        
+ </body>
+ </html>
+ 

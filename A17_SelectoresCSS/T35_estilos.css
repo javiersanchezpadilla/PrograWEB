@@ -1,0 +1,55 @@
+/* SELECTORES HERMANOS EN CSS
+
+
+*/
+
+h1 {
+    text-align: center;
+    color: #e63946;
+}
+
+div.contenedor {
+    width: 30%;
+    height: 20%;
+    margin: auto;
+    border: 3px solid #a8dadc;
+    padding: 15px;
+    color: #457b9d;
+    text-align: center;
+}
+
+/*  1. PSEUDO CLASE CON EL ESTADO DE HOVER.
+
+    Mediante el uso de los dos puntos (:) podemos modificar propiedades o
+    comportamientos de las etiquetas.
+    Con esto cuando pasemos el cursor sobre el elemneto cambiar el fondo y 
+    el color de la fuente */
+div.contenedor:hover {
+    background-color: #457b9d;
+    color: #f1faee;
+}
+
+
+/*  2. Ocultamos el elemento de parrafo
+    Lo que a suceder es que visualmente estara oculto */
+div.contenedor.oculto p {
+    display: none;          /* Ocultamos el elemento */
+}
+
+
+/*  3. PSEUSO CLASE CUANDO PASEMOS EL CURSOR SOBRE EL PARRAFO
+    Cuando pasemos encima del contenedor modificamos de nueva cuent
+    el displar para que cambi y sea visible */
+div.contenedor.oculto:hover p {
+    display: block;
+    background-color: #a8dadc;
+    color: #023e8a;
+    padding-left: 15px;
+}
+
+/*  4. MODIFICAR ELPRIMER PARRAFO QUE ENCONTREMOS
+    Se va a cambiar el primer parrafo en su tipo de letra
+    */
+div.contenedor.primero p:first-child {
+    font-variant: small-caps;   /* Todas en mayusc pero primer letra mas grande*/
+}

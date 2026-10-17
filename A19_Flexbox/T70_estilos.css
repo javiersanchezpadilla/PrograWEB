@@ -1,0 +1,27 @@
+/* Manejo de flexbox */
+
+h1 {
+    text-align: center;
+    text-shadow: 2px 2px 2px #a8dadc;
+    color: #e63046;
+}
+
+/*  1) Para que una clase pueda aplicar la propiedad de flex-box
+    cambiamos el display a FLEX, con esto los parrafos se van a 
+    acomodar de manera horizontal (ya no vertical) */ 
+div.contenedor {
+    display: flex;  /*  PROBAR QUE SUCEDE SI SE QUITA ESTA LINEA 
+                        LOS ELEMENTOS SE ACOMODARAN EN VERTICAL */ 
+    background-color: #560bad;
+}
+
+
+/* 2) Vamos a modificar los parrafos que se encuentran dentro del
+    elemento <div> vamos a seleccionar todos los elementos del tipo hijo */ 
+div.contenedor > p {
+    background-color: #4895ef;
+    color: #f1faee;
+    margin: 20px;   /* para separar del borde de la caja que los contiene */
+    padding: 15px;
+    font-size: 1.5em;
+}

@@ -1,0 +1,46 @@
+/* SELECTORES SIBLING (ADYACENTE) EN CSS
+
+Un selector descendiente va a seleccionar todos los elementos que hayamos 
+agregado, por ejemplo, en un elemento de tipo <div>, podemos cambiar 
+background de todos los elementos de tipo párrafo que estén dentro de este
+elemento del tipo <div> (al ser descendiente afecta a todo lo que este dentro)
+*/
+
+h1 {
+    text-align: center;
+    color: #e63946;
+}
+
+div.contenedor {
+    width: 80%;
+    height: 20%;
+    margin: auto;
+    border: 3px solid #a8dadc;
+    padding: 15px;
+    color: #457b9d;
+}
+
+/*  Selector desdendiente (Afecta hijos, nietos, bisnietos, etc)
+
+    Se define despues de la clase dejando un espacio en blanco
+    SELECTOR.CLASE.CLASE SELECTOR
+                           ▼  */
+div.contenedor.descendiente p {     
+    background-color: #fdffb6;
+}
+
+/*  Selector CHILD se usa el simbolo mayor que (>) 
+    SELECTOR.CLASE.CLASE > SELECTOR
+                    ▼       */
+div.contenedor.hijo > p {
+    background-color: #ffc6ff;
+}
+
+/*  Selector SIBLING (ADYACENTE) (Afecta solo al elemento pegado inmediato)
+
+    Se define despues de la clase con un signo +
+    CLASE.CLASE + SELECTOR      <-- define el elemento adyacente 
+                         ▼  */
+div.contenedor.adyacente + p {
+    background-color: #caffbf;
+}                        

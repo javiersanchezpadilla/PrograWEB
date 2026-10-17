@@ -1,0 +1,46 @@
+/* JUSTIFICACIÓN VERTICALMENTE LOS ELEMENTOS EN FLEXBOX 
+
+Si no especificamos nada se tomara la altura máxima del elemento contenedor
+como referencia para los elementos interno-
+*/
+
+h1 {
+    text-align: center;
+    text-shadow: 2px 2px 2px #a8dadc;
+    color: #e63046;
+}
+
+/* Como alinear los elementos con FlexBox de forma vertical
+
+align-items: flex-start;    Los alines desde arriba (flex-start), cada caja ya
+                            no se alarga, solo se queda en la parte superior
+align-items: center;        Centra los elementos de forma vertical                    
+align-items: stretch;       Alargado es el valor por defecto
+align-items: baseline;      Toma la linea base para alinear los elementos
+                            Si nuestros elementos tienen tamaños distintos, así
+                            como tamaños de fuentes distintos, se traza una linea
+                            imaginario al centro de cada elemento, especificamente
+                            al centro de cada texto (a nivel de la fuente) y esa 
+                            es la baseline (linea base)
+align-items: flex-end;      Toma como base la linea inferior de los elementos
+*/
+div.contenedor {
+    display: flex;
+    background-color: #560bad;
+    flex-flow: row wrap;                /* Renglon y envuelto */
+    justify-content: space-evenly;      /* espacio igual entre todos los elementos */
+    height: 300px;                      /* Aumentamos la altura para el ejemplo */
+    /* align-items: flex-start;            /* alinea desde el inicio (desde arriba) */
+    /* align-items: center;                /* Centra los elementos verticalmente */
+    /* align-items: stretch;               /* alargar (valor por defecto)      */
+    align-items: baseline;              /* Toma la linea vertical base para alinear */
+    /*align-items: flex-end;              /* Toma como base la linea inferior */
+}
+
+div.contenedor > p {
+    background-color: #4895ef;
+    color: #f1faee;
+    margin: 20px; 
+    padding: 15px;
+    font-size: 1.5em;
+}

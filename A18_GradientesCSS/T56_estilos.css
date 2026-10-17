@@ -1,0 +1,27 @@
+/* MANEJO DE SOMBRAS EN CSS PARTE 1 */
+
+/*  TEXT-SHADOW  
+    -----------
+    text-shadow: SombraEje_X  SombraEje_Y Blur color;
+
+    SombraEje_X     positivo es sombra a la derecha (altura)
+                    negativo es sombra a la izquierda (altura)
+    SombraEje_Y     Ancho de la sombra hacia abajo (vertical Eje Y)                
+    Blur            Difuminado (permite que la sombra no sea tan dura)
+                    No acepta valores negativos solo positivos.
+    color           Color de la sombra                
+*/
+
+h1 {
+    text-align: center;
+    text-shadow: 2px 2px 5px grey;
+}
+
+div.contenedor {
+    width: 40%;
+    height: 30%;
+    margin: auto;
+    border: 3px solid #a8dadc;
+    padding: 15px;
+    text-align: center;
+}

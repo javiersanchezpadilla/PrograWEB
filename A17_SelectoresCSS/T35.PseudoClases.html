@@ -1,0 +1,36 @@
+<!-- MANEJO DE PSEUDO CLASES EN CSS
+ 
+Vamos a realizar este ejercicio donde vamos a aplicar el concepto de pseudo 
+clases en CSS, las pseudo clases nos van a permitir manipular ciertos estados 
+de nuestros elementos HTML, por ejemplo, si pasamos el cursor encima de un 
+elemento de tipo <div>, podemos hacer que se activa un parrafo, o tambien por
+si tenemos varios párrafos, pero solamente queremos aplicarle cierto estilo 
+al primer párrafo, algo así como aplicar las letras de tipo small caps a 
+nuestro primer párrafo, etc. todo esto podemos hacerlo bajo el uso de las 
+pseudo clases.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Pseudoclases en CSS</title>
+    <link rel="stylesheet" href="T35_estilos.css">
+</head>
+<body>
+    <h1>Pseudo clases en CSS</h1>
+
+    <!-- Vamos a tener un parrafo oculto que no se va a visualizar solamente qie
+    pasemos el cursor sobre el elemento modificaremos la propiedad over-->
+    <div class="contenedor oculto">
+        Pasa por encima
+        <p>Se muestra el parrafo</p>
+    </div>
+
+
+    <div class="contenedor primero">
+        <p>Primer parrago</p>
+        <p>Segundo parrafo con letra normal</p>
+    </div>
+</body>
+</html>
