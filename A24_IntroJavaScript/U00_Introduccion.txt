@@ -1,0 +1,96 @@
+¿QUÉ ES JavaScript?
+
+Básicamente JavaScript es un lenguaje interpretado el cual puede ser ejecutado 
+y entendido por navegadores web.
+Por ejemplo, cualquier navegador como Google, Chrome, Firefox, Safari, Internet 
+Explorer, cualquiera de estos navegadores puede interpretar correctamente el 
+lenguaje de programación en JavaScript, por ello, es uno de los lenguajes más 
+utilizados en los navegadores, a esto también se le da a conocer como FRONT-END.
+Es decir, la presentación de una aplicación web es lo que visualiza el usuario 
+final, pero JavaScript no solamente se utiliza en la parte de front end, es 
+decir, en el navegador, sino que también se utiliza en la parte del servidor, 
+en la parte del backend, ya que las aplicaciones web al día de hoy han 
+evolucionado bastante y JavaScript no solamente es parte de FRONT-END, sino 
+también parte del backend con tecnologías como NodeJS en la parte del backend
+ y frameworks basados en JavaScript, cómo son los frameworks de Angular, Vue.j,
+ React. Así que todas estas tecnologías utilizan de una u otra forma el 
+ lenguaje de JavaScript, por ello, va a ser muy importante empezar a entender 
+ correctamente este lenguaje desde las bases.
+
+ Los frameworks mas comunes son:
+ * React
+ * Vue.js
+ * Angular
+
+ DEl lao del servidor
+ * Node js
+
+ El estandarde JavaScript se basa  en el estandar ECMAsc
+
+ Requerientos:
+ buscar en google --->  download node js
+ Node js no requiere instalarse ya que desde el navegador lo puede instalar, 
+ sin embargo como vamos a ejecutar javascript en tiempo real es necesario 
+ instalarlo para que Viual Studio Code lo reconozca a traves de sus extensiones
+
+
+
+ INSATALACÓN DE NODE.JS
+ -----------------------
+
+ # Download and install nvm:
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.8/install.sh | bash
+# in lieu of restarting the shell
+\. "$HOME/.nvm/nvm.sh"
+# Download and install Node.js:
+nvm install 24
+# Verify the Node.js version:
+node -v # Should print "v24.22.0".
+# Verify npm version:
+npm -v # Should print "11.19.1".
+
+
+Este script es el método oficial y recomendado para instalar NVM (Node Version 
+Manager), una herramienta excelente para administrar y cambiar entre diferentes 
+versiones de Node.js sin complicaciones en tu sistema.
+
+Lo que hace paso a paso:
+------------------------
+1.  Descarga e instala NVM: Utiliza curl para bajar el instalador oficial desde 
+    GitHub y lo configura en tu usuario.
+2.  Carga NVM en tu sesión actual: El comando con el punto (\.) hace que no 
+    necesites cerrar y abrir la terminal para empezar a usarlo inmediatamente.
+3.  Instala Node.js (Versión 24): Descarga la versión específica que se solicito
+    (en este caso nvm install 24).
+4.  Verifica la instalación: Comprueba que tanto node como npm respondan 
+    correctamente con sus respectivas versiones.
+
+Nota importante:
+----------------
+Para que este script funcione sin problemas, se debe de tener instalado el 
+paquete curl en tu Ubuntu. Si al ejecutarlo te da un error de que no encuentra 
+curl, solo instálalo ejecutando: 
+
+$ sudo apt install curl.
+
+
+
+EXTENSIONES DE VISUAL STUDIO CODE
+---------------------------------
+
+quokka.js
+Bracket Pair Colorizer 2        permite identificar parentesis, corchetes 
+                                y llave
+eslint                          Agrega mejores prácticas a nuestro código
+prettier Code                   Para dar formato        
+debugger for chrome             Ejecución paso a paso desde nuestro programación
+                                ya no existe ahora se recomiendajavascript 
+                                debugger
+better comments                 PAra agregar colores a los comentarios
+intellicode                     Para autocompletar código de forma inteligente
+Live Server                     Servidor local para despliegue de las apps                         
+
+Quokka Statusbar buttons        Agrega iconos abajo sobre Quokka     Q+ Q- Q--  
+                                Q+  Ejecuta          
+                                Q-  Detiene   
+                                Q-- Detiene en todas las aplicaciones
