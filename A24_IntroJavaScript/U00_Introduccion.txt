@@ -79,6 +79,11 @@ EXTENSIONES DE VISUAL STUDIO CODE
 ---------------------------------
 
 quokka.js
+Quokka Statusbar buttons        Agrega iconos abajo sobre Quokka     Q+ Q- Q--  
+                                Q+  Ejecuta          
+                                Q-  Detiene   
+                                Q-- Detiene en todas las aplicaciones
+
 Bracket Pair Colorizer 2        permite identificar parentesis, corchetes 
                                 y llave
 eslint                          Agrega mejores prácticas a nuestro código
@@ -89,8 +94,3 @@ debugger for chrome             Ejecución paso a paso desde nuestro programaci�
 better comments                 PAra agregar colores a los comentarios
 intellicode                     Para autocompletar código de forma inteligente
 Live Server                     Servidor local para despliegue de las apps                         
-
-Quokka Statusbar buttons        Agrega iconos abajo sobre Quokka     Q+ Q- Q--  
-                                Q+  Ejecuta          
-                                Q-  Detiene   
-                                Q-- Detiene en todas las aplicaciones
