@@ -4,7 +4,7 @@ Vamos a ver como eliminar o agregar propiedades al vuelo
 
 Para agregar: Al agregar nuevas propiedades debemos tener cuidado debido a que
 si nos equivocamos al momento de escribir el nombre de la propiedad, estariamos 
-agregando una nueva propiedad (tel <> te1)
+agregando una nueva propiedad (tel <> te1)(con le letra "l" con el numero "1")
 
     objeto.nuevo_objeto = valor
 

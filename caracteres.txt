@@ -18,6 +18,7 @@ Flechas y Triángulos
 25c4    ◄   Triángulo izquierda relleno
 2192    →   Flecha derecha
 2190    ←   Flecha izquierda
+03bb    λ   Lambda (para las funciones)
 
 Figuras Geométricas
 ------------------------------------
