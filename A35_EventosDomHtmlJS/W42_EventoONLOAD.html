@@ -1,0 +1,50 @@
+<!-- EVENTO ONLOAD
+
+Este evento se ejecuta al momento en que se carga nuestra página WEB
+
+Nos puede servir para revisar ciertas cuestiones cuando estamos cargando 
+nuestra página web, por ejemplo, podemos revisar el idioma que está utilizando 
+el usuario o por ejemplo, también si tiene habilitado el concepto de cookies
+básicamente las cookies son archivos que guardan información cuando estamos 
+navegando por sitios web y esta información se guarda en el formato de 
+llave-valor, así que podemos asociar, por ejemplo, un nombre de usuario y 
+asignar el nombre del usuario y almacenarlo en una cookie (esto por poner un
+ejemplo), sin embargo, para poder revisar si están habilitadas las cookies de 
+nuestra página web, podemos hacer lo siguiente, recordemos que en cuanto se 
+carga nuestra página se manda llamar El método de entrar, aquí es justo el
+momento indicado para donde vamos a revisar si están habilitada las cookies.
+
+Vamos a hacer uso de la clase NAVIGATOR, que nos permite pretuntarle al 
+navegador ciertas características 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento ONLOAD</title>
+</head>
+<body onload="funcion_entrar()">
+
+    <h1 id='encabezado'>Manejo de Eventos con JavaScript</h1>
+    <br/>
+
+    <div id="mostrar_en_div"></div>
+    <script>
+        function funcion_entrar(){
+            alert('Entrando y Cargando la página WEB');
+            let texto = '';
+
+            // Le preguntamos al navegador si estan habilitadas las cookies
+            if (navigator.cookieEnabled) {
+                texto = 'Las Cookies estan habilidatas';
+            }
+            else {
+                texto = 'Las Cookies estan inhabilitadas';
+            }
+            document.getElementById('mostrar_en_div').innerHTML = texto;
+        }
+    </script>
+
+</body>
+</html>

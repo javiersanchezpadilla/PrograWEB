@@ -1,0 +1,37 @@
+<!-- MODIFICAR ELEMENTO DENTRO DEL HTML A TRAVÉS DE JAVASCRIPT
+
+EL CÓDIGO JAVASCRIPT SOLO PUEDE VER HACIA ARRIBA NO HACIA ABAJO
+
+Otra propiedad de innerHTML, es que permite modificar el contenido de una
+etiqueta
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo DOM con JavaScript</title>
+</head>
+<body>
+    <h1 id='cabecero'>Ejemplo DOM con JavaScript</h1>
+    <p id='parrafo'>Saludos</p>
+
+<script>
+        let encabezado = document.getElementById('cabecero')
+        console.log(`Valor original del encabezado: ${encabezado}`)
+
+        encabezado.innerHTML = 'Este es el nuevo valor para el encabezado'
+        console.log(`NUEVO Valor del encabezado: ${encabezado}`)
+
+
+        let parrafo_obj = document.getElementById('parrafo');
+
+        console.log(`Contenido parrafo: ${parrafo_obj.innerHTML}`);
+        
+        // Modificamos el contenido de la etiqueta parrafo id=cabecero
+        parrafo_obj.innerHTML = 'Nuevo valor del parrafo';
+        console.log(`Nuevo Contenido parrafo: ${parrafo_obj.innerHTML}`);
+    </script>
+
+</body>
+</html>

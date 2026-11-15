@@ -1,0 +1,74 @@
+<!-- Prueba de ejecución de un documento HTML incrustando JavaScript  
+
+EL CÓDIGO JAVASCRIPT SOLO PUEDE VER HACIA ARRIBA NO HACIA ABAJO
+
+REGLAS PARA ACCEDER AL CÓDIGO HTML
+-----------------------------------
+
+1)  Para que el código Javacript pueda acceder a los elementos HTLM las 
+    etiquetas de script para colocar el código debe estas abajo de las 
+    etiquetas o De lo contrario no podrá ver el código HTML
+
+2)  La manera mas sencilla de acceder es mediante el uso de un identificado
+
+                              ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
+                <etiquetaHTML id='nombreEtiqueta'>
+
+3)  DEntro del código javascript declaramos una variable y para acceder al
+    elemento HTML usamos la clase object método getElementById('nombreEtique')
+    esto permitira RECUPERAR TODO EL ELEMENTO HTML DE UNA ETIQUETA
+
+                let variable = documento.getElementById('etiqueta_id_en_html')
+            
+4)  Con el paso 3 recuperamos el objeto que contiene todo el elemento HTML, 
+    para acceder al valor del objeto usamos la propiedad innerHTML
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo DOM con JavaScript</title>
+</head>
+<body>
+    <!--DEclaramos un identificados para señalar la etiqueta h1 -->
+    <!--   ||||||||| -->
+    <!--   ▼▼▼▼▼▼▼▼▼ -->
+    <h1 id='cabecero'>Ejemplo DOM con JavaScript</h1>
+
+    <!--   ||||||| -->
+    <!--   ▼▼▼▼▼▼▼ -->
+    <p id='parrafo'>Saludos</p>
+    
+    <!-- Aqui incrustamos el código JavaScript, si queremos ver la salida de 
+        este resultado debemos inspeccionar la página y ver la pestaña de 
+        consola, ya que console.log() no es visible en la página web, como su 
+        nombre lo dice solamente en la consola de inspección -->
+    <script>
+        // Lo que nos a regresar es todo el objeto h1 (no el valor), para 
+        // poder acceder al valor usamos la propeidad .innerHTML, inner 
+        // significa interno
+        // Para comprobar lo inspeccionamos desde la página web
+
+        let cabecero_valor = document.getElementById('cabecero').innerHTML;
+        let cabecero_objeto = document.getElementById('cabecero');
+
+        let parrafo_valor = document.getElementById('parrafo').innerHTML;
+        let parrafo_objeto = document.getElementById('parrafo');
+
+        console.log('Valor contenido cabecero -->  ' + cabecero_valor);
+        console.log('Valor objeto cabecero -->  ' + cabecero_objeto);
+        console.log('Valor cabecero a traves del objeto -->  ' + cabecero_objeto.innerHTML);
+        // Podemos usar template literal
+        console.log(`Valor cabecero a traves del objeto --> ${cabecero_objeto.innerHTML}`);
+
+        console.log('Valor contenido parrafo  -->  ' + parrafo_valor);
+        console.log('Valor objeto parrafo  -->  ' + parrafo_objeto);
+        console.log('Valor parrafo a traves del objeto  -->  ' + parrafo_objeto.innerHTML);
+        // Mediante el uso de template literal
+        console.log(`Valor parrafo a traves del objeto --> ${parrafo_objeto.innerHTML}`);
+
+        console.log('Saludos desde JavaScript');
+    </script>
+</body>
+</html>

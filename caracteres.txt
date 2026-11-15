@@ -16,9 +16,13 @@ Flechas y Triángulos
 25b3    ▲   Triángulo arriba hueco
 25ba    ►   Triángulo derecha relleno
 25c4    ◄   Triángulo izquierda relleno
-2192    →   Flecha derecha
 2190    ←   Flecha izquierda
+2191    ↑   Fecla hacia arriba
+2192    →   Flecha derecha
+2193    ↓   Fecla hacia abajo
 03bb    λ   Lambda (para las funciones)
+25C6    ◆   Diamante relleno
+25C7    ◇   Diamante vacio
 
 Figuras Geométricas
 ------------------------------------
@@ -37,3 +41,13 @@ Símbolos de Verificación y Sistema
 2718    ✘  Tache grueso
 26a0    ⚠  Advertencia
 2699    ⚙  Engrane
+
+
+Símbolo	Nombre o descripción	Código Unicode
+2588    █   Bloque completo (ocupa todo el alto de la línea) 
+25A0    ■	Cuadrado negro median
+25FC    ◼	Cuadrado negro mediano-grande
+25AA    ▪	Cuadrado negro pequeño
+2593    ▓	Sombreado oscuro (75% relleno)
+2592    ▒	Sombreado medio (50% relleno)
+2591    ░	Sombreado claro (25% relleno)

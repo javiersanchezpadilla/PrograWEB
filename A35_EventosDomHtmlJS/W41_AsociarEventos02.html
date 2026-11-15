@@ -1,0 +1,37 @@
+<!-- ASOCIAR EVENTOS A ELEMENTOS HTML DIRECTAMENTE DESDE JAVASCRIPT
+
+Con el ejemplo desarrollado anteriormente podemos cambiar cualquier parte
+de nuestro documento HTML, en este ejemplo se va a agregar una sección DIV
+y vamos a modificar el contenido agregando texto dentro de la sección.
+
+Al dar click sobre el título recuperamos el elemento H1 y posteriormente, por 
+medio de la propiedad ONCLICK, le asociamos una función, la referencia de una 
+función y entonces, cuando hacemos clic sobre este elemento H1 se manda a 
+llamar la función de cambiar texto y entonces la función de cambiarTexto se 
+ejecuta
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM en HTML</title>
+</head>
+<body>
+
+    <h1 id='encabezado'>Manejo de Eventos con JavaScript</h1>
+    <br/>
+
+    <div id="mostrar_en_div"></div>
+    <script>
+        // Pasamos la reerencia de la función (en este caso es callback)
+        document.getElementById('encabezado').onclick = cambiarTexto;
+
+        function cambiarTexto(){
+                // recuperamos el elemento nuevamente para poder cambiarlo
+                document.getElementById('mostrar_en_div').innerHTML = 'Nuevo Contenido';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!-- CAMBIAR CONTENIDO DEL DOM EN JAVASCRIPT
+ 
+Ya sabemos que si le asignamos un identificador a un elemento HTML (por ID),
+y si queremos modificarlo desde JavaScript, podemos hacerlo a través de
+
+    document.GetElementById('identificador');
+
+y posteriormente mediante el uso de la propiedad innerHtml podemos cambiar 
+el valor desde JavaScript del elemento colocando un valor nuevo
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de DOM con JavaScript</title>
+</head>
+<body>
+
+    <h1 id="encab_tit">Manejo de DOM con JavaScript</h1>
+
+    <!-- Al dar clic sobre el boton el texto del encabezado cambiará -->
+    <button onclick="funcion_mostrar()">Camiar el encabezado</button>
+    <br/>
+
+    <script>
+        function funcion_mostrar() {
+            // Cambia el valor del elemento recuperad de etiqueta encab_tit
+            document.getElementById('encab_tit').innerHTML = 'Nuevo TITULO desde JavaScript';
+
+            // Si queremos mantener el título original mas el nuevo titulo 
+            //document.getElementById('encab_tit').innerHTML += '<br/> Nuevo TITULO desde JavaScript';
+        }
+    </script>
+
+</body>
+</html>

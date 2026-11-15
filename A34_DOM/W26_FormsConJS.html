@@ -1,0 +1,76 @@
+<!-- MANEJO DE FORMAULARIOS CON JavaScript (LLAMAR FUNCION JS DESDE BOTON)
+
+En este ejercicio vamos a asociar un evento de boton (onclick) para mandar a
+llamar una funcion de JavaScript, lo que se va a hacer es recuperar los 
+elementos del formulario y concatenarlos en una variable "texto", vamos a 
+concatenarla y agregar elementos de salto de linea (BR), solamente recordar
+que estos elementos de salto no tienen efecto sobre la consola (console.log())
+así que para visualizarlos vamos a crear una etiueta div y vamos a modificar
+su contenido con la propiedad innerHTML con el valor recuperado en la variable 
+texto, la receperación de información posterior de DIV será mediante un 
+identificador y una vez recuperado la modificaremos para mostrar su contenido 
+en el documento HTML
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo formularios con JavaScript</title>
+</head>
+<body>
+    <!-- PASO 1. Creamos el formulario con valores por defecto -->
+    <form id='formulario' action="">
+        Nombre: <input type="text" name="nombre" value="Juan" />
+        <br>
+        Apellido: <input type="text" name="apellido" value="Perez"/>
+    </form>
+
+<!-- PASO 2. vamos a agregar un botón que despliegue los elementos de este 
+     formulario y posteriormente este botón lo que va a hacer es mandar a 
+     llamar una función de JavaScript que va a procesar y acceder a cada uno 
+     de los elementos de este formulario. 
+     Vamos a programar el método onclick para llamar una función de JavaScript
+     por esa razon la definimos con parentesis <button onclick="mostrarValores()
+     -->
+     <button onclick="mostrarValores()">Mostrar</button>
+
+     <!-- PASO 4. Creamos un elmento HTML para poder mostrar apropiadamente
+          el conenido de la variable creada en la función (texto), ya que si
+          mostramos el contenido en consola console.log(texto); esté no se 
+          mostrará correctamente debido a que los saltos de linea (BR), son
+          elementos HTML, es aquí donde nace la necesidad de crear un elemento
+          HTML para poder mostar corectamente el contenido de la variable 
+          texto -->
+    <div id="modificame">
+
+    </div>
+
+     <!-- PASO 3. Aquí comienza el código JavaScrips    -->
+     <script>
+        function mostrarValores() {
+            // Esta función va a concatenar los valores de los formularios
+            // dentro de la variable texto, los valores recuperados de cada 
+            // elemento del formulario corresponden a VALE de cada elemento
+
+            // Asignamos a mi_formulario lo recuperado del form id='formulario'
+            // como pueden ser varios valores el resultado es un arreglo
+            let mi_formulario = document.forms['formulario'];
+            let texto = '';
+            for (let elemento of mi_formulario){
+                // de cada elemento recuperamos su elemento VALUE (ver etiqueta)
+                // Se va a agregar un elemento de salto de linea <BR> entre
+                // cada elemento del formulario
+                texto += elemento.value + '<br/>';
+            }
+
+            // PASO 5. extramos el contenido del elemento <div> y lo 
+            //         modificamos 
+            document.getElementById('modificame').innerHTML = texto;
+            console.log(texto);
+        }
+     </script>
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!-- ACCEDER A VARIOS ELEMENTOS QUE CONTENGAN UN CIERTA CLASE EN CSS
+
+Ahora vamos a ver otro método para recuperar todos los elementos HTML que 
+contengan una cierta clase de tipo CSS, vamos a utilizar el método 
+
+    GetElementsByClassName()
+
+En el ejemplo vamos a definir un estilo CSS, de momento, vamos a definirlo 
+dentro del mismo documento HTML mediante la etiqueta style
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo DOM con JavaScript</title>
+
+    <!-- DEfinimos una clase para manejar un color azul en los parrafos-->
+    <style>
+        .azul{
+            color:blue
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id='cabecero' class="azul">Ejemplo DOM con JavaScript</h1>
+
+    <!-- Para este ejercicio NO SE REQUIEREN LOS IDENTIFICADORES ID='ALGO'
+         se pueden dejar, pero no son necesarios, debido a la manera en que
+         estamos extrayendo los contenidos -->
+    <p id="parrafo01" class="azul">Saludos</p>
+    <p id="parrafo02" class="azul">Este es el segundo parrafo </p>
+    <p class="azul">Este es el tercer parrafo </p>
+    <p class="azul">Este es el cuarto parrafo </p>
+    
+
+<script>
+        // Extraemos TODOS LOS ELEMENTOS ASOCIADOS A LA MISMA CLASE 'azul', 
+        // incluso podemos asignar la misma clase al encabezado h1 y lo extrae
+        let elementos = document.getElementsByClassName('azul');
+
+        // Verificamos cuantos parrafos extrajo usamos la propiedad length
+        console.log(`Numero de elementos recuperados ${elementos.length}`)
+
+        // OTRA FORMA DE CICLAR LOS ELEMENTOS DEL ARREGLO
+        
+        // Ciclamos los parrafos para ver su contenido con innerHTML
+        for (let un_elemento of elementos){
+            console.log(`${un_elemento.innerHTML}`);
+        }
+    </script>
+
+</body>
+</html>
+

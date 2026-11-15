@@ -1,0 +1,65 @@
+<!-- MANEJO DE FORMAULARIOS CON ELEMENTOS INDIDUALES
+
+Lo que hicimos hasta el momento es acceder a todos los elementos del 
+formulario, pero recorriendo el arreglo de nuestro formulario y debido a que 
+tenemos varios elementos en este formulario, como podemos observar el input 
+text del nombre y el input de apellido, Entonces podemos recorrer estos 
+elementos, sin embargo, si queremos acceder a estos elementos de manera 
+individual, también podemos hacerlo debido a que es un ARREGLO.
+Entonces podemos acceder a cada uno de esos elementos de manera individual,
+así que vamos a quitar el ciclo for y vamos a ver cómo acceder a estos 
+elementos por separado.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo formularios con JavaScript</title>
+</head>
+<body>
+    <form id='formulario' action="">
+        Nombre: <input type="text" name="nombre" value="Juan" />
+        <br>
+        Apellido: <input type="text" name="apellido" value="Perez"/>
+    </form>
+
+     <button onclick="mostrarValores()">Mostrar</button>
+
+    <div id="modificame">   </div>
+
+     <!-- Código JavaScrips    -->
+     <script>
+        function mostrarValores() {
+            // al recuperar mas de un valor se asume como arreglo
+            let mi_formulario = document.forms['formulario'];
+            let texto = '';
+            let objetos = '';
+
+            // En este punto se recuperan los objetos (ver resultado en consola)
+            let el_nombre = mi_formulario['nombre'];
+            let el_apellido = mi_formulario['apellido'];
+
+            // PAra verificar los nombres de los objetos recuperaos
+            console.log(el_nombre);
+            console.log(el_apellido);
+
+            // tenemos que acceder a la propiedad .VALUE para recuperar el 
+            // valor si no indico la propiedad se accederia a todo el objeto
+            //               ▼▼▼▼▼▼                        ▼▼▼▼▼▼
+            texto = el_nombre.value + '<br/>' + el_apellido.value;
+
+            // Aqui vamos a recuperar los valores solo como objetos
+            objetos = el_nombre + '<br/>' + el_apellido;
+
+            // Recuperamos el elemento DIV que contiene la etiqueta 
+            // 'modificame' y lo modificamos con la variable 'texto' para 
+            // poder visualizar el resultado en la pantalla
+            document.getElementById('modificame').innerHTML = texto + '<br/>' + objetos;
+            console.log(texto);
+        }
+     </script>
+    
+</body>
+</html>

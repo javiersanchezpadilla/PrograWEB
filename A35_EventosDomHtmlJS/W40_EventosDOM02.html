@@ -1,0 +1,37 @@
+<!-- MANEJO DE EVENTOS DOM Y HTML
+
+Al dar clic sobre el encabezado el texto cambiara, esto mediante un evento.
+
+La manera en que se resolvió en el ejemlo anterior no es la mejor práctica, 
+lo correcto es involucrar una función en javasript que será llamada desde
+la etiqueta (H1), otro aspecto a resaltar es la manera en que llamaremos a la
+función haciendo referencia al objeto actual sin necesidad de recuperarlos
+a través de GetElementById('Id_de_la_etoqueta_HTML');
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM en HTML</title>
+</head>
+<body>
+
+    <!-- Apunta con this directamente al elemento H1 ya que estamos posicionados
+         ya que estamos parados directamente sobre él
+         -->
+    <h1 onclick="cambiarTexto(this)">Manejo de Eventos con JavaScript</h1>
+    <br/>
+
+    <script>
+        function cambiarTexto(this_recibodo) {
+            // Para ver en consola el objeto completo y su contenido
+            console.log('El objeto : ' + this_recibodo);
+            console.log('El valor :' + this_recibodo.innerHTML);
+
+            this_recibodo.innerHTML = 'Cambiamos el Título del encabezado';
+        }
+    </script>
+
+</body>
+</html>

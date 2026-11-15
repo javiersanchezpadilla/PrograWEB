@@ -1,0 +1,34 @@
+<!-- CAMBIO DE ESTILOS CSS CON JAVASCRIPT
+ 
+Vamos a modificar los estilos CSS dentro del documento HTML
+vamos a modificar el color del título desde la función de JavaScript
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Estilo CSS con JavaScript</title>
+</head>
+<body>
+
+    <h1 id="encab_tit">Manejo de DOM con JavaScript</h1>
+
+    <!-- Al dar clic sobre el boton el texto del encabezado cambiará -->
+    <button onclick="cambiar_color_titulo()">Camiar la imagen</button>
+    <br/>
+
+    <script>
+        function cambiar_color_titulo() {
+            // Permite cambiar el color del encabezado.
+
+            // Recupera por ID el elemento encabezado, y cambia la propuedad
+            // style, al momento de seleccionar esta propiedad se habilitan
+            // todas las subpropiedades que tienen que ver con los estilos
+            // en CSS, como color, alineación, borde, background,etc.
+            document.getElementById('encab_tit').style.background = 'red';
+        }
+    </script>
+
+</body>
+</html>

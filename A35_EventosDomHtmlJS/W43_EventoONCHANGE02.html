@@ -1,0 +1,33 @@
+<!-- EVENTO ONCHANGE (VERSION CON THIS)
+
+Este evento normalmente lo vamos a querer capturar cuando modificamos los 
+valores de un campo de texto o los elementos de un formulario.
+En este ejemplo vamos a gregar un campo de texto y una vez que hayamos hecho
+una modificación a este campo de texto lo vamos a cambiar a mayúsculas
+
+Podemos resolverlo asignando un ID y recuperarlo mediante getElemtById() o
+enviando directamente el elemento mediante this,
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento ONCHANGE</title>
+</head>
+<body>
+
+    <h1 id='encabezado'>Manejo de Eventos con JavaScript</h1>
+    <br/>
+
+    Nombre: <input type="text" onchange="convertir(this)"/>
+
+    <script>
+        function convertir(nombreInput){
+            nombreInput.value = nombreInput.value.toUpperCase();
+        }
+
+    </script>
+
+</body>
+</html>

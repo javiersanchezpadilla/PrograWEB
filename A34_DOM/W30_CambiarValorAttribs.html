@@ -1,0 +1,37 @@
+<!-- CAMBIO DEL VALOR DE LOS ATRIBUTOS EN EL DOM EN JAVASCRIPT
+ 
+Vamos a manejar una imagen y la imagen tiene el atributo de source (src), este 
+atributo vamos a asignarle una imagen de manera inicial y posteriormente a 
+través de dar clic sobre un botón, vamos a modificar esta imagen asignando un 
+nuevo valor al atributo de Source, es decir, la fuente de la imagen.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de DOM con JavaScript</title>
+</head>
+<body>
+
+    <h1 id="encab_tit">Manejo de DOM con JavaScript</h1>
+
+    <!-- Al dar clic sobre el boton la imagen cambiará -->
+    <button onclick="cambiar_imagen()">Camiar la imagen</button>
+    <br/>
+
+    <img id="imagen01"  src="../A01_HTML/imagenes/html5.png" alt="aquí va una imagen de HTML">
+
+    <script>
+        function cambiar_imagen() {
+            // Cambia la imagen 
+
+            // Recuperamos el elemento de la imagen por su ID y cambiamos la
+            // PROPIEDAD O ATRIBUTO SRC (source) que contiene la ruta de la 
+            // imagen                          ▼▼▼▼▼      
+            document.getElementById('imagen01').src = '../A01_HTML/imagenes/javascript.png';
+        }
+    </script>
+
+</body>
+</html>

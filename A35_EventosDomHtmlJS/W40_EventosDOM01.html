@@ -1,0 +1,67 @@
+<!-- MANEJO DE EVENTOS DOM Y HTML
+ 
+Al dar clic sobre el encabezado el texto cambiara, esto mediante un evento.
+
+Hasta el momento ya hemos visto varios de los temas que tienen que ver con el 
+manejo de DOM y JavaScript, ahora en este tema vamos a empezar a formalizar el 
+uso de eventos cuando estamos trabajando con el DOM y JavaScript.
+Lo que vamos a hacer es asignar un evento a nuestro título (H1) y cuando demos 
+clic sobre nuestro título vamos a hacer un cambio de texto.
+De momento tampoco, ya no vamos a utilizar directamente el (ID) de este título, 
+sino que vamos a capturar directamente el evento sobre este elemento HTML.
+Para ello vamos a asignar el evento on click, tenemos varios tipos de eventos.
+podemos se va que si ponemos la palabra (ON), podemos observar que tenemos 
+múltiples eventos que podemos manejar con JavaScript y dependiendo del tipo de
+elemento HTML que estemos manejando, entonces podemos manejar diferentes tipos 
+de eventos, en este caso, el evento que queremos manejar es el elemento "CLICK"
+Cabe resaltar que aunque el evento se llama click en JavaScript, cuando estamos 
+trabajando con los elementos HTML, se utiliza la palabra ON para especificar 
+este evento, así que por ello ponemos la palabra a un "onclic" a "click", todo 
+en minúsculas y posteriormente le asignamos un código de JavaScript aquí no es
+necesario mandarse llamar una función de JavaScript directamente como lo hemos 
+hecho hasta el momento, sino que podríamos tener directo aquí el código de 
+JavaScript, dentro del elemento HTML, para acceder desde JavaScript al elemento
+hemos trabajado 
+
+            document.GetByElementId('Id_del_elemento_HTML');
+
+Pero como vamos a incrustar el código JavaScript dentro de la etiqueta HTML, 
+entonces ya se referencia directamente ya que estará sobre la etiqueta
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM en HTML</title>
+</head>
+<body>
+
+    <!-- Apunta con .this directamente al elemento H1 ya que estamos posicionados
+         sobre el, ya no es necesario indicar el objeto document.innerHTML
+         ADVERTENCIA!!! Si abrimos con comilla doble podemos usar comilla simple
+         dentro de la linea, si abrimos con comilla simple entonces debemos usar
+         la comilla doble internamente (como en Python para alternar las comillas)
+            <h1 onclick="this.innerHTML='Nuevo Titulo'">    envuelve con " "
+            <h1 onclick='this.innerHTML="Nuevo Titulo"''>   envuelve con ' '
+         
+         -->
+    <h1 onclick="this.innerHTML='Nuevo Titulo'">Manejo de Eventos con JavaScript</h1>
+
+    <button onclick="cambiar_color_titulo()">Camiar la imagen</button>
+    <br/>
+
+    <script>
+        function cambiar_color_titulo() {
+            // Permite cambiar el color del encabezado.
+
+            // Recupera por ID el elemento encabezado, y cambia la propuedad
+            // style, al momento de seleccionar esta propiedad se habilitan
+            // todas las subpropiedades que tienen que ver con los estilos
+            // en CSS, como color, alineación, borde, background,etc.
+            document.getElementById('encab_tit').style.background = 'red';
+        }
+    </script>
+
+</body>
+</html>

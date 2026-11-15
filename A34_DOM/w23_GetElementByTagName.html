@@ -1,0 +1,53 @@
+<!-- ACCEDER A VARIOS ELEMENTOS DE FORMA SIMULTANEA EN HTML A TRAVÉS DE 
+     JAVASCRIPT MEDIANTE LA ETIQUETA GETELEMENTBYID
+
+Si tenemos varios parrafos lo que vamos a hacer ahora es tratar de recuperar 
+estos párrafos, sí que si queremos recuperar uno a uno, tendríamos que 
+utilizar el método GetElementByID uno a uno, sin embargo, existe otra forma 
+en que podemos recuperar los párrafos, ya no solamente por identificador, sino 
+también por el tipo de elemento HTML que tenemos, para esto usaremos el método
+
+            getElementsByTagName(etiqueta)
+
+Lo anterior nos regresará un arreglo con todos los elementos del mismo tipo, 
+por ejemplo en el ejemplo desarrollado obtenemos un arreglo de todos los 
+parrafos            
+
+            getElementsByTagName('p');
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo DOM con JavaScript</title>
+</head>
+<body>
+    <h1 id='cabecero'>Ejemplo DOM con JavaScript</h1>
+
+    <!-- Para este ejercicio NO SE REQUIEREN LOS IDENTIFICADORES ID='ALGO'
+         se pueden dejar, pero no son necesarios, debido a la manera en que
+         estamos extrayendo los contenidos -->
+    <p id="parrafo01">Saludos</p>
+    <p id="parrafo02">Este es el segundo parrafo </p>
+    <p>Este es el tercer parrafo </p>
+    <p>Este es el cuarto parrafo </p>
+    
+
+<script>
+        // Extraemos TODOS los elementos del tipo parrafo en un arreglo
+        // JAVIER!! REALIZA la prueba con 'h1'
+        let losParrafos = document.getElementsByTagName('p');
+
+        // Verificamos cuantos parrafos extrajo usamos la propiedad length
+        console.log(`Numero de parrafos extraidos ${losParrafos.length}`)
+
+        // Ciclamos los parrafos para ver su contenido con innerHTML
+        for (let indice=0; indice<losParrafos.length; indice++){
+            console.log(`Índice : ${indice} - ${losParrafos[indice].innerHTML}`);
+        }
+    </script>
+
+</body>
+</html>
+

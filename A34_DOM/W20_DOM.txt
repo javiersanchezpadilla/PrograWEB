@@ -1,0 +1,54 @@
+DOM DOCUMENT OBJECT MODEL
+=========================
+
+Document        <-- Objeto principal para acceder al DOM desde JavaScript
+    |
+    +---Root Element <html>
+            |
+            +-- Element: <head>
+            |       |
+            |       +-------Element: <title>
+            |                   |
+            |                   +--- Text: "Mi titulo"    
+            +-- Element: <body>
+            |       |
+                    +-------Element: <h1>
+                    |           |
+                    |           +--- Text: "Un encabezado"
+                    |
+                    +-------Element: <a> ----- Atribute href
+                                |
+                                +--- Text: "Link text"
+
+DOM Document Object Model para trabajarlo con JavaScript.
+En el arbol podemos observar un ejemplo de un document object model, cuando 
+estamos trabajando con un documento HTML vamos a tener diferentes etiquetas.
+Por ejemplo, la etiqueta de <HTML> e internamente podemos manejar otras 
+etiquetas como puede ser el <HEAD>, como puede ser el <BODY> y a su vez, 
+dentro de cada una de estas etiquetas podemos tener más elementos.
+Por ejemplo, en el <HEAD> podemos tener un título y finalmente una cadena que 
+muestre el título de nuestro cabecero.
+Por otro lado, dentro del <BODY> podemos tener elementos como pueden ser un 
+elemento <H1> y finalmente su texto, el texto que contiene, podemos tener 
+links que nos lleven hacia otras partes del documento o a otras páginas HTML, 
+etc. y todos estos elementos componen lo que se conoce como DOCUMENT OBJECT 
+MODEL, así que básicamente cada uno de estos elementos va a formar un 
+documento <HTML>, el concepto de DOM es un estándar y cada uno de estos 
+elementos es un objeto, cuando se trabaja desde JavaScript, el objeto 
+principal que va a acceder a nuestro document object model, este objeto se 
+llama DOCUMENT, así que este objeto es el que vamos a utilizar para manipular 
+nuestro documento <HTML>, es decir, el DOM de nuestra página <HTML> y entonces
+a través de este objeto vamos a poder interactuar con cada uno de estos 
+elementos como es el elemento principal <HTML>, el <HEAD>, el <BODY>, los <H1>, 
+etc. Cualquiera de estos elementos los vamos a poder acceder a través de este 
+objeto (El objeto de documento), por lo tanto, con JavaScript vamos a poder 
+trabajar y modificar cada uno de estos elementos. 
+
+Ahora, un detalle es que cada uno de estos elementos desde JavaScript es un 
+objeto, esto quiere decir que cada uno de estos elementos contiene atributos 
+o propiedades y también métodos, así que vamos a poder acceder a los atributos 
+y métodos de cada uno de estos elementos, ya que cada elemento, como hemos 
+comentado, es un objeto y por lo tanto podemos agregar elementos, modificar o
+eliminar elementos de nuestro document object model, todo esto, lo vamos a 
+hacer desde JavaScript, así que con JavaScript vamos a poder manipular sin 
+ningún problema nuestros documentos <HTML>.

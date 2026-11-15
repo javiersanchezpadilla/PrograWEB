@@ -1,0 +1,35 @@
+<!-- MANEJO DE DOCUMENT WRITE EN JavaScript
+ 
+Aquí se van a ver varias formas de modicar nuestros elementos HTML
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de DOM con JavaScript</title>
+</head>
+<body>
+
+    <h1>Manejo de DOM con JavaScript</h1>
+
+    <button onclick="funcion_mostrar()">Mostrar</button>
+    <br/>
+
+    <!-- FORMA 1. Mandar información directamente a la salida 
+                  Para esto no estamos utilizando ningún tipo de código HTML, 
+                  simplemente estamos vaciando información directamente al 
+                  flujo del documento HTML.
+                  Sin embargo, debemos tener cuidado, ya que esto sobreescribe
+                  por completo cualquier información que tuviéramos previa a 
+                  la escritura de este mensaje.-->
+    <script>
+        document.write('Saludos desde JavaScrips');
+
+        function funcion_mostrar(){
+            document.write('Hasta la vista');
+        }
+    </script>
+
+</body>
+</html>

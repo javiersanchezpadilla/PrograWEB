@@ -1,0 +1,83 @@
+<!-- ACCEDER A ELEMENTOS QUE TENGAN APLICADA UNA CLASE 
+ QUERYSELECTORALL('Elemento.clase')
+
+Otro método que podemos utilizar cuando estamos aplicando una clase de estilos
+CSS, en lugar a utilizar el método GetElementByClassName(), en el cual nos 
+recupera TODOS los elementos HTML (aquí no importa el elemetno o etiqueta HTML, 
+solo la clase como referencia) que tengan aplicada esta clase).
+También podemos utilizar el método siguiente.
+
+            QuerySelectorALL('elementoHTML.etiqueta');
+
+En el método no solamente vamos a especificar la clase, sino también el 
+elemento HTML que queremos recuperar, por ejemplo, en este ejemplo vamos a 
+asignar la clase azul a los parrafos y al encabezao, pero a difencia del código
+anterior ahora aunque ambos elementos tengan la misma clase asignada 'azul', solo
+se van a recuperar los parrafos (ya que lo vamos a especificar p.azul)
+
+document.querySelectorAll('p.azul');    Solo PARRAFOS con clase AZUL
+
+    ✘  <h1 id='cabecero' CLASS="AZUL">Ejemplo DOM con JavaScript</h1>
+    ✔  <p id="parrafo01" CLASS="AZUL">Saludos</p>
+    ✔  <p id="parrafo02" CLASS="AZUL">Este es el segundo parrafo </p>
+    ✔  <p CLASS="AZUL">Este es el tercer parrafo </p>
+    ✔  <p CLASS="AZUL">Este es el cuarto parrafo </p>
+
+Si quisiera solo recfuperar los elementos del tipo ENCABEZADO quedaria
+
+document.querySelectorAll('h1.azul');    Solo PARRAFOS con clase AZUL
+
+    ✔  <h1 id='cabecero' CLASS="AZUL">Ejemplo DOM con JavaScript</h1>
+    ✘  <p id="parrafo01" CLASS="AZUL">Saludos</p>
+    ✘  <p id="parrafo02" CLASS="AZUL">Este es el segundo parrafo </p>
+    ✘  <p CLASS="AZUL">Este es el tercer parrafo </p>
+    ✘  <p CLASS="AZUL">Este es el cuarto parrafo </p>
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo DOM con JavaScript</title>
+
+    <!-- DEfinimos una clase para manejar un color azul en los parrafos-->
+    <style>
+        .azul{
+            color:blue
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id='cabecero' class="azul">Ejemplo DOM con JavaScript</h1>
+
+    <!-- Para este ejercicio NO SE REQUIEREN LOS IDENTIFICADORES ID='ALGO'
+         se pueden dejar, pero no son necesarios, debido a la manera en que
+         estamos extrayendo los contenidos -->
+    <p id="parrafo01" class="azul">Saludos</p>
+    <p id="parrafo02" class="azul">Este es el segundo parrafo </p>
+    <p class="azul">Este es el tercer parrafo </p>
+    <p class="azul">Este es el cuarto parrafo </p>
+    
+
+<script>
+        // Extraemos TODOS LOS ELEMENTOS ASOCIADOS A LA MISMA CLASE 'azul', 
+        // incluso podemos asignar la misma clase al encabezado h1 y lo extrae
+        let elementos = document.querySelectorAll('p.azul');
+
+        // Verificamos cuantos parrafos extrajo usamos la propiedad length
+        console.log(`Numero de elementos recuperados ${elementos.length}`)
+
+        // OTRA FORMA DE CICLAR LOS ELEMENTOS DEL ARREGLO
+        
+        // Ciclamos los parrafos para ver su contenido con innerHTML
+        for (let un_elemento of elementos){
+            console.log(`${un_elemento.innerHTML}`);
+        }
+    </script>
+
+</body>
+</html>
+

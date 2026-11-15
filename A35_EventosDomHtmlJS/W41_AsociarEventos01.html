@@ -1,0 +1,33 @@
+<!-- ASOCIAR EVENTOS A ELEMENTOS HTML DIRECTAMENTE DESDE JAVASCRIPT
+
+Hasta el momento ya hemos visto que a nuestro elemento HTML podemos asociarle 
+una función a un evento, en este caso al evento, a un clic le estamos 
+asociando la función de cambiar texto, sin embargo, también podemos hacer esto
+pero directamente desde JavaScript, así que no tenemos que especificarlo desde 
+el elemento HTML, sino que todo lo podemos hacer desde JavaScript, todo lo
+vamos a hacer desde JavaScript sin necesidad de modificar los elemento HTML
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM en HTML</title>
+</head>
+<body>
+
+    <h1 id='encabezado'>Manejo de Eventos con JavaScript</h1>
+    <br/>
+
+    <script>
+        // Pasamos la reerencia de la función (en este caso es callback)
+        document.getElementById('encabezado').onclick = cambiarTexto;
+
+        function cambiarTexto(){
+                // recuperamos el elemento nuevamente para poder cambiarlo
+                document.getElementById('encabezado').innerHTML = 'Nuevo Titulo de encabezado';
+        }
+    </script>
+
+</body>
+</html>
