@@ -1,0 +1,59 @@
+<!-- METODO ADDEVENTLISTENER CON FUNCIONES NORMALES
+ 
+Realizaremos lo mismo que se hizo anteriormente pero ahora desde JavaScript
+esto limpiará el código HTML, sin embargo aumentará el código de JavaScript
+Ahora desde javascipt los eventos que en HTML se nombraban como onclic, 
+onfocus, onblur cambiar a solo el nombre del evento eliminando ON, de tal 
+manera que onfocus = focus, onblur=blur, onclic=clic
+
+Tambien es importante comparar lo siguiente, antes con el manejo directo de los
+eventos usabamos algo asi:
+                           ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
+Nombre: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)">
+
+el evento onfocus llamaba a la función cambiar(this) enviando todo el objeto
+a través de this, ahora se manejara de esta forma evento.taret para recuperar
+el componente this cambia por evento.target
+
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento ADD EVENT LISTENER</title>
+</head>
+<body>
+    <h1 id='encabezado'>Manejo de Eventos con el Raton y JavaScript</h1>
+    <br/>
+    Nombre: <input type="text" id="nombre"/>
+    Apellido: <input type="text" id="apellido"/>
+
+    <script>
+        // Cuando usamos addEventListener ya no es necesario el uso
+        // de onfocus, onblur, solo indicamos el nombre del evento
+        // onfocus = 'focus', onblur = 'blur', onclick = 'click'  
+        //                                                 evento   funcion
+        document.getElementById('nombre').addEventListener('focus', cambiar);
+        document.getElementById('nombre').addEventListener('blur',  regresar);
+
+        // PAra el apellido
+        document.getElementById('apellido').addEventListener('focus', cambiar);
+        document.getElementById('apellido').addEventListener('blur',  regresar);
+
+        function cambiar(evento){
+            let componente = evento.target;
+            componente.style.background = 'yellow';
+        }
+
+        function regresar(evento){
+            let componente = evento.target;
+            componente.style.background = 'white';
+        }
+
+    </script>
+
+</body>
+</html>

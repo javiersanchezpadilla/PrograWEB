@@ -1,0 +1,37 @@
+<!-- EENTOS ONFOCUS Y ONBLUR 
+ 
+Para este ejemplo se usaran elemento del tipo input
+cuando estemos en un elemento de este tipo como el foco estará en el objeto
+lanzaremos un evento y al salir dispararemos otro evento
+
+Cuando demos clic sobre el elemento del tipo input cambiara a color amarillo
+el fondo del elemento en foco (ONFOCUS).
+Cuando salgamos del elemento y ya no este en foco cambiara a color blanco
+(ONBLUR)
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento ONFOCUS ONBLUR</title>
+</head>
+<body>
+    <h1 id='encabezado'>Manejo de Eventos con el Raton y JavaScript</h1>
+    <br/>
+    Nombre: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)">
+    Apellido: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)">
+
+    <script>
+        function cambiar(elementoInput){
+            elementoInput.style.background = 'yellow';
+        }
+
+        function regresar(elementoInput){
+            elementoInput.style.background = 'white';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!-- APLICACIÓN DE CALCULADORA -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Aplicación Calculadora</title>
+  </head>
+  <body>
+    <div class='container'>
+        <h1>Aplicación Calculadora</h1>
+        <!-- El identificador (id='forma') es para que podamos recuperarlo desde
+            JavaScript -->
+        <form id='forma'>
+
+                <!-- mb es margin bottom, -->
+                <div class='mb-3'>
+                    <label for='operandoA'>Operando A</label>
+
+                    <!-- type="number"        Para que solo podamos introducir números
+                        class=form-control   Clase de BootStrap (mejora visual de formularios)
+                        placeholder          Mensje sobre el cuadro de la caja de input
+                        id='operandoA'       ID para poder recuperarlo desde JavaScript -->
+                    <input type="number" class='form-control'
+                        placeholder="Escribe operando A" id='operandoA'/>
+                </div>
+
+                <div class='mb-3'>
+                    <label for='operandoB'>Operando B</label>
+                    <input type="number" class="form-control"
+                        placeholder="Escribe operando B" id='operandoB'/>
+                </div>
+
+        </form>
+
+        <!-- Definición de un boton, 
+            type="submit"   No es necesario, ya que de ponerlo al oprimir el boton
+                            borrria toda la pantalla para enviar la información al 
+                            servidor, y nuestra aplicación es solo para el navegador
+                            por lo que debe ser un boton simple
+                            button type="submit"
+        -->
+        
+        <button class='btn btn-primary mb-3' onclick='sumar()'
+        >Sumar</button>
+
+        <div id="resultado"></div>
+
+    </div>  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- Recordemos que JavaScrip solo puede ver hacia arriba -->
+    <script src='JS/app.js'></script>
+  </body>
+</html>

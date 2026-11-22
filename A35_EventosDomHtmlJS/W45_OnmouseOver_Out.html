@@ -1,0 +1,36 @@
+<!-- ONMOUSEOVER ONMOUSEOUT
+
+Cuando nos posicionamos con el ratón encima de un elemento y quitamos el ratón
+de ese elemento
+
+EVENTOS:
+--------
+1)  Cuando pasemos el ratón sobre el encabezado lo vamos a cambiar a rojo 
+2)  Cuando salgamos del encabezado con el ratón vamos a cambiar a azul
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento ONCHANGE</title>
+</head>
+<body>
+    <!-- declaramos los evento y mandamos this para envviar todo el objeto 
+         como referencia   Mouse envcima     
+                        ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼  ▼▼▼▼   ▼▼▼▼▼▼▼▼▼▼  ▼▼▼▼▼▼▼▼▼▼  -->
+    <h1 id='encabezado' onmouseover="rojo(this)" onmouseout="azul(this)">
+        Manejo de Eventos con el Raton y JavaScript</h1>
+    <br/>
+
+    <script>
+        function rojo(titulo){
+            titulo.style.color = 'red';
+        }
+        function azul(titulo){
+            titulo.style.color = 'blue';
+        }
+    </script>
+
+</body>
+</html>

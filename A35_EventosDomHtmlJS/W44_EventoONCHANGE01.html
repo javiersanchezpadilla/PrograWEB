@@ -19,18 +19,21 @@ enviando directamente el elemento mediante this,
 
     <h1 id='encabezado'>Manejo de Eventos con JavaScript</h1>
     <br/>
-
+    <!-- FORMA 1. para llamar al evento después de un cambio -->
+    <!-- Vamos a monitorear el evento      ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
     Nombre: <input type="text" id="nombre" onchange="convertir()">
 
     <script>
+        // Este es el método que se llamará en onchange
+        // aquí no podemos usar innerHTML, debido a que solo funciona en 
+        // elementos como h1, p, div, dado que es un elemento tipo input
+        // debemos usar .value para hacer referencia a su valor
         function convertir(){
             let el_nombre = document.getElementById('nombre');
-            console.log(document.getElementById('nombre'));
+            // Aqui hacemos la conversión
+            el_nombre.value = el_nombre.value.toUpperCase();
             console.log(el_nombre);
-            //document.getElementById('nombre').innerHTML = nombre.toUpperCase();
         }
-
     </script>
-
 </body>
 </html>

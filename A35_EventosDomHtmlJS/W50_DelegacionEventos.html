@@ -1,0 +1,81 @@
+<!-- DELEGACIÓN DE EVENTOS O USECAPTURE
+ 
+Para poder aplicar los estilos que hemos definido a nuestro formulario para no
+reescribir tanto código podemos y simplificar el código y delegar los eventos
+de un elemento exteno a elementos internos, esto es, para no crear eventos 
+indivuales a cada elemento del tipo input, los envolvemos en un formulario y
+aplicaremos un solo evento asiciado al formulario pero con la opción de que
+este comportamiento del evento se propague a sus elementos internos contenidos
+dentro del formulario.
+
+Requerimientos:
+---------------
+1) Todos nuestros elementos del tipo input deben estar dentro de un formulario
+2) En lugar de recuperar cada elemento del tipo input vamos a recuperar nuestro
+   formulario
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento ADD EVENT LISTENER</title>
+</head>
+<body>
+    <h1 id='encabezado'>Manejo de Eventos con el Raton y JavaScript</h1>
+    <br/>
+
+    <form id='forma' action="">
+        Nombre: <input type="text" id="nombre"/>
+        <br/><br/>
+        Apellido: <input type="text" id="apellido"/>
+
+    </form>
+
+    
+
+    <script>
+        // Ya no vamos a aplicar el estilo a cada elemento de forma individual
+        // lo vamos a hacer directamente a la forma, solamente tener cuidado con
+        // lo siguiente los elementos del tipo FORM son elemento externos y lo que
+        // queremos es trabajar con elementos internos (cada elemento input),entonces
+        // va a ser necesario agregar un parametro mas para que addEventListener
+        // pueda aplicar esto a todos los elementos contenidos en el elemnento 
+        // externo
+
+        const la_forma = document.getElementById('forma');
+       
+        
+        // Si ejecutaramos directamente el código no funcionaria, esto se debe
+        // a que nos falta un parámetro.
+
+        //              forma.addEventListener('focus', (evento) =>{
+        //                        evento.target.style.background = 'pink'; }   );
+        //                                                                  ▲▲▲
+        
+        // cuando estamos trabajando con el método AddEventListener()
+        // Podemos agregar un parámetro más y este parámetro básicamente lo 
+        // que significa es que lo que estamos configurando para un elemento 
+        // externo, como en este caso es el formulario y queremos que se 
+        // propague esa misma configuración para elementos más internos, es decir
+        // por ejemplo, en este caso para los elementos de tipo input.
+        // entonces tenemos que indicar un parámetro más para que lo que hemos 
+        // configurado en el formulario se aplique también a nuestros componentes 
+        // de tipo input, así que al final de la configuración de nuestra función 
+        // flecha, vamos a pasar un parámetro más con el valor de TRUE y 
+        // básicamente con eso estamos indicando que lo que hemos configurado 
+        // para el formulario (se propaga de un elemento externo FORM a un 
+        // elemento interno INPUT)
+
+        forma.addEventListener('focus', (evento) =>{
+            evento.target.style.background = 'pink'; }, true);
+        //                                            ▲▲▲▲▲▲▲
+        //                                  Tercer argumento requerido
+        //                            Para que se propague del FORM a los INPUTS
+        // background = '' es igual a 'white'
+        forma.addEventListener('blur',  (evento) =>{
+            evento.target.style.background = ''; }, true);
+    </script>
+
+</body>
+</html>

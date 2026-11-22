@@ -1,0 +1,47 @@
+<!-- ONMOUSEDOWN ONMOUSEUP ONCLIC
+
+OnMouseDown     Cuando damos clic sobre un elmeento
+OnMouseUp       Cuando soltamos el elemento
+OnClic
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento ONCHANGE</title>
+</head>
+<body>
+    <!-- declaramos los evento y mandamos this para envviar todo el objeto 
+         como referencia   Mouse envcima, probar onmouseup="azul(this)"  
+         onclic="verde(this)"    INSPECCIONAR LOS EVENTOS
+                        ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼  ▼▼▼▼  -->
+    <h1 id='encabezado' onmousedown="rojo(this)"" onclic="verde(this)"> 
+    
+        Manejo de Eventos con el Raton y JavaScript</h1>
+    <br/>
+
+    <script>
+
+        // la linea orignal para h1 queda así:
+        // <h1 id='encabezado' onmousedown="rojo(this)"" onclic="verde(this)">
+
+        function rojo(titulo){      // onmousedown="rojo(this)"
+            console.log('OnMouseDown cambio a ROJO');
+            titulo.style.color = 'red';
+        }
+
+        function azul(titulo){      // onmouseup="azul(this)"
+            console.log('OnMouseUp cambio a AZUL');
+            titulo.style.color = 'blue';
+        }
+
+        function verde(titulo){     // onclic="verde(this)"
+            console.log('OnClic camnio a VERDE');
+            titulo.style.color = 'green';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!-- CUANDO USAR INNETHTML Y VALUE 
+ 
+Es sencillo .value es para lo que el usuario escribe o selecciona en un 
+control de formulario, y .innerHTML es para lo que va dentro de una etiqueta 
+de contenido en la página.
+
+Si es una caja donde se teclea o se elige algo (como un <input>, <select> o 
+<textarea>), se usa .value. 
+Si es un contenedor o texto normal de la página (como un <p>, <h1>, <div> o 
+<span>), se usa .innerHTML
+
+EJEMPLO .value (Controles de formulario)
+----------------------------------------
+Se usa cuando quieres leer lo que el usuario escribió/eligió o cambiar el valor 
+que aparece dentro del campo.
+
+Propiedad           ¿Para qué sirve?                Etiquetas comunes
+------------------------------------------------------------------------------
+.value          Obtener o cambiar el dato       <input>, <select>,
+                ingresado/seleccionado          <textarea>
+                    
+.innerHTML      Obtener o cambiar el contenido  <div>, <p>, <h1>, <span>, <li>
+                (y etiquetas HTML) de un bloque
+                
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="correo" placeholder="tucorreo@ejemplo.com">
+    <button onclick="mostrarCorreo()">Revisar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function mostrarCorreo() {
+            const inputCorreo = document.getElementById("correo");
+
+            // LEER lo que escribió el usuario
+            const textoEscrito = inputCorreo.value;
+
+            // ESCRIBIR o limpiar el valor del input
+            inputCorreo.value = "";
+
+            document.getElementById("resultado").innerHTML = `Correo capturado: <strong>${textoEscrito}</strong>`;
+        }
+    </script>
+</body>
+</html>

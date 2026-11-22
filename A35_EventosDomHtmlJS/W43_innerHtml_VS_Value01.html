@@ -1,0 +1,44 @@
+<!-- CUANDO USAR INNETHTML Y VALUE 
+ 
+Es sencillo .value es para lo que el usuario escribe o selecciona en un 
+control de formulario, y .innerHTML es para lo que va dentro de una etiqueta 
+de contenido en la página.
+
+Si es una caja donde se teclea o se elige algo (como un <input>, <select> o 
+<textarea>), se usa .value. 
+Si es un contenedor o texto normal de la página (como un <p>, <h1>, <div> o 
+<span>), se usa .innerHTML
+
+EJEMPLO .innerHTML (Contenido dentro de etiquetas)
+--------------------------------------------------
+Se usa cuando quieres insertar, cambiar o leer HTML o texto dentro de una 
+etiqueta que tiene apertura y cierre (como <div>, <p>, <li>, <h1>).
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="tarjeta">
+        <p>Estado inicial</p>
+    </div>
+    <button onclick="actualizarTarjeta()">Actualizar</button>
+
+    <script>
+        function actualizarTarjeta() {
+            const tarjeta = document.getElementById("tarjeta");
+
+            // Reemplaza todo lo que hay dentro de <div id="tarjeta"> con nuevas etiquetas HTML
+            tarjeta.innerHTML = `
+            <h3>¡Listo!</h3>
+            <p>Tu perfil se actualizó correctamente.</p>
+            `;
+        }
+    </script>
+</body>
+</html>

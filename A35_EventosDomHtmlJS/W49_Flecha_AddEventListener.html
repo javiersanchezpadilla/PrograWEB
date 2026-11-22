@@ -1,0 +1,55 @@
+<!-- FUNCIONES DE FLECHA CON ADDEVENTLISTENER CON FUNCIONES FLECHA
+ 
+Podemos también utilizar funciones flecha en lugar de definir funciones por 
+separado, uno de los detalles es QUE NO PODEMOS REUTILIZAR EL CÓDIGO, así que 
+ya dependiendo de lo se requiera, podemos utilizar las funciones flecha.
+
+Recordar que las funciones del tipo flecha son anonimas por lo que no se pueden
+volver a usar.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento ADD EVENT LISTENER</title>
+</head>
+<body>
+    <h1 id='encabezado'>Manejo de Eventos con el Raton y JavaScript</h1>
+    <br/>
+    Nombre: <input type="text" id="nombre"/>
+    Apellido: <input type="text" id="apellido"/>
+
+    <script>
+        // Cuando usamos addEventListener ya no es necesario el uso
+        // de onfocus, onblur, solo indicamos el nombre del evento
+        // onfocus = 'focus', onblur = 'blur', onclick = 'click'  
+
+        // MEDIANTE EL USO DE FUNCIONES DEL TIPO FLECHA
+        //                                                 evento   funcion flecha
+        document.getElementById('nombre').addEventListener('focus', (evento) =>{
+            evento.target.style.background = 'pink';
+        });
+
+        document.getElementById('nombre').addEventListener('blur',  (evento) =>{
+            evento.target.style.background = '';    // background = '' es igual a 'white'
+        });
+
+        // PAra el apellido MEDIANTE EL USO DE FUNCIONES NORMALES
+        document.getElementById('apellido').addEventListener('focus', cambiar);
+        document.getElementById('apellido').addEventListener('blur',  regresar);
+
+        function cambiar(evento){
+            let componente = evento.target;
+            componente.style.background = 'yellow';
+        }
+
+        function regresar(evento){
+            let componente = evento.target;
+            componente.style.background = 'white';
+        }
+
+    </script>
+
+</body>
+</html>
